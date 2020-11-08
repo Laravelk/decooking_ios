@@ -12,6 +12,10 @@ class LoginViewController : UIViewController {
     private var presenter: ILoginPresenter
 
     init(presenter: ILoginPresenter) {
+//        loginView.onLoginTapHandler = { _ in
+//            var login: String  = loginView.loginField.text ?? "login"
+//            var password: String = loginView.passwordField.text ?? "password"
+//        }
         self.presenter = presenter
         presenter.didLoad(ui: loginView)
         super.init(nibName: nil, bundle: nil)

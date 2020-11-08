@@ -10,6 +10,7 @@ import UIKit
 protocol ILoginView : AnyObject {
     var onLoginTapHandler: (() -> Void)? { get set }
     var onForgotTapHandler: (() -> Void)? { get set }
+    var onRegisterTapHandler: (() -> Void)? { get set }
 }
 
 
@@ -23,6 +24,7 @@ class LoginView: UIView, ILoginView {
     
     var onLoginTapHandler: (() -> Void)?
     var onForgotTapHandler: (() -> Void)?
+    var onRegisterTapHandler: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +45,19 @@ class LoginView: UIView, ILoginView {
         self.entrance.layer.cornerRadius = 10
 
         self.register.setTitleColor(.red, for: .normal)
+    }
+    @IBAction func forgotAction(_ sender: Any) {
+        guard let _ = onForgotTapHandler else { return }
+        self.onForgotTapHandler?()
+    }
+    
+    @IBAction func registerAction(_ sender: Any) {
+        guard let _ = onRegisterTapHandler else { return }
+        self.onRegisterTapHandler?()
+    }
+    @IBAction func entranceAction(_ sender: Any) {
+        guard let _ = onLoginTapHandler else { return }
+        self.onLoginTapHandler?()
     }
     
 }
