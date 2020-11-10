@@ -38,7 +38,7 @@ class LoginView: UIView, ILoginView {
         self.passwordField.layer.cornerRadius = 20
         self.passwordField.borderStyle = UITextField.BorderStyle.roundedRect
 
-        self.forgotPassword.setTitleColor(.gray, for: .normal)
+        self.forgotPassword.setTitleColor(.blue, for: .normal)
 
         self.entrance.setTitleColor(.white, for: .normal)
         self.entrance.backgroundColor = .gray
