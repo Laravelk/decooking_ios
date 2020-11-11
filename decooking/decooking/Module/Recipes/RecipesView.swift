@@ -7,10 +7,7 @@
 
 import UIKit
 
-protocol IRecipesView : AnyObject {
-    
-}
-
+protocol IRecipesView : AnyObject {}
 
 class RecipesView: UIView, IRecipesView {
     override func awakeFromNib() {

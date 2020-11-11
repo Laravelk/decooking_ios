@@ -8,13 +8,26 @@
 import UIKit
 
 class LoginViewController : UIViewController {
-    private var loginView: LoginView = LoginView.loadXib()
+    private var loginView: ILoginView = LoginView.loadXib()
     private var presenter: ILoginPresenter
 
     init(presenter: ILoginPresenter) {
         self.presenter = presenter
         presenter.didLoad(ui: loginView)
         super.init(nibName: nil, bundle: nil)
+        
+        loginView.onLoginTapHandler = {
+            
+        }
+        
+        loginView.onForgotTapHandler = {
+            
+        }
+        
+        loginView.onRegisterTapHandler = {
+            
+        }
+        
     }
     
     required init?(coder: NSCoder) {
@@ -22,7 +35,11 @@ class LoginViewController : UIViewController {
     }
     
     override func loadView() {
-        self.view = self.loginView
+        guard let view = self.loginView as? UIView else {
+            assertionFailure("Login view is not UIView")
+            return
+        }
+        self.view = view
     }
 
     override func viewDidLoad() {

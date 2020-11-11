@@ -24,6 +24,9 @@
 		48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CE82545BE4B00511922 /* Assets.xcassets */; };
 		48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CEA2545BE4B00511922 /* LaunchScreen.storyboard */; };
 		48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CF72545BE7A00511922 /* LoginPresenter.swift */; };
+		48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */; };
+		48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FDC255AC8A9006C49B2 /* Network.swift */; };
+		48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */; };
 		48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB1CBC255977DF00962D53 /* RecipesView.xib */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		48B13CEB2545BE4B00511922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B13CED2545BE4B00511922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B13CF72545BE7A00511922 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationData.swift; sourceTree = "<group>"; };
+		48E06FDC255AC8A9006C49B2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSharedSessionDelegate.swift; sourceTree = "<group>"; };
 		48EB1CBC255977DF00962D53 /* RecipesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +70,7 @@
 		482535FD25487F7D001C7316 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				483A2D8F255BE5AB00F5E537 /* Splash */,
 				489F975B25587C1700FD51DF /* Recipes */,
 				482535FF25487FB6001C7316 /* Login */,
 				489F976D25587CA400FD51DF /* Module.swift */,
@@ -81,6 +88,13 @@
 				48413412254ACF7700F7133E /* LoginAssembly.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		483A2D8F255BE5AB00F5E537 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		489F975B25587C1700FD51DF /* Recipes */ = {
@@ -114,7 +128,8 @@
 		48B13CDE2545BE4700511922 /* decooking */ = {
 			isa = PBXGroup;
 			children = (
-				48E06FD7255AC33F006C49B2 /* Router */,
+				48E06FDB255AC898006C49B2 /* Web */,
+				48E06FDA255AC892006C49B2 /* Routers */,
 				482535FD25487F7D001C7316 /* Module */,
 				48B13CDF2545BE4700511922 /* AppDelegate.swift */,
 				48B13CE12545BE4700511922 /* SceneDelegate.swift */,
@@ -128,11 +143,29 @@
 			path = decooking;
 			sourceTree = "<group>";
 		};
-		48E06FD7255AC33F006C49B2 /* Router */ = {
+		48C0FEDE255C4F7C00832202 /* UserStructs */ = {
+			isa = PBXGroup;
+			children = (
+				48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */,
+			);
+			path = UserStructs;
+			sourceTree = "<group>";
+		};
+		48E06FDA255AC892006C49B2 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Router;
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		48E06FDB255AC898006C49B2 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				48C0FEDE255C4F7C00832202 /* UserStructs */,
+				48E06FDC255AC8A9006C49B2 /* Network.swift */,
+				48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,16 +245,19 @@
 			files = (
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				4825360225487FD5001C7316 /* LoginView.swift in Sources */,
+				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
 				48B13CE42545BE4700511922 /* ViewController.swift in Sources */,
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
 				48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */,
+				48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */,
 				48413408254ACC3700F7133E /* UIView+xib.swift in Sources */,
 				489F976725587C7B00FD51DF /* RecipesAssembly.swift in Sources */,
 				48B13CE22545BE4700511922 /* SceneDelegate.swift in Sources */,
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
 				489F976E25587CA400FD51DF /* Module.swift in Sources */,
 				489F976125587C4E00FD51DF /* RecipesView.swift in Sources */,
+				48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */,
 				48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
