@@ -10,9 +10,12 @@ import UIKit
 class RecipesViewController : UIViewController {
     private var recepiesView: RecipesView = RecipesView.loadXib()
     private var presenter: IRecipesPresenter
+    private var interactor: IRecipesInteractor
 
-    init(presenter: IRecipesPresenter) {
+    init(presenter: IRecipesPresenter, interactor: IRecipesInteractor) {
         self.presenter = presenter
+        self.interactor = interactor
+        
         presenter.didLoad(ui: recepiesView)
         super.init(nibName: nil, bundle: nil)
     }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DAF255D303B00213628 /* LoginInteractor.swift */; };
+		48161DB3255D35D600213628 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DB2255D35D600213628 /* SplashViewController.swift */; };
+		48161DB6255D35DF00213628 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DB5255D35DF00213628 /* SplashView.swift */; };
+		48161DB9255D35EC00213628 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DB8255D35EC00213628 /* SplashAssembly.swift */; };
+		48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DBB255D35F700213628 /* SplashPresenter.swift */; };
+		48161DBF255D360D00213628 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48161DBE255D360C00213628 /* SplashView.xib */; };
 		4825360225487FD5001C7316 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4825360125487FD5001C7316 /* LoginView.swift */; };
 		4825361F25488222001C7316 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4825361E25488222001C7316 /* LoginViewController.swift */; };
 		48413408254ACC3700F7133E /* UIView+xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48413407254ACC3700F7133E /* UIView+xib.swift */; };
@@ -28,9 +34,16 @@
 		48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FDC255AC8A9006C49B2 /* Network.swift */; };
 		48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */; };
 		48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB1CBC255977DF00962D53 /* RecipesView.xib */; };
+		48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C21255D382000A93771 /* RecipesInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48161DAF255D303B00213628 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		48161DB2255D35D600213628 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		48161DB5255D35DF00213628 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		48161DB8255D35EC00213628 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		48161DBB255D35F700213628 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		48161DBE255D360C00213628 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		4825360125487FD5001C7316 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4825361E25488222001C7316 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48413407254ACC3700F7133E /* UIView+xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+xib.swift"; sourceTree = "<group>"; };
@@ -54,6 +67,7 @@
 		48E06FDC255AC8A9006C49B2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSharedSessionDelegate.swift; sourceTree = "<group>"; };
 		48EB1CBC255977DF00962D53 /* RecipesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesView.xib; sourceTree = "<group>"; };
+		48EC3C21255D382000A93771 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,7 @@
 				4825361E25488222001C7316 /* LoginViewController.swift */,
 				4841340B254ACD8F00F7133E /* LoginView.xib */,
 				48413412254ACF7700F7133E /* LoginAssembly.swift */,
+				48161DAF255D303B00213628 /* LoginInteractor.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -93,6 +108,11 @@
 		483A2D8F255BE5AB00F5E537 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				48161DB2255D35D600213628 /* SplashViewController.swift */,
+				48161DB5255D35DF00213628 /* SplashView.swift */,
+				48161DB8255D35EC00213628 /* SplashAssembly.swift */,
+				48161DBB255D35F700213628 /* SplashPresenter.swift */,
+				48161DBE255D360C00213628 /* SplashView.xib */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -105,6 +125,7 @@
 				489F976325587C6C00FD51DF /* RecipesViewController.swift */,
 				489F976625587C7B00FD51DF /* RecipesAssembly.swift */,
 				48EB1CBC255977DF00962D53 /* RecipesView.xib */,
+				48EC3C21255D382000A93771 /* RecipesInteractor.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -229,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */,
+				48161DBF255D360D00213628 /* SplashView.xib in Resources */,
 				48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */,
 				48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */,
 				48B13CE72545BE4700511922 /* Main.storyboard in Resources */,
@@ -243,21 +265,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				4825360225487FD5001C7316 /* LoginView.swift in Sources */,
+				48161DB3255D35D600213628 /* SplashViewController.swift in Sources */,
+				48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */,
 				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
 				48B13CE42545BE4700511922 /* ViewController.swift in Sources */,
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
+				48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */,
 				48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */,
 				48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */,
 				48413408254ACC3700F7133E /* UIView+xib.swift in Sources */,
 				489F976725587C7B00FD51DF /* RecipesAssembly.swift in Sources */,
 				48B13CE22545BE4700511922 /* SceneDelegate.swift in Sources */,
+				48161DB6255D35DF00213628 /* SplashView.swift in Sources */,
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
 				489F976E25587CA400FD51DF /* Module.swift in Sources */,
 				489F976125587C4E00FD51DF /* RecipesView.swift in Sources */,
 				48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */,
+				48161DB9255D35EC00213628 /* SplashAssembly.swift in Sources */,
 				48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

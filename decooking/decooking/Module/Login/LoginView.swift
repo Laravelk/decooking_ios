@@ -8,28 +8,30 @@
 import UIKit
 
 protocol ILoginView : AnyObject {
-    var onLoginTapHandler: (() -> Void)? { get set }
+    var onLoginTapHandler: ((_ email: String, _ password: String) -> Void)? { get set }
     var onForgotTapHandler: (() -> Void)? { get set }
     var onRegisterTapHandler: (() -> Void)? { get set }
 }
 
 
 class LoginView: UIView, ILoginView {
+    
     @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var register: UIButton!
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var entrance: UIButton!
     @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var passwordField: UITextField!
     
-    var onLoginTapHandler: (() -> Void)?
+    var onLoginTapHandler: ((String, String) -> Void)?
     var onForgotTapHandler: (() -> Void)?
     var onRegisterTapHandler: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.loginField.placeholder = "Введите пароль или логин"
+                
+        self.loginField.placeholder = "Введите email"
         self.loginField.layer.cornerRadius = 20
         self.loginField.borderStyle = UITextField.BorderStyle.roundedRect
 
@@ -57,7 +59,10 @@ class LoginView: UIView, ILoginView {
     }
     @IBAction func entranceAction(_ sender: Any) {
         guard let _ = onLoginTapHandler else { return }
-        self.onLoginTapHandler?()
+        guard let _ = loginField.text else { return }
+        guard let _ = passwordField.text else { return }
+        
+        self.onLoginTapHandler?(loginField.text!, passwordField.text!)
     }
     
 }
