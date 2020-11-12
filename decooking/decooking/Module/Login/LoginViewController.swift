@@ -8,17 +8,29 @@
 import UIKit
 
 class LoginViewController : UIViewController {
-    private var loginView: LoginView = LoginView.loadXib()
+    private var loginView: ILoginView = LoginView.loadXib()
     private var presenter: ILoginPresenter
+    private var interactor: ILoginInteractor
 
-    init(presenter: ILoginPresenter) {
-//        loginView.onLoginTapHandler = { _ in
-//            var login: String  = loginView.loginField.text ?? "login"
-//            var password: String = loginView.passwordField.text ?? "password"
-//        }
+    init(presenter: ILoginPresenter, interactor: ILoginInteractor) {
         self.presenter = presenter
+        self.interactor = interactor
         presenter.didLoad(ui: loginView)
         super.init(nibName: nil, bundle: nil)
+        
+        loginView.onLoginTapHandler = { (email, password) in
+            let authentication = interactor.getAuthentication(email, password)
+            print("hello")
+        }
+        
+        loginView.onForgotTapHandler = {
+            
+        }
+        
+        loginView.onRegisterTapHandler = {
+            
+        }
+        
     }
     
     required init?(coder: NSCoder) {
@@ -26,7 +38,11 @@ class LoginViewController : UIViewController {
     }
     
     override func loadView() {
-        self.view = self.loginView
+        guard let view = self.loginView as? UIView else {
+            assertionFailure("Login view is not UIView")
+            return
+        }
+        self.view = view
     }
 
     override func viewDidLoad() {
