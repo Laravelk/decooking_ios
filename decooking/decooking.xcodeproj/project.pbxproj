@@ -18,6 +18,9 @@
 		48413408254ACC3700F7133E /* UIView+xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48413407254ACC3700F7133E /* UIView+xib.swift */; };
 		4841340C254ACD8F00F7133E /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4841340B254ACD8F00F7133E /* LoginView.xib */; };
 		48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48413412254ACF7700F7133E /* LoginAssembly.swift */; };
+		489130CE255EE913005174BF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489130CD255EE913005174BF /* LoginRouter.swift */; };
+		489130D1255EE942005174BF /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489130D0255EE942005174BF /* RegisterRouter.swift */; };
+		489130D4255EE96E005174BF /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489130D3255EE96E005174BF /* SplashRouter.swift */; };
 		489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F975C25587C4500FD51DF /* RecipesPresenter.swift */; };
 		489F976125587C4E00FD51DF /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F976025587C4E00FD51DF /* RecipesView.swift */; };
 		489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F976325587C6C00FD51DF /* RecipesViewController.swift */; };
@@ -35,6 +38,12 @@
 		48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */; };
 		48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB1CBC255977DF00962D53 /* RecipesView.xib */; };
 		48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C21255D382000A93771 /* RecipesInteractor.swift */; };
+		48EC3C2D255D70AD00A93771 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C2C255D70AD00A93771 /* RegisterPresenter.swift */; };
+		48EC3C31255D70B600A93771 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C30255D70B600A93771 /* RegisterView.swift */; };
+		48EC3C34255D70C500A93771 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C33255D70C500A93771 /* RegisterViewController.swift */; };
+		48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C36255D70D100A93771 /* RegisterAssembly.swift */; };
+		48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */; };
+		48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EC3C3C255D70F100A93771 /* RegisterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +58,9 @@
 		48413407254ACC3700F7133E /* UIView+xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+xib.swift"; sourceTree = "<group>"; };
 		4841340B254ACD8F00F7133E /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		48413412254ACF7700F7133E /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		489130CD255EE913005174BF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		489130D0255EE942005174BF /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		489130D3255EE96E005174BF /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		489F975C25587C4500FD51DF /* RecipesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesPresenter.swift; sourceTree = "<group>"; };
 		489F976025587C4E00FD51DF /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		489F976325587C6C00FD51DF /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +80,12 @@
 		48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSharedSessionDelegate.swift; sourceTree = "<group>"; };
 		48EB1CBC255977DF00962D53 /* RecipesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesView.xib; sourceTree = "<group>"; };
 		48EC3C21255D382000A93771 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
+		48EC3C2C255D70AD00A93771 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		48EC3C30255D70B600A93771 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		48EC3C33255D70C500A93771 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		48EC3C36255D70D100A93771 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		48EC3C3C255D70F100A93771 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +102,7 @@
 		482535FD25487F7D001C7316 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				48EC3C2B255D709E00A93771 /* Register */,
 				483A2D8F255BE5AB00F5E537 /* Splash */,
 				489F975B25587C1700FD51DF /* Recipes */,
 				482535FF25487FB6001C7316 /* Login */,
@@ -175,6 +194,9 @@
 		48E06FDA255AC892006C49B2 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				489130CD255EE913005174BF /* LoginRouter.swift */,
+				489130D0255EE942005174BF /* RegisterRouter.swift */,
+				489130D3255EE96E005174BF /* SplashRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -187,6 +209,19 @@
 				48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */,
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		48EC3C2B255D709E00A93771 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				48EC3C2C255D70AD00A93771 /* RegisterPresenter.swift */,
+				48EC3C30255D70B600A93771 /* RegisterView.swift */,
+				48EC3C33255D70C500A93771 /* RegisterViewController.swift */,
+				48EC3C36255D70D100A93771 /* RegisterAssembly.swift */,
+				48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */,
+				48EC3C3C255D70F100A93771 /* RegisterView.xib */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +288,7 @@
 				48161DBF255D360D00213628 /* SplashView.xib in Resources */,
 				48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */,
 				48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */,
+				48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */,
 				48B13CE72545BE4700511922 /* Main.storyboard in Resources */,
 				4841340C254ACD8F00F7133E /* LoginView.xib in Resources */,
 			);
@@ -265,10 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
+				489130D1255EE942005174BF /* RegisterRouter.swift in Sources */,
 				4825360225487FD5001C7316 /* LoginView.swift in Sources */,
 				48161DB3255D35D600213628 /* SplashViewController.swift in Sources */,
+				48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */,
 				48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */,
 				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
@@ -281,11 +320,16 @@
 				489F976725587C7B00FD51DF /* RecipesAssembly.swift in Sources */,
 				48B13CE22545BE4700511922 /* SceneDelegate.swift in Sources */,
 				48161DB6255D35DF00213628 /* SplashView.swift in Sources */,
+				48EC3C34255D70C500A93771 /* RegisterViewController.swift in Sources */,
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
+				48EC3C2D255D70AD00A93771 /* RegisterPresenter.swift in Sources */,
 				489F976E25587CA400FD51DF /* Module.swift in Sources */,
 				489F976125587C4E00FD51DF /* RecipesView.swift in Sources */,
 				48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */,
+				489130D4255EE96E005174BF /* SplashRouter.swift in Sources */,
+				48EC3C31255D70B600A93771 /* RegisterView.swift in Sources */,
 				48161DB9255D35EC00213628 /* SplashAssembly.swift in Sources */,
+				489130CE255EE913005174BF /* LoginRouter.swift in Sources */,
 				48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

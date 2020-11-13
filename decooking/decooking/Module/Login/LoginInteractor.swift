@@ -20,7 +20,9 @@ class LoginInteractor: ILoginInteractor {
     }
     
     func getAuthentication(_ email: String, _ password: String) -> AuthenticationData {
-        let authentication = network?.getAuthentication(email: email, password: password)
+        let authentication = network?.getAuthentication(email: email, password: password) { returnValue in
+            print("hhh")
+        }
         return AuthenticationData(answer: 2, username: "Ivan", token: "321312safdsad213") // TODO: do function
     }
 }
