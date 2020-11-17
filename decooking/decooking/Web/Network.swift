@@ -14,7 +14,7 @@ class Network {
     
     public enum RequestResult<Value> {
         case success(Value)
-        case failure(Error)
+        case failure(RequestError)
     }
     
     public enum RequestError: Error {
@@ -29,33 +29,30 @@ class Network {
         self.session = URLSession(configuration: configuration, delegate: URLSharedSessionDelegate() , delegateQueue: nil)
     }
     
-    private func getData<Value: Decodable>(url: String) -> RequestResult<Value> {
-            var returnValue: RequestResult<Value> = RequestResult<Value>.failure(RequestError.loadFailed)
-            guard let url = URL(string: url) else {
-                return RequestResult.failure(RequestError.wrongURL)
+    private func getData<Value: Decodable>(url: String, completion: @escaping (RequestResult<Value>) -> Void) {
+             guard let url = URL(string: url) else {
+                completion(.failure(.wrongURL))
+                return
             }
 
-            session.dataTask(with: url) { (data, response, error) in
+            self.session.dataTask(with: url) { (data, response, error) in
                 guard let data = data else {
-                    returnValue = RequestResult<Value>.failure(RequestError.loadFailed)
+                    completion(.failure(.loadFailed))
                     return
                 }
                 do {
-                    let loginSuccess = try self.decoder.decode(Value.self, from: data)
-                    returnValue = RequestResult.success(loginSuccess)
+                    let decodingResult = try self.decoder.decode(Value.self, from: data)
+                    completion(.success(decodingResult))
                 } catch is DecodingError {
-                    returnValue = RequestResult.failure(RequestError.failedToDecode)
+                    completion(.failure(RequestError.failedToDecode))
                 } catch {
-                    returnValue = RequestResult.failure(RequestError.unknownError)
+                    completion(.failure(RequestError.unknownError))
                 }
             }.resume()
-            return returnValue
         }
     
-    public func getAuthentication(email: String, password: String) -> RequestResult<AuthenticationData> {
-        let url: String = URLBase + "user/?email=\(email)?password=\(password)"
-        return getData(url: url)
-    }
-    
-    
+    public func getNearestEvents(email: String, password: String,completion: @escaping (RequestResult<AuthenticationData>) -> Void) {
+            let url: String = URLBase + "user/?email=\(email)?password=\(password)"
+            self.getData(url: url, completion: completion)
+        }
 }
