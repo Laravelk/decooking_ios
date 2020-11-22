@@ -33,6 +33,7 @@
 		48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CE82545BE4B00511922 /* Assets.xcassets */; };
 		48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CEA2545BE4B00511922 /* LaunchScreen.storyboard */; };
 		48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CF72545BE7A00511922 /* LoginPresenter.swift */; };
+		48BB656B256561D700F4B583 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB656A256561D700F4B583 /* AppRouter.swift */; };
 		48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */; };
 		48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FDC255AC8A9006C49B2 /* Network.swift */; };
 		48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */; };
@@ -75,6 +76,7 @@
 		48B13CEB2545BE4B00511922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B13CED2545BE4B00511922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B13CF72545BE7A00511922 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		48BB656A256561D700F4B583 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationData.swift; sourceTree = "<group>"; };
 		48E06FDC255AC8A9006C49B2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSharedSessionDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				489130CD255EE913005174BF /* LoginRouter.swift */,
 				489130D0255EE942005174BF /* RegisterRouter.swift */,
 				489130D3255EE96E005174BF /* SplashRouter.swift */,
+				48BB656A256561D700F4B583 /* AppRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
+				48BB656B256561D700F4B583 /* AppRouter.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				489130D1255EE942005174BF /* RegisterRouter.swift in Sources */,

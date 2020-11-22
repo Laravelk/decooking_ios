@@ -7,51 +7,26 @@
 
 import UIKit
 
-enum firstWindow {
-    case Main // если мы уже залогинены
-    case Login
-}
-
 protocol ISplashRouter {
-    func show(on: UIWindow)
-    func showLogin()
-    func showMain()
+    var pushLoginRouter: (() -> Void)? { get set }
+    var pushMainRouter: (() -> Void)? { get set}
 }
 
 class SplashRouter: ISplashView {
-    private weak var window: UIWindow?
     private weak var network: Network?
     
-    init(network: Network) {
+    var pushLoginRouter: (() -> Void)?
+    var pushMainRouter: (() -> Void)?
+    
+    init(network: Network, toLogin: @escaping () -> Void, toMain: @escaping () -> Void) {
         self.network = network
-        // check cache
-    }
-    
-    func show(on window: UIWindow) {
-        self.window = window
+        self.pushMainRouter = toMain
+        self.pushLoginRouter = toLogin
         
-        // тут будем решать, что показывать дальше
-        // сейчас просто показываем Login
-        
-        self.showLogin()
-    }
-    
-    func showLogin() {
-        guard let window = self.window else {
-            return
-        }
-        guard let network = self.network else {
-            return
-        }
-    
-        let loginModule = LoginAssembly.makeModule(network: self.network!)
-        let viewController = loginModule.viewController
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-    }
-    
-    func showMain() {
-        // code
+        // Если пользователь не заходил в приложение, то логин
+        // Если пользователь заходил в приложение, то основной экран
+        guard let loginClosure = pushLoginRouter else { return }
+        guard let mainClosure = pushMainRouter else { return }
+        loginClosure()
     }
 }
