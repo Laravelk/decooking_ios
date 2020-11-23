@@ -35,6 +35,7 @@
 		48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CF72545BE7A00511922 /* LoginPresenter.swift */; };
 		48BB656B256561D700F4B583 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB656A256561D700F4B583 /* AppRouter.swift */; };
 		48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */; };
+		48D9E120256BF894003D71BE /* LoginFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */; };
 		48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FDC255AC8A9006C49B2 /* Network.swift */; };
 		48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */; };
 		48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB1CBC255977DF00962D53 /* RecipesView.xib */; };
@@ -78,6 +79,7 @@
 		48B13CF72545BE7A00511922 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		48BB656A256561D700F4B583 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationData.swift; sourceTree = "<group>"; };
+		48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowRouter.swift; sourceTree = "<group>"; };
 		48E06FDC255AC8A9006C49B2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSharedSessionDelegate.swift; sourceTree = "<group>"; };
 		48EB1CBC255977DF00962D53 /* RecipesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesView.xib; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		482535FF25487FB6001C7316 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				489130CD255EE913005174BF /* LoginRouter.swift */,
 				48B13CF72545BE7A00511922 /* LoginPresenter.swift */,
 				4825360125487FD5001C7316 /* LoginView.swift */,
 				4825361E25488222001C7316 /* LoginViewController.swift */,
@@ -130,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				48161DB2255D35D600213628 /* SplashViewController.swift */,
+				489130D3255EE96E005174BF /* SplashRouter.swift */,
 				48161DB5255D35DF00213628 /* SplashView.swift */,
 				48161DB8255D35EC00213628 /* SplashAssembly.swift */,
 				48161DBB255D35F700213628 /* SplashPresenter.swift */,
@@ -196,10 +200,8 @@
 		48E06FDA255AC892006C49B2 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				489130CD255EE913005174BF /* LoginRouter.swift */,
-				489130D0255EE942005174BF /* RegisterRouter.swift */,
-				489130D3255EE96E005174BF /* SplashRouter.swift */,
 				48BB656A256561D700F4B583 /* AppRouter.swift */,
+				48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				48EC3C2C255D70AD00A93771 /* RegisterPresenter.swift */,
+				489130D0255EE942005174BF /* RegisterRouter.swift */,
 				48EC3C30255D70B600A93771 /* RegisterView.swift */,
 				48EC3C33255D70C500A93771 /* RegisterViewController.swift */,
 				48EC3C36255D70D100A93771 /* RegisterAssembly.swift */,
@@ -306,6 +309,7 @@
 			files = (
 				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
 				48BB656B256561D700F4B583 /* AppRouter.swift in Sources */,
+				48D9E120256BF894003D71BE /* LoginFlowRouter.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				489130D1255EE942005174BF /* RegisterRouter.swift in Sources */,

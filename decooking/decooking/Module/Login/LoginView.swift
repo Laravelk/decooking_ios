@@ -15,7 +15,6 @@ protocol ILoginView : AnyObject {
 
 
 class LoginView: UIView, ILoginView {
-    
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var register: UIButton!
@@ -33,12 +32,12 @@ class LoginView: UIView, ILoginView {
                 
         self.loginField.placeholder = "Введите email"
         self.loginField.layer.cornerRadius = 20
-        self.loginField.borderStyle = UITextField.BorderStyle.roundedRect
+        self.loginField.borderStyle = .roundedRect
 
         self.passwordField.textColor = .black
         self.passwordField.placeholder = "Введите пароль"
         self.passwordField.layer.cornerRadius = 20
-        self.passwordField.borderStyle = UITextField.BorderStyle.roundedRect
+        self.passwordField.borderStyle = .roundedRect
 
         self.forgotPassword.setTitleColor(.blue, for: .normal)
 
@@ -61,7 +60,6 @@ class LoginView: UIView, ILoginView {
         guard let _ = onLoginTapHandler else { return }
         guard let _ = loginField.text else { return }
         guard let _ = passwordField.text else { return }
-        
         self.onLoginTapHandler?(loginField.text!, passwordField.text!)
     }
     

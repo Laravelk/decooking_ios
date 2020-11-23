@@ -8,48 +8,21 @@
 import UIKit
 
 protocol IAppRouter {
-    func showLogin()
-    func showMain()
+    func pushLoginFlow() -> Void
 }
 
-class AppRouter {
-    weak var window: UIWindow?
-    weak var network: Network?
-    var splashRouter: ISplashRouter?
+class AppRouter: IAppRouter {
+    weak var window: UIWindow!
+    weak var network: Network!
+    var loginFlowRouter: LoginFlowRouter?
     
     init(window: UIWindow, network: Network) {
         self.window = window
         self.network = network
-        pushSplashRouter()
-    }
-}
-
-extension AppRouter: IAppRouter {
-    func pushSplashRouter() {
-        guard let network = self.network else { return }
-        let onLogin: () -> Void = { [weak self] in
-            self?.showLogin()
-        }
-        
-        let onMain: () -> Void = { [weak self] in
-            self?.showMain()
-        }
-        let splashRouter: SplashRouter = SplashRouter(network: network, toLogin: onLogin, toMain: onMain)
-        }
-    
-    func showMain() {
-        // тут будет создаваться основной роутер
+        pushLoginFlow()
     }
     
-    func showLogin() {
-        guard let window = self.window else { return }
-        guard let network = self.network else { return }
-        let loginModule = LoginAssembly.makeModule(network: network)
-        let firstViewConroller = loginModule.viewController
-        let navigationConroller = UINavigationController(rootViewController: firstViewConroller)
-        window.rootViewController = navigationConroller
-        window.makeKeyAndVisible()
+    func pushLoginFlow() {
+        loginFlowRouter = LoginFlowRouter(on: self.window, appRouter: self, network: network)
     }
-    
-    
-}
+}   

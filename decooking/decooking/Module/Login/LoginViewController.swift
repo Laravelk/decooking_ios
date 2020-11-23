@@ -17,20 +17,6 @@ class LoginViewController : UIViewController {
         self.interactor = interactor
         presenter.didLoad(ui: loginView)
         super.init(nibName: nil, bundle: nil)
-        
-        loginView.onLoginTapHandler = { (email, password) in
-            let authentication = interactor.getAuthentication(email, password)
-            print("hello")
-        }
-        
-        loginView.onForgotTapHandler = {
-            
-        }
-        
-        loginView.onRegisterTapHandler = {
-            
-        }
-        
     }
     
     required init?(coder: NSCoder) {
