@@ -41,6 +41,12 @@ class LoginFlowRouter: ILoginFlowRouter {
         }
         
         let splashRouter = SplashRouter(network: self.network, toLogin: loginCompletion, toMain: mainCompletion)
+        let splashModule = SplashAssembly.makeModule(network: self.network, router: splashRouter)
+        let firstViewController = splashModule.viewController
+        let navigationController = UINavigationController(rootViewController: firstViewController)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+        splashModule.presenter.moveToScreen()
     }
     
     func pushMain() {
@@ -83,7 +89,6 @@ class LoginFlowRouter: ILoginFlowRouter {
         }
         
         let loginRouter = LoginRouter(toRegister: register, toForgotPassword: forgotPassword, toLogin: wasLoged)
-        
         let loginModule = LoginAssembly.makeModule(network: network, router: loginRouter)
         let firstViewConroller = loginModule.viewController
         let navigationConroller = UINavigationController(rootViewController: firstViewConroller)

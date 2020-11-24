@@ -7,10 +7,10 @@
 
 import UIKit
 
-protocol ISplashView: AnyObject {
-    
-}
+protocol ISplashView : AnyObject {}
 
 class SplashView: UIView, ISplashView {
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }

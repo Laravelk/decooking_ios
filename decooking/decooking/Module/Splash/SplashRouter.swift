@@ -8,25 +8,27 @@
 import UIKit
 
 protocol ISplashRouter {
-    var pushLoginRouter: (() -> Void)? { get set }
-    var pushMainRouter: (() -> Void)? { get set}
+    var pushLogin: (() -> Void)! { get set }
+    var pushMain: (() -> Void)! { get set }
 }
 
-class SplashRouter: ISplashView {
-    private weak var network: Network?
+class SplashRouter: ISplashRouter {
+    private weak var network: Network!
     
-    var pushLoginRouter: (() -> Void)?
-    var pushMainRouter: (() -> Void)?
-    
+    var pushLogin: (() -> Void)!
+    var pushMain: (() -> Void)!
+        
     init(network: Network, toLogin: @escaping () -> Void, toMain: @escaping () -> Void) {
         self.network = network
-        self.pushMainRouter = toMain
-        self.pushLoginRouter = toLogin
-        
-        // Если пользователь не заходил в приложение, то логин
-        // Если пользователь заходил в приложение, то основной экран
-        guard let loginClosure = pushLoginRouter else { return }
-        guard let mainClosure = pushMainRouter else { return }
-        loginClosure()
+        self.pushLogin = toLogin
+        self.pushMain = toMain
+    }
+    
+    func moveToLogin() {
+        pushLogin()
+    }
+    
+    func moveToMain() {
+        pushMain()
     }
 }
