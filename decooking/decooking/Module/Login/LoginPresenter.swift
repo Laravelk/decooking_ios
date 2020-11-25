@@ -9,7 +9,7 @@ import Foundation
 
 protocol ILoginPresenter {
     func didLoad(ui: ILoginView)
-    var router: ILoginRouter? { get set }
+    var router: ILoginRouter! { get set }
     var onRegisterPress: (() -> Void)? { get set }
     var onLoginPress: ((String, String) -> Void)? { get set }
     var onForgotPress: (() -> Void)? { get set }
@@ -21,10 +21,13 @@ class LoginPresenter : ILoginPresenter {
     var onRegisterPress: (() -> Void)?
     
     private weak var ui: ILoginView?
-    var router: ILoginRouter?
     
-    init(router: ILoginRouter?) {
+    var router: ILoginRouter!
+    var interactor: ILoginInteractor!
+    
+    init(router: ILoginRouter?, interactor: ILoginInteractor) {
         self.router = router
+        self.interactor = interactor
     }
 
     func didLoad(ui: ILoginView) {
@@ -37,6 +40,7 @@ class LoginPresenter : ILoginPresenter {
         
         ui.onLoginTapHandler = { [weak self] (email, password) in
             guard let router = self?.router else { return }
+            self?.interactor.getAuthentication(email, password)
             router.pushLogin(email: email, password: password)
         }
         

@@ -10,11 +10,9 @@ import UIKit
 class LoginViewController : UIViewController {
     private var loginView: ILoginView = LoginView.loadXib()
     private var presenter: ILoginPresenter
-    private var interactor: ILoginInteractor
 
-    init(presenter: ILoginPresenter, interactor: ILoginInteractor) {
+    init(presenter: ILoginPresenter) {
         self.presenter = presenter
-        self.interactor = interactor
         presenter.didLoad(ui: loginView)
         super.init(nibName: nil, bundle: nil)
     }
