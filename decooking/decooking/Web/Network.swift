@@ -23,6 +23,7 @@ class Network {
         case loadFailed
         case failedToDecode
         case catchedError(error: Error)
+        case backendError(number: Int)
         case noLoadedDataYet
         case wrongParameters
     }
@@ -44,6 +45,8 @@ class Network {
                 completion(.failure(.loadFailed))
                 return
             }
+            
+            
             do {
                 let decodingResult = try self.decoder.decode(Value.self, from: data)
                 completion(.success(decodingResult))
@@ -77,6 +80,12 @@ class Network {
                completion(.failure(.loadFailed))
                return
            }
+            
+            if let response = response as? HTTPURLResponse {
+                completion(.failure(RequestError.backEndError(number: response.statusCode)))
+                return
+            }
+            
            do {
                let decodingResult = try self.decoder.decode(Value.self, from: data)
                completion(.success(decodingResult))
