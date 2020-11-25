@@ -27,6 +27,8 @@
 		489F976725587C7B00FD51DF /* RecipesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F976625587C7B00FD51DF /* RecipesAssembly.swift */; };
 		489F976E25587CA400FD51DF /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F976D25587CA400FD51DF /* Module.swift */; };
 		48AC755E256D284F00EBBD09 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AC755D256D284F00EBBD09 /* SplashInteractor.swift */; };
+		48AC7562256D3D2900EBBD09 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AC7561256D3D2900EBBD09 /* BaseRouter.swift */; };
+		48AC7565256D6C9600EBBD09 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AC7564256D6C9600EBBD09 /* ScreenKey.swift */; };
 		48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CDF2545BE4700511922 /* AppDelegate.swift */; };
 		48B13CE22545BE4700511922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CE12545BE4700511922 /* SceneDelegate.swift */; };
 		48B13CE42545BE4700511922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CE32545BE4700511922 /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 		489F976625587C7B00FD51DF /* RecipesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesAssembly.swift; sourceTree = "<group>"; };
 		489F976D25587CA400FD51DF /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		48AC755D256D284F00EBBD09 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		48AC7561256D3D2900EBBD09 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		48AC7564256D6C9600EBBD09 /* ScreenKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
 		48B13CDC2545BE4700511922 /* decooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = decooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B13CDF2545BE4700511922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B13CE12545BE4700511922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			children = (
 				48BB656A256561D700F4B583 /* AppRouter.swift */,
 				48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */,
+				48AC7561256D3D2900EBBD09 /* BaseRouter.swift */,
+				48AC7564256D6C9600EBBD09 /* ScreenKey.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -319,9 +325,11 @@
 				4825360225487FD5001C7316 /* LoginView.swift in Sources */,
 				48161DB3255D35D600213628 /* SplashViewController.swift in Sources */,
 				48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */,
+				48AC7562256D3D2900EBBD09 /* BaseRouter.swift in Sources */,
 				48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */,
 				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
+				48AC7565256D6C9600EBBD09 /* ScreenKey.swift in Sources */,
 				48B13CE42545BE4700511922 /* ViewController.swift in Sources */,
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
 				48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */,
