@@ -8,13 +8,11 @@
 import UIKit
 
 class SplashViewController : UIViewController {
-    private var splashView: SplashView = SplashView.loadXib()
-    private var presenter: ISplashPresenter
-    private var interactor: ISplashInteractor
+    var splashView: SplashView = SplashView.loadXib()
+    var presenter: ISplashPresenter!
 
-    init(presenter: ISplashPresenter, interactor: ISplashInteractor) {
+    init(presenter: ISplashPresenter) {
         self.presenter = presenter
-        self.interactor = interactor
         
         presenter.didLoad(ui: splashView)
         super.init(nibName: nil, bundle: nil)

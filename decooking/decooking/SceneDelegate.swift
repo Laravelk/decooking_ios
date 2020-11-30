@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     lazy var network = Network()
-    var appRouter: AppRouter?
+    var appRouter: newAppRouter?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         self.window?.windowScene = windowScene
 
-        self.appRouter = AppRouter(window: window, network: network)
+        self.appRouter = newAppRouter(on: window)
         
 //        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
 //        window?.windowScene = windowScene

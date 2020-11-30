@@ -9,23 +9,13 @@ import Foundation
 
 protocol ISplashPresenter {
     func didLoad(ui: ISplashView)
-    func moveToScreen()
-    var router: ISplashRouter! { get set }
 }
 
-class SplashPresenter {
+class SplashPresenter: BasePresenter<ISplashInteractor, ISplashRouter>, ISplashPresenter {
     private weak var ui: ISplashView?
-    var router: ISplashRouter!
     
-    init(router: ISplashRouter?) {
-        self.router = router
-    }
-}
-
-extension SplashPresenter: ISplashPresenter {
-    func moveToScreen() {
-        // use core data
-        router.pushLogin()
+    override init(interactor: ISplashInteractor, router: ISplashRouter) {
+        super.init(interactor: interactor, router: router)
     }
     
     func didLoad(ui: ISplashView) {

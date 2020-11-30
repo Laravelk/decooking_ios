@@ -82,7 +82,7 @@ class Network {
            }
             
             if let response = response as? HTTPURLResponse {
-                completion(.failure(RequestError.backEndError(number: response.statusCode)))
+                completion(.failure(RequestError.backendError(number: response.statusCode)))
                 return
             }
             

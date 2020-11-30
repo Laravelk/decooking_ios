@@ -49,6 +49,7 @@
 		48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C36255D70D100A93771 /* RegisterAssembly.swift */; };
 		48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */; };
 		48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EC3C3C255D70F100A93771 /* RegisterView.xib */; };
+		48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA0E25753F0A00E29547 /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		48EC3C36255D70D100A93771 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
 		48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		48EC3C3C255D70F100A93771 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		48F2CA0E25753F0A00E29547 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				489F975B25587C1700FD51DF /* Recipes */,
 				482535FF25487FB6001C7316 /* Login */,
 				489F976D25587CA400FD51DF /* Module.swift */,
+				48F2CA0E25753F0A00E29547 /* Presenter.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
 				48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */,
 				48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */,
+				48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */,
 				48AC755E256D284F00EBBD09 /* SplashInteractor.swift in Sources */,
 				48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */,
 				48413408254ACC3700F7133E /* UIView+xib.swift in Sources */,

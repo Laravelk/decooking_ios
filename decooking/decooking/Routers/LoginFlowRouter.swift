@@ -32,21 +32,11 @@ class LoginFlowRouter: ILoginFlowRouter {
     }
     
     func pushSplash() {
-        let loginCompletion: () -> Void = { [weak self] in
-            self?.pushLogin()
-        }
-        
-        let mainCompletion: () -> Void = { [weak self] in
-            self?.pushMain()
-        }
-        
-        let splashRouter = SplashRouter(network: self.network, toLogin: loginCompletion, toMain: mainCompletion)
-        let splashModule = SplashAssembly.makeModule(network: self.network, router: splashRouter)
+        let splashModule = SplashAssembly.makeModule()
         let firstViewController = splashModule.viewController
         let navigationController = UINavigationController(rootViewController: firstViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        splashModule.presenter.moveToScreen()
     }
     
     func pushMain() {
@@ -65,36 +55,11 @@ class LoginFlowRouter: ILoginFlowRouter {
     }
     
     func pushLogin() {
-        let register: () -> Void = { [weak self] in
-            guard let router = self else {
-                return
-            }
-            router.pushRegister()
-        }
-        
-        let forgotPassword: () -> Void = { [weak self] in
-            guard let router = self else {
-                return
-            }
-            
-            router.pushForgot()
-        }
-        
-        let wasLoged: (String, String) -> Void = { [weak self] (email, password) in
-            guard let router = self else {
-                return
-            }
-            
-            router.pushLogin()
-        }
-        
-        let loginRouter = LoginRouter(toRegister: register, toForgotPassword: forgotPassword, toLogin: wasLoged)
-        let loginModule = LoginAssembly.makeModule(network: network, router: loginRouter)
-        let firstViewConroller = loginModule.viewController
-        let navigationConroller = UINavigationController(rootViewController: firstViewConroller)
-        window.rootViewController = navigationConroller
-        window.makeKeyAndVisible()
+//        let loginRouter = LoginRouter()
+//        let loginModule = LoginAssembly.makeModule(network: network, router: loginRouter)
+//        let firstViewConroller = loginModule.viewController
+//        let navigationConroller = UINavigationController(rootViewController: firstViewConroller)
+//        window.rootViewController = navigationConroller
+//        window.makeKeyAndVisible()
     }
-    
-    
 }

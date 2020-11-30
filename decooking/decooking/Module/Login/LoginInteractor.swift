@@ -8,15 +8,15 @@
 import Foundation
 
 protocol ILoginInteractor {
-    var network: Network? { get set }
+    var network: Network! { get set }
     func getAuthentication(_ email: String, _ password: String) -> Void
 }
 
 class LoginInteractor: ILoginInteractor {
-    var network: Network?
+    var network: Network!
     
-    init(network: Network) {
-        self.network = network
+    init() {
+        self.network = Network()
     }
     
     func getAuthentication(_ email: String, _ password: String) -> Void {

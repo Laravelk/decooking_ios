@@ -13,7 +13,8 @@ protocol ISplashInteractor {
 
 class SplashInteractor: ISplashInteractor {
     var network: Network!
-    init(network: Network) {
-        self.network = network
+    
+    init() {
+        self.network = Network()
     }
 }
