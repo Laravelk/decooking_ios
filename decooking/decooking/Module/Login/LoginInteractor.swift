@@ -9,7 +9,7 @@ import Foundation
 
 protocol ILoginInteractor {
     var network: Network? { get set }
-    func getAuthentication(_ email: String, _ password: String) -> AuthenticationData
+    func getAuthentication(_ email: String, _ password: String) -> Void
 }
 
 class LoginInteractor: ILoginInteractor {
@@ -19,7 +19,11 @@ class LoginInteractor: ILoginInteractor {
         self.network = network
     }
     
-    func getAuthentication(_ email: String, _ password: String) -> AuthenticationData {
-        return AuthenticationData(answer: 2, username: "f", token: "Fdsfds") // TODO: function
+    func getAuthentication(_ email: String, _ password: String) -> Void {
+        network?.getAuthentication(email: email, password: password) {
+            (data: Network.RequestResult<AuthenticationData>) in
+            print(data)
+        }
+        
     }
 }

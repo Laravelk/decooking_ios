@@ -10,17 +10,23 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     lazy var network = Network()
+    var appRouter: AppRouter?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        self.window = window
+        self.window?.windowScene = windowScene
+
+        self.appRouter = AppRouter(window: window, network: network)
         
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
-        let loginModel = LoginAssembly.makeModule(network: self.network)
-        let firstViewController =  loginModel.viewController
-        let navigationController = UINavigationController(rootViewController: firstViewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+//        window?.windowScene = windowScene
+//        let loginModel = LoginAssembly.makeModule(network: self.network)
+//        let firstViewController =  loginModel.viewController
+//        let navigationController = UINavigationController(rootViewController: firstViewController)
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

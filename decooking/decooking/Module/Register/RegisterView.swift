@@ -21,19 +21,23 @@ class RegisterView: UIView, IRegisterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        username.placeholder = "Введите username"
-        username.layer.cornerRadius = 20
+        self.username.placeholder = "Введите username"
+        self.username.layer.cornerRadius = 20
+        self.username.borderStyle = .roundedRect
         
-        email.placeholder = "Введите email"
-        email.layer.cornerRadius = 20
+        self.email.placeholder = "Введите email"
+        self.email.layer.cornerRadius = 20
+        self.email.borderStyle = .roundedRect
         
-        password.placeholder = "Придумайте пароль"
-        password.layer.cornerRadius = 20
+        self.password.placeholder = "Придумайте пароль"
+        self.password.layer.cornerRadius = 20
+        self.password.borderStyle = .roundedRect
         
-        register.layer.cornerRadius = 20
+        self.register.layer.cornerRadius = 10
+        self.register.backgroundColor = .gray
         
-        error.text = " "
-        error.isHidden = true
+        self.error.text = " "
+        self.error.isHidden = true
     }
     
 }

@@ -10,27 +10,11 @@ import UIKit
 class LoginViewController : UIViewController {
     private var loginView: ILoginView = LoginView.loadXib()
     private var presenter: ILoginPresenter
-    private var interactor: ILoginInteractor
 
-    init(presenter: ILoginPresenter, interactor: ILoginInteractor) {
+    init(presenter: ILoginPresenter) {
         self.presenter = presenter
-        self.interactor = interactor
         presenter.didLoad(ui: loginView)
         super.init(nibName: nil, bundle: nil)
-        
-        loginView.onLoginTapHandler = { (email, password) in
-            let authentication = interactor.getAuthentication(email, password)
-            print("hello")
-        }
-        
-        loginView.onForgotTapHandler = {
-            
-        }
-        
-        loginView.onRegisterTapHandler = {
-            
-        }
-        
     }
     
     required init?(coder: NSCoder) {

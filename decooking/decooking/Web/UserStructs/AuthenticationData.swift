@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct AuthenticationData : Decodable {
-    var answer: Int // true is 1, false is 0
+struct AuthenticationData : Codable {
+    var answerCode: Int // 1 – почта или пароль неверные, 0 – все хорошо
     var username: String
     var token: String
 }

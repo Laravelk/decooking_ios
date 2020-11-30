@@ -32,5 +32,4 @@ class RecipesViewController : UIViewController {
         super.viewDidLoad()
         self.presenter.didLoad(ui: self.recepiesView)
     }
-    
 }
