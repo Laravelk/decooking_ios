@@ -1,20 +1,16 @@
 //
-//  RegisterRouter.swift
+//  ForgotRouter.swift
 //  decooking
 //
-//  Created by Иван Морозов on 13.11.2020.
+//  Created by Иван Морозов on 02.12.2020.
 //
 
 import UIKit
 
+protocol IForgotRouter {}
 
-protocol IRegisterRouter {
-    
-}
-
-class RegisterRouter : IRegisterRouter, BaseRouting {
+class ForgotRouter: IForgotRouter, BaseRouting {
     var viewController: UIViewController?
-    
     func setViewController(viewController: UIViewController) {
         self.viewController = viewController
     }
@@ -24,14 +20,12 @@ class RegisterRouter : IRegisterRouter, BaseRouting {
     }
     
     func presentScreen(with key: ScreenKey, data: Any?) {
-    
+        
     }
     
     func exit() {
         
     }
     
-    init() {
-        
-    }
+    
 }

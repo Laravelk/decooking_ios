@@ -13,8 +13,8 @@ class SplashViewController : UIViewController {
 
     init(presenter: ISplashPresenter) {
         self.presenter = presenter
-        
         presenter.didLoad(ui: splashView)
+        
         super.init(nibName: nil, bundle: nil)
     }
     

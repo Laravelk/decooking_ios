@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol ISplashRouter {
+protocol ISplashRouter: BaseRouting {
     
 }
 
-class SplashRouter: BaseRouting, ISplashRouter {
+class SplashRouter: ISplashRouter {
     weak var viewController: UIViewController?
     
     func setViewController(viewController: UIViewController) {
@@ -36,7 +36,13 @@ class SplashRouter: BaseRouting, ISplashRouter {
     }
     
     func presentScreen(with key: ScreenKey, data: Any?) {
-        
+        switch key {
+        case .login:
+            let module = LoginAssembly.makeModule()
+            viewController?.present(module.viewController, animated: false, completion: nil)
+        default:
+            break
+        }
     }
     
     func exit() {

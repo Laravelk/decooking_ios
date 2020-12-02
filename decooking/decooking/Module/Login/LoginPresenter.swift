@@ -14,31 +14,29 @@ protocol ILoginPresenter {
     var onForgotPress: (() -> Void)? { get set }
 }
 
-class LoginPresenter : BasePresenter<ILoginInteractor, ILoginRouter>,ILoginPresenter {
+class LoginPresenter : BasePresenter<ILoginInteractor, ILoginRouter>, ILoginPresenter {
     var onForgotPress: (() -> Void)?
     var onLoginPress: ((_ email: String, _ password: String) -> Void)?
     var onRegisterPress: (() -> Void)?
     
     private weak var ui: ILoginView?
-    
-    override init(interactor: ILoginInteractor, router: ILoginRouter) {
-        super.init(interactor: interactor, router: router)
-    }
 
     func didLoad(ui: ILoginView) {
         self.ui = ui
         
-        ui.onRegisterTapHandler = { [weak self]() in
-            guard let router = self?.router else { return }
+        guard let superRouter = router as? LoginRouter else { return }
+        
+        ui.onRegisterTapHandler = { [weak superRouter]() in
+            superRouter?.routeToScreen(with: .register, data: nil)
         }
         
         ui.onLoginTapHandler = { [weak self] (email, password) in
             guard let router = self?.router else { return }
-            self?.interactor.getAuthentication(email, password)
+            var status = self?.interactor.getAuthentication(email, password)
         }
         
-        ui.onForgotTapHandler = { [weak self]() in
-            guard let router = self?.router else { return }
+        ui.onForgotTapHandler = { [weak superRouter]() in
+            superRouter?.routeToScreen(with: .forgot, data: nil)
         }
     }
 }

@@ -14,7 +14,7 @@ protocol IRecipesInteractor: class {
 class RecipesInteractor: IRecipesInteractor {
     var network: Network!
     
-    init(network: Network) {
-        self.network = network
+    init() {
+        self.network = Network()
     }
 }

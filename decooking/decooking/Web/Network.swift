@@ -88,6 +88,7 @@ class Network {
             
            do {
                let decodingResult = try self.decoder.decode(Value.self, from: data)
+            print("SSSS")
                completion(.success(decodingResult))
            } catch is DecodingError {
                completion(.failure(RequestError.failedToDecode))
@@ -102,4 +103,10 @@ class Network {
         let parameters: [String:String] = ["email": email, "password": password]
         self.postData(url: url, parameters: parameters, completion: completion)
         }
+    
+    public func register(username: String, email: String, password: String, completion: @escaping (RequestResult<RegisterData>) -> Void) {
+        let url: String = URLBase + "/dev/register"
+        let parameters: [String:String] = ["username": username, "email": email, "password": password]
+        self.postData(url: url, parameters: parameters, completion: completion)
+    }
 }

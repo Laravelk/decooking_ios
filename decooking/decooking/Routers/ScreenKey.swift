@@ -12,4 +12,6 @@ enum ScreenKey {
     case register
     case splash
     case recipes
+    case forgot
+    case forgotConform
 }

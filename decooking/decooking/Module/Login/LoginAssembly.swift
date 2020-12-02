@@ -9,18 +9,21 @@ import Foundation
 
 enum LoginAssembly {
     static func makeModule() -> Module<LoginPresenter> {
-        // Interactor
-        let interactor = LoginInteractor()
-        
         // Router
         let router = LoginRouter()
+        
+        // Interactor
+        let interactor = LoginInteractor()
         
         // Presenter
         let presenter = LoginPresenter(interactor: interactor, router: router)
         
         // ViewController
-        let loginController = LoginViewController(presenter: presenter)
+        let controller = LoginViewController(presenter: presenter)
+        
+        // Dependency Setup
+        router.setViewController(viewController: controller)
     
-        return Module<LoginPresenter>(viewController: loginController, presenter: presenter)
+        return Module<LoginPresenter>(viewController: controller, presenter: presenter)
     }
 }

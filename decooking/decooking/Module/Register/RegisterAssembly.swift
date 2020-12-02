@@ -9,10 +9,19 @@ import Foundation
 
 enum RegisterAssembly {
     static func makeModule() -> Module<RegisterPresenter> {
-        let presenter = RegisterPresenter()
+        
+        // Router
+        let router = RegisterRouter()
+        
+        // Interactor
         let interactor = RegisterInteractor()
-        let loginController = RegisterViewController(presenter: presenter, interactor: interactor)
-        let loginModule = Module<RegisterPresenter>(viewController: loginController, presenter: presenter)
-        return loginModule
+        
+        // Presenter
+        let presenter = RegisterPresenter(interactor: interactor, router: router)
+        
+        // ViewController
+        let loginController = RegisterViewController(presenter: presenter)
+        
+        return Module<RegisterPresenter>(viewController: loginController, presenter: presenter)
     }
 }

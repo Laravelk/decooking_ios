@@ -10,12 +10,9 @@ import UIKit
 class RegisterViewController : UIViewController {
     private var registerView: RegisterView = RegisterView.loadXib()
     private var presenter: IRegisterPresenter
-    private var interactor: IRegisterInteractor
 
-    init(presenter: IRegisterPresenter, interactor: IRegisterInteractor) {
+    init(presenter: IRegisterPresenter) {
         self.presenter = presenter
-        self.interactor = interactor
-        
         presenter.didLoad(ui: registerView)
         super.init(nibName: nil, bundle: nil)
     }

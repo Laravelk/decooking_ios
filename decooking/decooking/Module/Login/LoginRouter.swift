@@ -19,14 +19,25 @@ class LoginRouter: BaseRouting, ILoginRouter {
     }
     
     func routeToScreen(with key: ScreenKey, data: Any?) {
+        guard let viewController = self.viewController else { return }
+        var destinationVC: UIViewController? = nil
+
         switch key {
+        case .forgot:
+            let module = ForgotAssembly.makeModule()
+            destinationVC = module.viewController
         case .register:
-            break
+            let module = RegisterAssembly.makeModule()
+            destinationVC = module.viewController
         case .recipes:
-            break
+            let module = RecipesAssembly.makeModule()
+            destinationVC = module.viewController
         default:
             break
         }
+        
+        guard let destination = destinationVC else { return }
+        viewController.navigationController?.pushViewController(destination, animated: false)
     }
     
     func presentScreen(with key: ScreenKey, data: Any?) {

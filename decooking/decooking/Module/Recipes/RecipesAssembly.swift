@@ -8,11 +8,21 @@
 import Foundation
 
 enum RecipesAssembly {
-    static func makeModule(network: Network/*, router: IRecepiesRouter*/) -> Module<RecipesPresenter> {
+    static func makeModule() -> Module<RecipesPresenter> {
+        
+        // Router
+//        let router = RecipesRouter()
+        
+        // Presenter
         let presenter = RecipesPresenter()
-        let interactor = RecipesInteractor(network: network)
-        let loginController = RecipesViewController(presenter: presenter, interactor: interactor)
-        let loginModule = Module<RecipesPresenter>(viewController: loginController, presenter: presenter)
-        return loginModule
+        
+        // Interactor
+        let interactor = RecipesInteractor()
+        
+        // Controller
+        let controller = RecipesViewController(presenter: presenter, interactor: interactor)
+        
+        // Setup depency
+        return Module<RecipesPresenter>(viewController: controller, presenter: presenter)
     }
 }
