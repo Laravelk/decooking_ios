@@ -82,8 +82,11 @@ class Network {
            }
             
             if let response = response as? HTTPURLResponse {
-                completion(.failure(RequestError.backEndError(number: response.statusCode)))
-                return
+                let correctCode = 200
+                if correctCode != response.statusCode {
+                    completion(.failure(RequestError.backendError(number: response.statusCode)))
+                    return
+                }
             }
             
            do {
@@ -102,4 +105,16 @@ class Network {
         let parameters: [String:String] = ["email": email, "password": password]
         self.postData(url: url, parameters: parameters, completion: completion)
         }
+    
+    public func register(username: String, email: String, password: String, completion: @escaping (RequestResult<RegisterData>) -> Void) {
+        let url: String = URLBase + "/dev/register"
+        let parameters: [String:String] = ["username": username, "email": email, "password": password]
+        self.postData(url: url, parameters: parameters, completion: completion)
+    }
+    
+    public func resetPassword(email: String, completion: @escaping (RequestResult<ForgotData>) -> Void) {
+        let url: String = URLBase + "/dev/login/reset_password"
+        let parameters: [String:String] = ["email": email]
+        self.postData(url: url, parameters: parameters, completion: completion)
+    }
 }

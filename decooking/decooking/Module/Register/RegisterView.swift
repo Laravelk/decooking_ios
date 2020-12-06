@@ -7,9 +7,15 @@
 
 import UIKit
 
-protocol IRegisterView : AnyObject {}
+protocol IRegisterView : AnyObject {
+    var onRegister: ((String, String, String) -> Void)? { get set }
+    var onBack: (() -> Void)? { get set }
+}
 
 class RegisterView: UIView, IRegisterView {
+    var onRegister: ((_ username: String, _ email: String, _ password: String) -> Void)?
+    var onBack: (() -> Void)?
+    
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var haveAccount: UIButton!
@@ -38,6 +44,18 @@ class RegisterView: UIView, IRegisterView {
         
         self.error.text = " "
         self.error.isHidden = true
+    }
+    
+    @IBAction func backAction(_ sender: Any) {
+        guard let onBack = self.onBack else { return }
+        onBack()
+    }
+    @IBAction func registerAction(_ sender: Any) {
+        guard let onRegister = self.onRegister else { return }
+        guard let username = self.username.text else { return }
+        guard let email = self.email.text else { return }
+        guard let password = self.password.text else { return }
+        onRegister(username, email, password)
     }
     
 }

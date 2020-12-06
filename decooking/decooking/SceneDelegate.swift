@@ -18,15 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         self.window?.windowScene = windowScene
 
-        self.appRouter = AppRouter(window: window, network: network)
-        
-//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//        window?.windowScene = windowScene
-//        let loginModel = LoginAssembly.makeModule(network: self.network)
-//        let firstViewController =  loginModel.viewController
-//        let navigationController = UINavigationController(rootViewController: firstViewController)
-//        window?.rootViewController = navigationController
-//        window?.makeKeyAndVisible()
+        self.appRouter = AppRouter(on: window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -56,7 +48,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+}
 
-
+extension SceneDelegate {
+    static var shared: SceneDelegate {
+        return UIApplication.shared.delegate as! SceneDelegate
+    }
+    
+//    var rootViewController: UIViewController? {
+//        return window?.rootViewController?
+//    }
 }
 

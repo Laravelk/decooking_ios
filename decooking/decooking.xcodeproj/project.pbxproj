@@ -36,9 +36,16 @@
 		48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CE82545BE4B00511922 /* Assets.xcassets */; };
 		48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CEA2545BE4B00511922 /* LaunchScreen.storyboard */; };
 		48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CF72545BE7A00511922 /* LoginPresenter.swift */; };
-		48BB656B256561D700F4B583 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB656A256561D700F4B583 /* AppRouter.swift */; };
 		48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */; };
-		48D9E120256BF894003D71BE /* LoginFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */; };
+		48D3BA332577E8ED00B71B35 /* ForgotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D3BA322577E8ED00B71B35 /* ForgotData.swift */; };
+		48DB32EA2577972E0075E4F0 /* ForgotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32E92577972E0075E4F0 /* ForgotRouter.swift */; };
+		48DB32EF2577973A0075E4F0 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32EE2577973A0075E4F0 /* ForgotView.swift */; };
+		48DB32F22577974B0075E4F0 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32F12577974B0075E4F0 /* ForgotViewController.swift */; };
+		48DB32F52577975C0075E4F0 /* ForgotInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32F42577975C0075E4F0 /* ForgotInteractor.swift */; };
+		48DB32F82577976C0075E4F0 /* ForgotPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32F72577976C0075E4F0 /* ForgotPresenter.swift */; };
+		48DB32FB257797770075E4F0 /* ForgotAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32FA257797770075E4F0 /* ForgotAssembly.swift */; };
+		48DB330C25779E1D0075E4F0 /* ForgotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48DB330B25779E1D0075E4F0 /* ForgotView.xib */; };
+		48DB331C2577BB140075E4F0 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB331B2577BB140075E4F0 /* RegisterData.swift */; };
 		48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FDC255AC8A9006C49B2 /* Network.swift */; };
 		48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */; };
 		48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB1CBC255977DF00962D53 /* RecipesView.xib */; };
@@ -49,6 +56,8 @@
 		48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C36255D70D100A93771 /* RegisterAssembly.swift */; };
 		48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */; };
 		48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EC3C3C255D70F100A93771 /* RegisterView.xib */; };
+		48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA0E25753F0A00E29547 /* Presenter.swift */; };
+		48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA2C25754D8100E29547 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,9 +92,16 @@
 		48B13CEB2545BE4B00511922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B13CED2545BE4B00511922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B13CF72545BE7A00511922 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		48BB656A256561D700F4B583 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationData.swift; sourceTree = "<group>"; };
-		48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowRouter.swift; sourceTree = "<group>"; };
+		48D3BA322577E8ED00B71B35 /* ForgotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotData.swift; sourceTree = "<group>"; };
+		48DB32E92577972E0075E4F0 /* ForgotRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRouter.swift; sourceTree = "<group>"; };
+		48DB32EE2577973A0075E4F0 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
+		48DB32F12577974B0075E4F0 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		48DB32F42577975C0075E4F0 /* ForgotInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotInteractor.swift; sourceTree = "<group>"; };
+		48DB32F72577976C0075E4F0 /* ForgotPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPresenter.swift; sourceTree = "<group>"; };
+		48DB32FA257797770075E4F0 /* ForgotAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotAssembly.swift; sourceTree = "<group>"; };
+		48DB330B25779E1D0075E4F0 /* ForgotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotView.xib; sourceTree = "<group>"; };
+		48DB331B2577BB140075E4F0 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
 		48E06FDC255AC8A9006C49B2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		48E06FE3255AC97C006C49B2 /* URLSharedSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSharedSessionDelegate.swift; sourceTree = "<group>"; };
 		48EB1CBC255977DF00962D53 /* RecipesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesView.xib; sourceTree = "<group>"; };
@@ -96,6 +112,8 @@
 		48EC3C36255D70D100A93771 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
 		48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		48EC3C3C255D70F100A93771 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		48F2CA0E25753F0A00E29547 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		48F2CA2C25754D8100E29547 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +130,13 @@
 		482535FD25487F7D001C7316 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				48DB32E82577971A0075E4F0 /* Forgot */,
 				48EC3C2B255D709E00A93771 /* Register */,
 				483A2D8F255BE5AB00F5E537 /* Splash */,
 				489F975B25587C1700FD51DF /* Recipes */,
 				482535FF25487FB6001C7316 /* Login */,
 				489F976D25587CA400FD51DF /* Module.swift */,
+				48F2CA0E25753F0A00E29547 /* Presenter.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -200,17 +220,32 @@
 			isa = PBXGroup;
 			children = (
 				48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */,
+				48DB331B2577BB140075E4F0 /* RegisterData.swift */,
+				48D3BA322577E8ED00B71B35 /* ForgotData.swift */,
 			);
 			path = UserStructs;
+			sourceTree = "<group>";
+		};
+		48DB32E82577971A0075E4F0 /* Forgot */ = {
+			isa = PBXGroup;
+			children = (
+				48DB32E92577972E0075E4F0 /* ForgotRouter.swift */,
+				48DB32EE2577973A0075E4F0 /* ForgotView.swift */,
+				48DB32F12577974B0075E4F0 /* ForgotViewController.swift */,
+				48DB32F42577975C0075E4F0 /* ForgotInteractor.swift */,
+				48DB32F72577976C0075E4F0 /* ForgotPresenter.swift */,
+				48DB32FA257797770075E4F0 /* ForgotAssembly.swift */,
+				48DB330B25779E1D0075E4F0 /* ForgotView.xib */,
+			);
+			path = Forgot;
 			sourceTree = "<group>";
 		};
 		48E06FDA255AC892006C49B2 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				48BB656A256561D700F4B583 /* AppRouter.swift */,
-				48D9E11F256BF894003D71BE /* LoginFlowRouter.swift */,
 				48AC7561256D3D2900EBBD09 /* BaseRouter.swift */,
 				48AC7564256D6C9600EBBD09 /* ScreenKey.swift */,
+				48F2CA2C25754D8100E29547 /* AppRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -302,6 +337,7 @@
 				48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */,
 				48161DBF255D360D00213628 /* SplashView.xib in Resources */,
 				48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */,
+				48DB330C25779E1D0075E4F0 /* ForgotView.xib in Resources */,
 				48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */,
 				48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */,
 				48B13CE72545BE4700511922 /* Main.storyboard in Resources */,
@@ -317,8 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
-				48BB656B256561D700F4B583 /* AppRouter.swift in Sources */,
-				48D9E120256BF894003D71BE /* LoginFlowRouter.swift in Sources */,
+				48DB32F22577974B0075E4F0 /* ForgotViewController.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				489130D1255EE942005174BF /* RegisterRouter.swift in Sources */,
@@ -328,17 +363,22 @@
 				48AC7562256D3D2900EBBD09 /* BaseRouter.swift in Sources */,
 				48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */,
 				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
+				48DB32EF2577973A0075E4F0 /* ForgotView.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
 				48AC7565256D6C9600EBBD09 /* ScreenKey.swift in Sources */,
 				48B13CE42545BE4700511922 /* ViewController.swift in Sources */,
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
 				48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */,
 				48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */,
+				48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */,
+				48D3BA332577E8ED00B71B35 /* ForgotData.swift in Sources */,
 				48AC755E256D284F00EBBD09 /* SplashInteractor.swift in Sources */,
+				48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */,
 				48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */,
 				48413408254ACC3700F7133E /* UIView+xib.swift in Sources */,
 				489F976725587C7B00FD51DF /* RecipesAssembly.swift in Sources */,
 				48B13CE22545BE4700511922 /* SceneDelegate.swift in Sources */,
+				48DB32F82577976C0075E4F0 /* ForgotPresenter.swift in Sources */,
 				48161DB6255D35DF00213628 /* SplashView.swift in Sources */,
 				48EC3C34255D70C500A93771 /* RegisterViewController.swift in Sources */,
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
@@ -347,8 +387,12 @@
 				489F976125587C4E00FD51DF /* RecipesView.swift in Sources */,
 				48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */,
 				489130D4255EE96E005174BF /* SplashRouter.swift in Sources */,
+				48DB32F52577975C0075E4F0 /* ForgotInteractor.swift in Sources */,
+				48DB32EA2577972E0075E4F0 /* ForgotRouter.swift in Sources */,
 				48EC3C31255D70B600A93771 /* RegisterView.swift in Sources */,
 				48161DB9255D35EC00213628 /* SplashAssembly.swift in Sources */,
+				48DB331C2577BB140075E4F0 /* RegisterData.swift in Sources */,
+				48DB32FB257797770075E4F0 /* ForgotAssembly.swift in Sources */,
 				489130CE255EE913005174BF /* LoginRouter.swift in Sources */,
 				48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */,
 			);

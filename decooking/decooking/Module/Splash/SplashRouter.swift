@@ -7,28 +7,46 @@
 
 import UIKit
 
-protocol ISplashRouter {
-    var pushLogin: (() -> Void)! { get set }
-    var pushMain: (() -> Void)! { get set }
+protocol ISplashRouter: BaseRouting {
+    
 }
 
 class SplashRouter: ISplashRouter {
-    private weak var network: Network!
+    weak var viewController: UIViewController?
     
-    var pushLogin: (() -> Void)!
-    var pushMain: (() -> Void)!
+    func setViewController(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func routeToScreen(with key: ScreenKey, data: Any?) {
+        guard let viewController = self.viewController else { return }
         
-    init(network: Network, toLogin: @escaping () -> Void, toMain: @escaping () -> Void) {
-        self.network = network
-        self.pushLogin = toLogin
-        self.pushMain = toMain
+        var destinationVC: UIViewController? = nil
+        
+        switch key {
+        case .login:
+            let module = LoginAssembly.makeModule()
+            destinationVC = module.viewController
+        default:
+            break
+        }
+        
+        guard let destination = destinationVC else { return }
+        viewController.navigationController?.pushViewController(destination, animated: false)
     }
     
-    func moveToLogin() {
-        pushLogin()
+    func presentScreen(with key: ScreenKey, data: Any?) {
+        switch key {
+        case .login:
+            let module = LoginAssembly.makeModule()
+            viewController?.present(module.viewController, animated: false, completion: nil)
+        default:
+            break
+        }
     }
     
-    func moveToMain() {
-        pushMain()
+    func exit() {
+        
     }
 }
+

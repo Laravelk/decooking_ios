@@ -16,18 +16,14 @@ protocol BaseRouting: class {
 
 class RoutingLayer: NSObject, BaseRouting {
     weak var viewController: UIViewController?
-       
+
        func setViewController(viewController: UIViewController) {
            self.viewController = viewController
        }
        
-       func routeToScreen(with key: ScreenKey, data: Any?) {
-           
-       }
+       func routeToScreen(with key: ScreenKey, data: Any?) {}
        
-       func presentScreen(with key: ScreenKey, data: Any?) {
-           
-       }
+       func presentScreen(with key: ScreenKey, data: Any?) {}
        
        func exit() {
            if (isModal()) {

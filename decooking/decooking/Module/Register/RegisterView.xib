@@ -27,6 +27,9 @@
                     <state key="normal" title="Register">
                         <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     </state>
+                    <connections>
+                        <action selector="registerAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DaJ-1W-HAI"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUK-ld-WTa">
                     <rect key="frame" x="26" y="470" width="363" height="43"/>
@@ -44,6 +47,9 @@
                     <rect key="frame" x="63" y="597" width="288" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Есть аккаунт? Авторизуйтесь."/>
+                    <connections>
+                        <action selector="backAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Bdd-LV-ege"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-RA-Rel">
                     <rect key="frame" x="63" y="763" width="288" height="38"/>
