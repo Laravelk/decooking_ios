@@ -20,8 +20,11 @@ enum RegisterAssembly {
         let presenter = RegisterPresenter(interactor: interactor, router: router)
         
         // ViewController
-        let loginController = RegisterViewController(presenter: presenter)
+        let controller = RegisterViewController(presenter: presenter)
         
-        return Module<RegisterPresenter>(viewController: loginController, presenter: presenter)
+        // Depency setup
+        router.setViewController(viewController: controller)
+        
+        return Module<RegisterPresenter>(viewController: controller, presenter: presenter)
     }
 }

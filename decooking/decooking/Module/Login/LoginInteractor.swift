@@ -23,6 +23,14 @@ class LoginInteractor: ILoginInteractor {
         var status = false
         network.getAuthentication(email: email, password: password) { [status]
             (data: Network.RequestResult<AuthenticationData>) in
+            switch data {
+            case .failure(let error):
+                break
+            case .success(let data):
+                break
+            default:
+                break
+            }
         }
         return true
     }

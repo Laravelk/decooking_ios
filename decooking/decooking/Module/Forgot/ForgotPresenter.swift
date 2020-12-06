@@ -20,13 +20,16 @@ extension ForgotPresenter: IForgotPresenter {
         self.ui = ui
         
         guard let superRouter = super.router as? ForgotRouter else { return }
+        guard let superInteractor = super.interactor as? ForgotInteractor else { return }
         
-        ui.onSend = {[weak superRouter] in
-            superRouter?.presentScreen(with: .forgotConform, data: nil)
+        ui.onSend = {[weak superRouter, weak superInteractor] (email: String) in
+            superInteractor?.resetPassword(email: email)
+            // TODO: обработка ошибок
+            superRouter?.presentScreen(with: .login, data: nil)
         }
         
         ui.onBack = { [weak superRouter] in
-            superRouter?.routeToScreen(with: .login, data: nil) // TODO: .login -> .backToParentRouter
+            superRouter?.routeToScreen(with: .login, data: nil)
         }
     }
 }

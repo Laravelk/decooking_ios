@@ -22,7 +22,14 @@ class RegisterInteractor: IRegisterInteractor {
         var status = false
         network.register(username: username, email: email, password: password) { [status]
             (data: Network.RequestResult<RegisterData>) in
-            print(data)
+            switch data {
+            case .failure(let error):
+                break
+            case .success(let data):
+                break
+            default:
+                break
+            }
         }
         return status
     }

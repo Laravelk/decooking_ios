@@ -9,12 +9,12 @@ import UIKit
 
 protocol IForgotView : AnyObject {
     var onBack: (() -> Void)? { get set }
-    var onSend: (() -> Void)? { get set }
+    var onSend: ((String) -> Void)? { get set }
 }
 
 class ForgotView: UIView, IForgotView {
     var onBack: (() -> Void)?
-    var onSend: (() -> Void)?
+    var onSend: ((_ email: String) -> Void)?
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var backButton: UIButton!
@@ -39,7 +39,8 @@ class ForgotView: UIView, IForgotView {
     
     @IBAction func sendAction(_ sender: Any) {
         guard let onSend = self.onSend else { return }
-        onSend()
+        guard let email = emailField.text else { return }
+        onSend(email)
     }
     
 }
