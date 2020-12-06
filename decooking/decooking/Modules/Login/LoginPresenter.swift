@@ -31,8 +31,20 @@ class LoginPresenter : BasePresenter<ILoginInteractor, ILoginRouter>, ILoginPres
         }
         
         ui.onLoginTapHandler = { [weak self] (email, password) in
-            guard let router = self?.router else { return }
-            var status = self?.interactor.getAuthentication(email, password)
+            guard let router = self?.router as? LoginRouter else { return }
+            guard let interactor = self?.interactor as? LoginInteractor else { return }
+            guard let ui = self?.ui as? LoginView else { return }
+            
+            interactor.getAuthentication(email, password) { (data: Network.RequestResult<AuthenticationData>) in
+                    switch data {
+                    case .failure(_): // TODO: обработка ошибок
+                        ui.setAccountLabelError(text: "Invalid data")
+                        break
+                    case .success(_ /*let data*/):
+                        router.routeToScreen(with: .recipes, data: nil)
+                        break
+                    }
+                }
         }
         
         ui.onForgotTapHandler = { [weak superRouter]() in

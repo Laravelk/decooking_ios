@@ -16,7 +16,15 @@ class ForgotRouter: IForgotRouter, BaseRouting {
     }
     
     func routeToScreen(with key: ScreenKey, data: Any?) {
+        guard let viewController = self.viewController else { return }
         
+        switch key {
+        case .login:
+            viewController.navigationController?.popViewController(animated: true)
+            break
+        default:
+            break
+        }
     }
     
     func presentScreen(with key: ScreenKey, data: Any?) {
