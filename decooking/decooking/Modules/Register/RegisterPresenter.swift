@@ -27,9 +27,19 @@ extension RegisterPresenter: IRegisterPresenter {
         }
         
         ui.onRegister = { [weak superRouter, weak interactor](username: String, email: String, password: String) in
-            var status = interactor?.registerAccount(username: username, email: email, password: password)
-            // if true
-            superRouter?.routeToScreen(with: .login, data: nil)
+            interactor?.registerAccount(username: username, email: email, password: password) {
+                (data: Network.RequestResult<RegisterData>) in
+                switch data {
+                case .failure(_):
+                    superRouter?.routeToScreen(with: .login, data: nil)
+                    break
+                case .success(_):
+                    superRouter?.routeToScreen(with: .login, data: nil)
+                    break
+                default:
+                    break
+                }
+            }
         }
         
     }

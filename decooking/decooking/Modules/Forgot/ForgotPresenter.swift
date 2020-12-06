@@ -23,9 +23,17 @@ extension ForgotPresenter: IForgotPresenter {
         guard let superInteractor = super.interactor as? ForgotInteractor else { return }
         
         ui.onSend = {[weak superRouter, weak superInteractor] (email: String) in
-            superInteractor?.resetPassword(email: email)
-            // TODO: обработка ошибок
-            superRouter?.presentScreen(with: .login, data: nil)
+            superInteractor?.resetPassword(email) { [weak superRouter] (data: Network.RequestResult<ForgotData>) in
+                switch data {
+                case .failure( _): // TODO: в зависимости от ошибки реагировать
+                    superRouter?.routeToScreen(with: .login, data: nil)
+                    break
+                case .success( _):
+                    superRouter?.routeToScreen(with: .login, data: nil)
+                    break
+                }
+            }
+            
         }
         
         ui.onBack = { [weak superRouter] in

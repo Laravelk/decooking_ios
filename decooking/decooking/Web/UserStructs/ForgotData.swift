@@ -8,5 +8,5 @@
 import Foundation
 
 struct ForgotData: Codable {
-    var answerCode: String
+    var answerCode: Int
 }

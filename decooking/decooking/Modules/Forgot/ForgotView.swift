@@ -29,7 +29,7 @@ class ForgotView: UIView, IForgotView {
         
         self.backButton.setTitleColor(.white, for: .normal)
         self.backButton.backgroundColor = .blue
-        self.backButton.layer.cornerRadius = 10
+        self.backButton.layer.cornerRadius = 15
     }
     
     @IBAction func backAction(_ sender: Any) {

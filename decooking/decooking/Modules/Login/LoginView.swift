@@ -11,6 +11,8 @@ protocol ILoginView : AnyObject {
     var onLoginTapHandler: ((_ email: String, _ password: String) -> Void)? { get set }
     var onForgotTapHandler: (() -> Void)? { get set }
     var onRegisterTapHandler: (() -> Void)? { get set }
+    
+    func setAccountLabelError(text: String)
 }
 
 
@@ -47,6 +49,11 @@ class LoginView: UIView, ILoginView {
 
         self.register.setTitleColor(.red, for: .normal)
     }
+    
+    func setAccountLabelError(text: String) {
+        self.accountLabel.text = text
+    }
+    
     @IBAction func forgotAction(_ sender: Any) {
         guard let _ = onForgotTapHandler else { return }
         self.onForgotTapHandler?()
