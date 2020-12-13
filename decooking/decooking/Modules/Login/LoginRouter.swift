@@ -7,12 +7,16 @@
 
 import UIKit
 
-protocol ILoginRouter {
-    
-}
+protocol ILoginRouter {}
 
 class LoginRouter: BaseRouting, ILoginRouter {
+    
     weak var viewController: UIViewController?
+    weak var window: UIWindow?
+    
+    init(on: UIWindow?) {
+        self.window = on
+    }
     
     func setViewController(viewController: UIViewController) {
         self.viewController = viewController
@@ -21,6 +25,7 @@ class LoginRouter: BaseRouting, ILoginRouter {
     func routeToScreen(with key: ScreenKey, data: Any?) {
         guard let viewController = self.viewController else { return }
         var destinationVC: UIViewController? = nil
+        var destinationTVC: UITabBarController? = nil
 
         switch key {
         case .forgot:
@@ -29,15 +34,20 @@ class LoginRouter: BaseRouting, ILoginRouter {
         case .register:
             let module = RegisterAssembly.makeModule()
             destinationVC = module.viewController
-        case .recipes:
-            let module = RecipesAssembly.makeModule()
-            destinationVC = module.viewController
+        case .tabbar:
+            let module = TabBarAssembly.makeModule()
+            destinationTVC = module.controller
         default:
             break
         }
         
-        guard let destination = destinationVC else { return }
-        viewController.navigationController?.pushViewController(destination, animated: false)
+        if let destination = destinationVC {
+            viewController.navigationController?.pushViewController(destination, animated: false)
+        }
+        if let destination = destinationTVC {
+            let firstViewController = destination
+            window?.rootViewController = firstViewController
+        }
     }
     
     func presentScreen(with key: ScreenKey, data: Any?) {
@@ -47,6 +57,4 @@ class LoginRouter: BaseRouting, ILoginRouter {
     func exit() {
         
     }
-    
-    init() {}
 }

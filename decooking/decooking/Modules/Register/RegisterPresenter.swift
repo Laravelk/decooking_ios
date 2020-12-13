@@ -36,8 +36,6 @@ extension RegisterPresenter: IRegisterPresenter {
                 case .success(_):
                     superRouter?.routeToScreen(with: .login, data: nil)
                     break
-                default:
-                    break
                 }
             }
         }

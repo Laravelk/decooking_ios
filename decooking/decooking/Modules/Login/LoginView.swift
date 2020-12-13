@@ -35,11 +35,13 @@ class LoginView: UIView, ILoginView {
         self.loginField.placeholder = "Введите email"
         self.loginField.layer.cornerRadius = 20
         self.loginField.borderStyle = .roundedRect
+        self.loginField.enablesReturnKeyAutomatically = true
 
         self.passwordField.textColor = .black
         self.passwordField.placeholder = "Введите пароль"
         self.passwordField.layer.cornerRadius = 20
         self.passwordField.borderStyle = .roundedRect
+        self.passwordField.returnKeyType = UIReturnKeyType.done
 
         self.forgotPassword.setTitleColor(.blue, for: .normal)
 

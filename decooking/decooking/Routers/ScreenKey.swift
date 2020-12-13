@@ -14,4 +14,5 @@ enum ScreenKey {
     case recipes
     case forgot
     case forgotConform
+    case tabbar
 }

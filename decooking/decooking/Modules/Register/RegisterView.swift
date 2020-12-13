@@ -55,6 +55,9 @@ class RegisterView: UIView, IRegisterView {
         guard let username = self.username.text else { return }
         guard let email = self.email.text else { return }
         guard let password = self.password.text else { return }
+        guard username.count >= 1 else { return }
+        guard email.count >= 1 else { return }
+        guard password.count >= 1 else { return }
         onRegister(username, email, password)
     }
     

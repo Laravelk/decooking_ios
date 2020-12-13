@@ -28,7 +28,7 @@ class AppRouter: BaseRouting {
         var destinationVC: UIViewController? = nil
         switch key {
         case .splash:
-            let splashModule = SplashAssembly.makeModule()
+            let splashModule = SplashAssembly.makeModule(on: window)
             destinationVC = splashModule.viewController
         default:
             break
@@ -41,7 +41,6 @@ class AppRouter: BaseRouting {
         window.makeKeyAndVisible()
         
         guard let splashController = destination as? SplashViewController else { return }
-        
         splashController.presenter.choice()
     }
     

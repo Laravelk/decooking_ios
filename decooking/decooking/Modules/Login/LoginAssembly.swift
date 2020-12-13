@@ -5,12 +5,12 @@
 //  Created by Иван Морозов on 29.10.2020.
 //
 
-import Foundation
+import UIKit
 
 enum LoginAssembly {
-    static func makeModule() -> Module<LoginPresenter> {
+    static func makeModule(on: UIWindow?) -> Module<LoginPresenter> {
         // Router
-        let router = LoginRouter()
+        let router = LoginRouter(on: on)
         
         // Interactor
         let interactor = LoginInteractor()

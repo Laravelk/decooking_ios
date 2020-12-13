@@ -5,12 +5,12 @@
 //  Created by Иван Морозов on 12.11.2020.
 //
 
-import Foundation
+import UIKit
 
 enum SplashAssembly {
-    static func makeModule() -> Module<SplashPresenter> {
+    static func makeModule(on: UIWindow?) -> Module<SplashPresenter> {
         // Router
-        let router = SplashRouter()
+        let router = SplashRouter(on: on)
         
         // Interactor
         let interactor = SplashInteractor()

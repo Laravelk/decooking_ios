@@ -10,6 +10,7 @@ import UIKit
 protocol IRecipesView : AnyObject {}
 
 class RecipesView: UIView, IRecipesView {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

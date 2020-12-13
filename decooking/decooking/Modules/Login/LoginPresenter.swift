@@ -41,7 +41,7 @@ class LoginPresenter : BasePresenter<ILoginInteractor, ILoginRouter>, ILoginPres
                         ui.setAccountLabelError(text: "Invalid data")
                         break
                     case .success(_ /*let data*/):
-                        router.routeToScreen(with: .recipes, data: nil)
+                        router.routeToScreen(with: .tabbar, data: nil)
                         break
                     }
                 }
