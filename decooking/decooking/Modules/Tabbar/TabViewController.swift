@@ -13,8 +13,14 @@ protocol ITabBarViewController {
 class TabBarViewContoller: UITabBarController, ITabBarViewController {
     private var recipes: Module<RecipesPresenter>?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setTabBar()
     }
     
@@ -22,6 +28,13 @@ class TabBarViewContoller: UITabBarController, ITabBarViewController {
         recipes = RecipesAssembly.makeModule()
         
         guard let recipes = recipes else { return }
-        viewControllers = [recipes.viewController, UIViewController()]
+        recipes.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        let viewCont = UIViewController()
+        viewCont.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        let viewCont1 = UIViewController()
+        viewCont1.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 2)
+        let profile = UIViewController()
+        profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
+        viewControllers = [recipes.viewController, viewCont, viewCont1, profile]
     }
 }

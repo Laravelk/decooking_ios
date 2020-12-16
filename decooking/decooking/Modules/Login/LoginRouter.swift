@@ -46,7 +46,9 @@ class LoginRouter: BaseRouting, ILoginRouter {
         }
         if let destination = destinationTVC {
             let firstViewController = destination
-            window?.rootViewController = firstViewController
+            let navigationController = UINavigationController(rootViewController: firstViewController)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
         }
     }
     

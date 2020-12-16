@@ -16,3 +16,13 @@ extension UIView {
         return view
     }
 }
+
+//extension UIScrollView {
+//    static func loadXib<T>() -> T {
+//        let name =  String(describing: self)
+//        guard let view = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? T else {
+//            fatalError("Could not load view with type \(name)")
+//        }
+//        return view
+//    }
+//}

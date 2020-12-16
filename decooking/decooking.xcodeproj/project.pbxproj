@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA25B38DCF0AA450FE94BE1 /* Pods_decooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055475BAF688C9A093755056 /* Pods_decooking.framework */; };
+		4806C4DE258A6C24006F247C /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4806C4DD258A6C24006F247C /* Ingredient.swift */; };
 		48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DAF255D303B00213628 /* LoginInteractor.swift */; };
 		48161DB3255D35D600213628 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DB2255D35D600213628 /* SplashViewController.swift */; };
 		48161DB6255D35DF00213628 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48161DB5255D35DF00213628 /* SplashView.swift */; };
@@ -20,6 +22,8 @@
 		48413408254ACC3700F7133E /* UIView+xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48413407254ACC3700F7133E /* UIView+xib.swift */; };
 		4841340C254ACD8F00F7133E /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4841340B254ACD8F00F7133E /* LoginView.xib */; };
 		48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48413412254ACF7700F7133E /* LoginAssembly.swift */; };
+		486ED704258A56B30025F573 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486ED703258A56B30025F573 /* IngredientCell.swift */; };
+		486ED708258A56FF0025F573 /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486ED707258A56FF0025F573 /* IngredientCell.xib */; };
 		4885CAE0257D09A4005C6737 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885CADF257D09A4005C6737 /* TabViewController.swift */; };
 		4885CAE4257D09B9005C6737 /* TabbarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885CAE3257D09B9005C6737 /* TabbarPresenter.swift */; };
 		4885CAE7257D09CC005C6737 /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885CAE6257D09CC005C6737 /* TabBarAssembly.swift */; };
@@ -63,9 +67,12 @@
 		48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EC3C3C255D70F100A93771 /* RegisterView.xib */; };
 		48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA0E25753F0A00E29547 /* Presenter.swift */; };
 		48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA2C25754D8100E29547 /* AppRouter.swift */; };
+		48F77B6C258675D50064047D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F77B6B258675D50064047D /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055475BAF688C9A093755056 /* Pods_decooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_decooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4806C4DD258A6C24006F247C /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		48161DAF255D303B00213628 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		48161DB2255D35D600213628 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		48161DB5255D35DF00213628 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -79,6 +86,8 @@
 		48413407254ACC3700F7133E /* UIView+xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+xib.swift"; sourceTree = "<group>"; };
 		4841340B254ACD8F00F7133E /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		48413412254ACF7700F7133E /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		486ED703258A56B30025F573 /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		486ED707258A56FF0025F573 /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
 		4885CADF257D09A4005C6737 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		4885CAE3257D09B9005C6737 /* TabbarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarPresenter.swift; sourceTree = "<group>"; };
 		4885CAE6257D09CC005C6737 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
@@ -124,6 +133,9 @@
 		48EC3C3C255D70F100A93771 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		48F2CA0E25753F0A00E29547 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		48F2CA2C25754D8100E29547 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		48F77B6B258675D50064047D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		501030F27E9113F2261DC879 /* Pods-decooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-decooking.release.xcconfig"; path = "Target Support Files/Pods-decooking/Pods-decooking.release.xcconfig"; sourceTree = "<group>"; };
+		C4F991EDDF87671ED5009426 /* Pods-decooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-decooking.debug.xcconfig"; path = "Target Support Files/Pods-decooking/Pods-decooking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +143,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA25B38DCF0AA450FE94BE1 /* Pods_decooking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CF2AE5FD0BD87B8E51B4DC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				055475BAF688C9A093755056 /* Pods_decooking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		48182B6A25860A4B00011CAC /* TabbarModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +218,7 @@
 				4885CAEC257D4D03005C6737 /* TabBarView.xib */,
 				48182B6C25860BD200011CAC /* TabBarRouter.swift */,
 				48182B6F25860C0100011CAC /* TabBarInteractor.swift */,
+				48F77B6B258675D50064047D /* TabBarView.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -210,6 +232,8 @@
 				489F976625587C7B00FD51DF /* RecipesAssembly.swift */,
 				48EB1CBC255977DF00962D53 /* RecipesView.xib */,
 				48EC3C21255D382000A93771 /* RecipesInteractor.swift */,
+				486ED703258A56B30025F573 /* IngredientCell.swift */,
+				486ED707258A56FF0025F573 /* IngredientCell.xib */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -219,6 +243,8 @@
 			children = (
 				48B13CDE2545BE4700511922 /* decooking */,
 				48B13CDD2545BE4700511922 /* Products */,
+				49682C2EC4D69D0093A543FA /* Pods */,
+				1CF2AE5FD0BD87B8E51B4DC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +279,7 @@
 				48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */,
 				48DB331B2577BB140075E4F0 /* RegisterData.swift */,
 				48D3BA322577E8ED00B71B35 /* ForgotData.swift */,
+				4806C4DD258A6C24006F247C /* Ingredient.swift */,
 			);
 			path = UserStructs;
 			sourceTree = "<group>";
@@ -305,6 +332,15 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		49682C2EC4D69D0093A543FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4F991EDDF87671ED5009426 /* Pods-decooking.debug.xcconfig */,
+				501030F27E9113F2261DC879 /* Pods-decooking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48B13CF02545BE4B00511922 /* Build configuration list for PBXNativeTarget "decooking" */;
 			buildPhases = (
+				4D23D803BBEE6DBAC89426CB /* [CP] Check Pods Manifest.lock */,
 				48B13CD82545BE4700511922 /* Sources */,
 				48B13CD92545BE4700511922 /* Frameworks */,
 				48B13CDA2545BE4700511922 /* Resources */,
+				DBADB9ADEBA6DEB5019F733F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,6 +409,7 @@
 				48DB330C25779E1D0075E4F0 /* ForgotView.xib in Resources */,
 				48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */,
 				48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */,
+				486ED708258A56FF0025F573 /* IngredientCell.xib in Resources */,
 				4885CAED257D4D04005C6737 /* TabBarView.xib in Resources */,
 				48B13CE72545BE4700511922 /* Main.storyboard in Resources */,
 				4841340C254ACD8F00F7133E /* LoginView.xib in Resources */,
@@ -379,6 +418,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D23D803BBEE6DBAC89426CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-decooking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBADB9ADEBA6DEB5019F733F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-decooking/Pods-decooking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-decooking/Pods-decooking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-decooking/Pods-decooking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48B13CD82545BE4700511922 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -386,6 +467,7 @@
 			files = (
 				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
 				48DB32F22577974B0075E4F0 /* ForgotViewController.swift in Sources */,
+				48F77B6C258675D50064047D /* TabBarView.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				489130D1255EE942005174BF /* RegisterRouter.swift in Sources */,
@@ -399,12 +481,14 @@
 				48DB32EF2577973A0075E4F0 /* ForgotView.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
 				48AC7565256D6C9600EBBD09 /* ScreenKey.swift in Sources */,
+				486ED704258A56B30025F573 /* IngredientCell.swift in Sources */,
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
 				48182B6D25860BD200011CAC /* TabBarRouter.swift in Sources */,
 				48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */,
 				4885CAE4257D09B9005C6737 /* TabbarPresenter.swift in Sources */,
 				48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */,
 				48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */,
+				4806C4DE258A6C24006F247C /* Ingredient.swift in Sources */,
 				48D3BA332577E8ED00B71B35 /* ForgotData.swift in Sources */,
 				48AC755E256D284F00EBBD09 /* SplashInteractor.swift in Sources */,
 				48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */,
@@ -574,6 +658,7 @@
 		};
 		48B13CF12545BE4B00511922 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4F991EDDF87671ED5009426 /* Pods-decooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -593,6 +678,7 @@
 		};
 		48B13CF22545BE4B00511922 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501030F27E9113F2261DC879 /* Pods-decooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

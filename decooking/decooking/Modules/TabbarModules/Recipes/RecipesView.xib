@@ -10,12 +10,78 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Cr7-Sg-vBF" customClass="RecipesView" customModule="decooking" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="BB8-Fm-7Ev" customClass="RecipesView" customModule="decooking" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="21d-ll-i79"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8F-he-Daz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMP-jG-125" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-AU-e4x">
+                                    <rect key="frame" x="29" y="643" width="357" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Search"/>
+                                    <connections>
+                                        <action selector="searchAction:" destination="BB8-Fm-7Ev" eventType="touchUpInside" id="bRM-ou-wMg"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Введите ингредиент " textAlignment="natural" minimumFontSize="17" id="p3n-vz-cA8">
+                                    <rect key="frame" x="29" y="36" width="357" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-qP-84r">
+                                    <rect key="frame" x="29" y="553" width="357" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Save"/>
+                                    <connections>
+                                        <action selector="saveAction:" destination="BB8-Fm-7Ev" eventType="touchUpInside" id="dYE-ce-nRv"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-PM-KK4">
+                                    <rect key="frame" x="29" y="103" width="357" height="385"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="HMP-jG-125" firstAttribute="top" secondItem="A8F-he-Daz" secondAttribute="top" id="6g4-Po-XpO"/>
+                        <constraint firstAttribute="bottom" secondItem="HMP-jG-125" secondAttribute="bottom" id="JfQ-hI-rrq"/>
+                        <constraint firstItem="HMP-jG-125" firstAttribute="leading" secondItem="A8F-he-Daz" secondAttribute="leading" id="NmX-DL-2Nf"/>
+                        <constraint firstItem="HMP-jG-125" firstAttribute="height" secondItem="A8F-he-Daz" secondAttribute="height" id="d9Q-as-Uci"/>
+                        <constraint firstItem="HMP-jG-125" firstAttribute="width" secondItem="A8F-he-Daz" secondAttribute="width" id="lOL-Je-GQL"/>
+                        <constraint firstAttribute="trailing" secondItem="HMP-jG-125" secondAttribute="trailing" id="wGw-63-baa"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Xf9-NO-giW"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="DAB-KJ-uYB"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="hJd-fG-Xxj"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="-675" y="3"/>
+            <constraints>
+                <constraint firstItem="A8F-he-Daz" firstAttribute="leading" secondItem="hJd-fG-Xxj" secondAttribute="leading" id="1WO-e0-HRF"/>
+                <constraint firstItem="hJd-fG-Xxj" firstAttribute="top" secondItem="A8F-he-Daz" secondAttribute="top" constant="44" id="WNn-Mg-RYU"/>
+                <constraint firstItem="A8F-he-Daz" firstAttribute="bottom" secondItem="hJd-fG-Xxj" secondAttribute="bottom" constant="34" id="c9W-h7-uGi"/>
+                <constraint firstItem="hJd-fG-Xxj" firstAttribute="trailing" secondItem="A8F-he-Daz" secondAttribute="trailing" id="cee-wK-f3y"/>
+                <constraint firstItem="A8F-he-Daz" firstAttribute="width" secondItem="BB8-Fm-7Ev" secondAttribute="width" id="k0u-W3-b9n"/>
+                <constraint firstItem="A8F-he-Daz" firstAttribute="height" secondItem="BB8-Fm-7Ev" secondAttribute="height" id="yBW-sc-HNU"/>
+                <constraint firstItem="A8F-he-Daz" firstAttribute="leading" secondItem="BB8-Fm-7Ev" secondAttribute="leadingMargin" constant="-20" id="yJv-fS-rMj"/>
+            </constraints>
+            <connections>
+                <outlet property="SearchButton" destination="Sjs-AU-e4x" id="O8b-WT-tfB"/>
+                <outlet property="ingredientsTable" destination="BeI-PM-KK4" id="dWj-U2-Rfn"/>
+                <outlet property="saveButton" destination="VTE-qP-84r" id="zKN-S8-sKv"/>
+                <outlet property="searchButton" destination="Sjs-AU-e4x" id="UQW-Sd-E7A"/>
+                <outlet property="searchField" destination="p3n-vz-cA8" id="UJY-vY-9v5"/>
+            </connections>
+            <point key="canvasLocation" x="-1759.4202898550725" y="-1931.25"/>
         </view>
     </objects>
     <resources>

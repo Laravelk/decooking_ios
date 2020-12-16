@@ -13,11 +13,11 @@ enum RecipesAssembly {
         // Router
 //        let router = RecipesRouter()
         
-        // Presenter
-        let presenter = RecipesPresenter()
-        
         // Interactor
         let interactor = RecipesInteractor()
+        
+        // Presenter
+        let presenter = RecipesPresenter(interactor: interactor)
         
         // Controller
         let controller = RecipesViewController(presenter: presenter, interactor: interactor)

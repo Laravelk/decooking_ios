@@ -35,17 +35,24 @@ class Network {
     }
     
     private func getData<Value: Decodable>(url: String, completion: @escaping (RequestResult<Value>) -> Void) {
-         guard let url = URL(string: url) else {
+        guard let networkURL = URL(string: url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) else {
             completion(.failure(.wrongURL))
             return
         }
 
-        self.session.dataTask(with: url) { (data, response, error) in
+        self.session.dataTask(with: networkURL) { (data, response, error) in
             guard let data = data else {
                 completion(.failure(.loadFailed))
                 return
             }
-            
+                        
+            if let response = response as? HTTPURLResponse {
+                let correctCode = 200
+                if correctCode != response.statusCode {
+                    completion(.failure(RequestError.backendError(number: response.statusCode)))
+                    return
+                }
+            }
             
             do {
                 let decodingResult = try self.decoder.decode(Value.self, from: data)
@@ -116,5 +123,11 @@ class Network {
         let url: String = URLBase + "/dev/login/reset_password"
         let parameters: [String:String] = ["email": email]
         self.postData(url: url, parameters: parameters, completion: completion)
+    }
+    
+    public func getIngredients(part: String, completion: @escaping (RequestResult<Array<Ingredient>>) -> Void) {
+        let url = URLBase + "/dev/ingredients_type/" + part
+        print(url)
+        self.getData(url: url, completion: completion)
     }
 }
