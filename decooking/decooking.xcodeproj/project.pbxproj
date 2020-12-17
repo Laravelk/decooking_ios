@@ -46,6 +46,14 @@
 		48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B13CEA2545BE4B00511922 /* LaunchScreen.storyboard */; };
 		48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B13CF72545BE7A00511922 /* LoginPresenter.swift */; };
 		48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */; };
+		48C8FA67258B609B00FB0B0A /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA66258B609B00FB0B0A /* SearchAssembly.swift */; };
+		48C8FA6B258B60DE00FB0B0A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA6A258B60DE00FB0B0A /* SearchPresenter.swift */; };
+		48C8FA6E258B60F300FB0B0A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA6D258B60F300FB0B0A /* SearchViewController.swift */; };
+		48C8FA71258B610100FB0B0A /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA70258B610100FB0B0A /* SearchInteractor.swift */; };
+		48C8FA74258B611100FB0B0A /* SearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA73258B611100FB0B0A /* SearchCellView.swift */; };
+		48C8FA77258B614C00FB0B0A /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA76258B614C00FB0B0A /* SearchRouter.swift */; };
+		48C8FA7A258B8E0F00FB0B0A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8FA79258B8E0F00FB0B0A /* SearchView.swift */; };
+		48C8FA7D258B8FBF00FB0B0A /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C8FA7C258B8FBF00FB0B0A /* SearchView.xib */; };
 		48D3BA332577E8ED00B71B35 /* ForgotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D3BA322577E8ED00B71B35 /* ForgotData.swift */; };
 		48DB32EA2577972E0075E4F0 /* ForgotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32E92577972E0075E4F0 /* ForgotRouter.swift */; };
 		48DB32EF2577973A0075E4F0 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB32EE2577973A0075E4F0 /* ForgotView.swift */; };
@@ -65,6 +73,13 @@
 		48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C36255D70D100A93771 /* RegisterAssembly.swift */; };
 		48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */; };
 		48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EC3C3C255D70F100A93771 /* RegisterView.xib */; };
+		48ECCEE5258B999B00EF87EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECCEE4258B999B00EF87EF /* ProfileViewController.swift */; };
+		48ECCEE8258B99A500EF87EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECCEE7258B99A500EF87EF /* ProfileView.swift */; };
+		48ECCEEB258B99AE00EF87EF /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECCEEA258B99AE00EF87EF /* ProfileAssembly.swift */; };
+		48ECCEEE258B99B800EF87EF /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECCEED258B99B800EF87EF /* ProfileInteractor.swift */; };
+		48ECCEF1258B99C100EF87EF /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECCEF0258B99C100EF87EF /* ProfileRouter.swift */; };
+		48ECCEF4258B99CE00EF87EF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECCEF3258B99CE00EF87EF /* ProfilePresenter.swift */; };
+		48ECCEF7258BA74800EF87EF /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48ECCEF6258BA74800EF87EF /* ProfileView.xib */; };
 		48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA0E25753F0A00E29547 /* Presenter.swift */; };
 		48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA2C25754D8100E29547 /* AppRouter.swift */; };
 		48F77B6C258675D50064047D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F77B6B258675D50064047D /* TabBarView.swift */; };
@@ -112,6 +127,14 @@
 		48B13CED2545BE4B00511922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B13CF72545BE7A00511922 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		48C0FEDF255C4F9D00832202 /* AuthenticationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationData.swift; sourceTree = "<group>"; };
+		48C8FA66258B609B00FB0B0A /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
+		48C8FA6A258B60DE00FB0B0A /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		48C8FA6D258B60F300FB0B0A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		48C8FA70258B610100FB0B0A /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		48C8FA73258B611100FB0B0A /* SearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellView.swift; sourceTree = "<group>"; };
+		48C8FA76258B614C00FB0B0A /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		48C8FA79258B8E0F00FB0B0A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		48C8FA7C258B8FBF00FB0B0A /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		48D3BA322577E8ED00B71B35 /* ForgotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotData.swift; sourceTree = "<group>"; };
 		48DB32E92577972E0075E4F0 /* ForgotRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRouter.swift; sourceTree = "<group>"; };
 		48DB32EE2577973A0075E4F0 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
@@ -131,6 +154,13 @@
 		48EC3C36255D70D100A93771 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
 		48EC3C39255D70DC00A93771 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		48EC3C3C255D70F100A93771 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		48ECCEE4258B999B00EF87EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		48ECCEE7258B99A500EF87EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		48ECCEEA258B99AE00EF87EF /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		48ECCEED258B99B800EF87EF /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		48ECCEF0258B99C100EF87EF /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		48ECCEF3258B99CE00EF87EF /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		48ECCEF6258BA74800EF87EF /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		48F2CA0E25753F0A00E29547 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		48F2CA2C25754D8100E29547 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		48F77B6B258675D50064047D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -161,6 +191,9 @@
 		48182B6A25860A4B00011CAC /* TabbarModules */ = {
 			isa = PBXGroup;
 			children = (
+				48ECCEE2258B98CB00EF87EF /* Favorite */,
+				48ECCEE1258B982700EF87EF /* Profile */,
+				48C8FA65258B608A00FB0B0A /* Search */,
 				489F975B25587C1700FD51DF /* Recipes */,
 			);
 			path = TabbarModules;
@@ -284,6 +317,21 @@
 			path = UserStructs;
 			sourceTree = "<group>";
 		};
+		48C8FA65258B608A00FB0B0A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				48C8FA66258B609B00FB0B0A /* SearchAssembly.swift */,
+				48C8FA6A258B60DE00FB0B0A /* SearchPresenter.swift */,
+				48C8FA6D258B60F300FB0B0A /* SearchViewController.swift */,
+				48C8FA70258B610100FB0B0A /* SearchInteractor.swift */,
+				48C8FA73258B611100FB0B0A /* SearchCellView.swift */,
+				48C8FA76258B614C00FB0B0A /* SearchRouter.swift */,
+				48C8FA79258B8E0F00FB0B0A /* SearchView.swift */,
+				48C8FA7C258B8FBF00FB0B0A /* SearchView.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		48DB32E82577971A0075E4F0 /* Forgot */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +378,27 @@
 				48EC3C3C255D70F100A93771 /* RegisterView.xib */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		48ECCEE1258B982700EF87EF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				48ECCEE4258B999B00EF87EF /* ProfileViewController.swift */,
+				48ECCEE7258B99A500EF87EF /* ProfileView.swift */,
+				48ECCEEA258B99AE00EF87EF /* ProfileAssembly.swift */,
+				48ECCEED258B99B800EF87EF /* ProfileInteractor.swift */,
+				48ECCEF0258B99C100EF87EF /* ProfileRouter.swift */,
+				48ECCEF3258B99CE00EF87EF /* ProfilePresenter.swift */,
+				48ECCEF6258BA74800EF87EF /* ProfileView.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		48ECCEE2258B98CB00EF87EF /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		49682C2EC4D69D0093A543FA /* Pods */ = {
@@ -408,8 +477,10 @@
 				48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */,
 				48DB330C25779E1D0075E4F0 /* ForgotView.xib in Resources */,
 				48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */,
+				48C8FA7D258B8FBF00FB0B0A /* SearchView.xib in Resources */,
 				48EC3C3D255D70F100A93771 /* RegisterView.xib in Resources */,
 				486ED708258A56FF0025F573 /* IngredientCell.xib in Resources */,
+				48ECCEF7258BA74800EF87EF /* ProfileView.xib in Resources */,
 				4885CAED257D4D04005C6737 /* TabBarView.xib in Resources */,
 				48B13CE72545BE4700511922 /* Main.storyboard in Resources */,
 				4841340C254ACD8F00F7133E /* LoginView.xib in Resources */,
@@ -466,34 +537,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
+				48C8FA7A258B8E0F00FB0B0A /* SearchView.swift in Sources */,
 				48DB32F22577974B0075E4F0 /* ForgotViewController.swift in Sources */,
 				48F77B6C258675D50064047D /* TabBarView.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
+				48ECCEEB258B99AE00EF87EF /* ProfileAssembly.swift in Sources */,
 				4825361F25488222001C7316 /* LoginViewController.swift in Sources */,
 				489130D1255EE942005174BF /* RegisterRouter.swift in Sources */,
 				4825360225487FD5001C7316 /* LoginView.swift in Sources */,
 				48182B7025860C0100011CAC /* TabBarInteractor.swift in Sources */,
+				48C8FA74258B611100FB0B0A /* SearchCellView.swift in Sources */,
 				48161DB3255D35D600213628 /* SplashViewController.swift in Sources */,
 				48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */,
 				48AC7562256D3D2900EBBD09 /* BaseRouter.swift in Sources */,
 				48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */,
 				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
 				48DB32EF2577973A0075E4F0 /* ForgotView.swift in Sources */,
+				48ECCEE8258B99A500EF87EF /* ProfileView.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
 				48AC7565256D6C9600EBBD09 /* ScreenKey.swift in Sources */,
 				486ED704258A56B30025F573 /* IngredientCell.swift in Sources */,
 				489F976425587C6C00FD51DF /* RecipesViewController.swift in Sources */,
+				48ECCEEE258B99B800EF87EF /* ProfileInteractor.swift in Sources */,
 				48182B6D25860BD200011CAC /* TabBarRouter.swift in Sources */,
 				48161DBC255D35F700213628 /* SplashPresenter.swift in Sources */,
 				4885CAE4257D09B9005C6737 /* TabbarPresenter.swift in Sources */,
 				48B13CE02545BE4700511922 /* AppDelegate.swift in Sources */,
+				48C8FA6B258B60DE00FB0B0A /* SearchPresenter.swift in Sources */,
 				48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */,
 				4806C4DE258A6C24006F247C /* Ingredient.swift in Sources */,
 				48D3BA332577E8ED00B71B35 /* ForgotData.swift in Sources */,
 				48AC755E256D284F00EBBD09 /* SplashInteractor.swift in Sources */,
 				48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */,
 				48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */,
+				48ECCEF1258B99C100EF87EF /* ProfileRouter.swift in Sources */,
 				48413408254ACC3700F7133E /* UIView+xib.swift in Sources */,
+				48C8FA71258B610100FB0B0A /* SearchInteractor.swift in Sources */,
 				489F976725587C7B00FD51DF /* RecipesAssembly.swift in Sources */,
 				48B13CE22545BE4700511922 /* SceneDelegate.swift in Sources */,
 				48DB32F82577976C0075E4F0 /* ForgotPresenter.swift in Sources */,
@@ -503,6 +582,8 @@
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
 				48EC3C2D255D70AD00A93771 /* RegisterPresenter.swift in Sources */,
 				4885CAE7257D09CC005C6737 /* TabBarAssembly.swift in Sources */,
+				48ECCEE5258B999B00EF87EF /* ProfileViewController.swift in Sources */,
+				48C8FA6E258B60F300FB0B0A /* SearchViewController.swift in Sources */,
 				489F976E25587CA400FD51DF /* Module.swift in Sources */,
 				489F976125587C4E00FD51DF /* RecipesView.swift in Sources */,
 				48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */,
@@ -513,7 +594,10 @@
 				48161DB9255D35EC00213628 /* SplashAssembly.swift in Sources */,
 				48DB331C2577BB140075E4F0 /* RegisterData.swift in Sources */,
 				48DB32FB257797770075E4F0 /* ForgotAssembly.swift in Sources */,
+				48C8FA77258B614C00FB0B0A /* SearchRouter.swift in Sources */,
+				48ECCEF4258B99CE00EF87EF /* ProfilePresenter.swift in Sources */,
 				489130CE255EE913005174BF /* LoginRouter.swift in Sources */,
+				48C8FA67258B609B00FB0B0A /* SearchAssembly.swift in Sources */,
 				48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

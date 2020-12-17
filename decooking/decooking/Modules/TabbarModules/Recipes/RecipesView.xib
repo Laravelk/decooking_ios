@@ -20,9 +20,11 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMP-jG-125" userLabel="Content View">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-AU-e4x">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-AU-e4x">
                                     <rect key="frame" x="29" y="643" width="357" height="65"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65" id="nfw-3N-vHD"/>
+                                    </constraints>
                                     <state key="normal" title="Search"/>
                                     <connections>
                                         <action selector="searchAction:" destination="BB8-Fm-7Ev" eventType="touchUpInside" id="bRM-ou-wMg"/>
@@ -34,21 +36,36 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-qP-84r">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-qP-84r">
                                     <rect key="frame" x="29" y="553" width="357" height="65"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65" id="2ul-Ik-obZ"/>
+                                    </constraints>
                                     <state key="normal" title="Save"/>
                                     <connections>
                                         <action selector="saveAction:" destination="BB8-Fm-7Ev" eventType="touchUpInside" id="dYE-ce-nRv"/>
                                     </connections>
                                 </button>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-PM-KK4">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-PM-KK4">
                                     <rect key="frame" x="29" y="103" width="357" height="385"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="385" id="jo2-N8-PkT"/>
+                                    </constraints>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="BeI-PM-KK4" secondAttribute="trailing" constant="28" id="6Ms-Ir-t7j"/>
+                                <constraint firstItem="VTE-qP-84r" firstAttribute="top" secondItem="BeI-PM-KK4" secondAttribute="bottom" constant="65" id="AUJ-vR-xfk"/>
+                                <constraint firstItem="VTE-qP-84r" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="AdR-a7-Dy9"/>
+                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="top" secondItem="VTE-qP-84r" secondAttribute="bottom" constant="25" id="Elm-y1-Ssz"/>
+                                <constraint firstItem="BeI-PM-KK4" firstAttribute="top" secondItem="p3n-vz-cA8" secondAttribute="bottom" constant="33" id="XZa-h4-bC3"/>
+                                <constraint firstAttribute="trailing" secondItem="VTE-qP-84r" secondAttribute="trailing" constant="28" id="Zbk-Mi-Ic7"/>
+                                <constraint firstAttribute="trailing" secondItem="Sjs-AU-e4x" secondAttribute="trailing" constant="28" id="aIp-rB-bOj"/>
+                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="bon-JT-x6O"/>
+                                <constraint firstItem="BeI-PM-KK4" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="wJJ-MW-9RO"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <constraints>

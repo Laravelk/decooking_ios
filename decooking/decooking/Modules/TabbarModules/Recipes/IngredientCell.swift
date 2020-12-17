@@ -13,10 +13,10 @@ class IngredientCell: UITableViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
-    }
+            }
      
-    func set(name: String) {
+    func set(ingredient: Ingredient) {
         print("setNAME")
-        self.label.text = name
+        self.label.text = ingredient.name
     }
 }

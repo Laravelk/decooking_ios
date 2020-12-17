@@ -15,14 +15,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBx-eJ-DGt">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBx-eJ-DGt">
                         <rect key="frame" x="65" y="12" width="225" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="UBx-eJ-DGt" secondAttribute="trailing" constant="124" id="Rgb-ah-3xV"/>
+                    <constraint firstItem="UBx-eJ-DGt" firstAttribute="leading" secondItem="6DN-Zd-Zkj" secondAttribute="leading" constant="65" id="bCj-Ws-fDe"/>
+                    <constraint firstAttribute="bottom" secondItem="UBx-eJ-DGt" secondAttribute="bottom" constant="11" id="i9W-dg-jbq"/>
+                    <constraint firstItem="UBx-eJ-DGt" firstAttribute="top" secondItem="6DN-Zd-Zkj" secondAttribute="top" constant="12" id="lGK-hP-liA"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="label" destination="UBx-eJ-DGt" id="gsS-1z-k3H"/>

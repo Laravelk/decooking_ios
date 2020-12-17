@@ -24,5 +24,4 @@ class RecipesInteractor: IRecipesInteractor {
         self.network = Network()
     }
     
-    
 }

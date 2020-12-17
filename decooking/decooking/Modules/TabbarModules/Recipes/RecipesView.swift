@@ -33,6 +33,7 @@ class RecipesView: UIView, IRecipesView {
         let cellNib = UINib(nibName: reuseId, bundle: nil)
         self.ingredientsTable.register(cellNib, forCellReuseIdentifier: reuseId)
         
+        
         self.searchButton.layer.cornerRadius = 10
         self.searchButton.backgroundColor = .systemOrange
         self.searchButton.tintColor = .white
@@ -40,6 +41,8 @@ class RecipesView: UIView, IRecipesView {
         self.saveButton.layer.cornerRadius = 10
         self.saveButton.backgroundColor = .systemOrange
         self.saveButton.tintColor = .white
+        
+        self.ingredientsTable.reloadData()
     }
     
     func addDoneButtonOnKeyboard() {
@@ -55,7 +58,7 @@ class RecipesView: UIView, IRecipesView {
     
     func set(ingredients: [Ingredient]) {
         self.ingredients = ingredients
-        print(self.ingredients)
+        self.searchField.text = "ANIME"
         self.ingredientsTable.reloadData()
     }
     
@@ -72,21 +75,24 @@ class RecipesView: UIView, IRecipesView {
 }
 
 extension RecipesView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("tea")
+        return 1
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("table")
         return self.ingredients.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("CELL")
         let cell = self.ingredientsTable.dequeueReusableCell(withIdentifier: "\(IngredientCell.self)", for: indexPath) as! IngredientCell
-        
-        let ingredientName = self.ingredients[indexPath.row]
-        cell.set(name: ingredientName.name)
-        
+
+        let ingredient = self.ingredients[indexPath.row]
+        cell.set(ingredient: ingredient)
+
         return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
 }
  

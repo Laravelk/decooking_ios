@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileView" customModule="decooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="CZe-fz-mHy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yw-8z-wMs">
+                            <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-FR-B8a">
+                                    <rect key="frame" x="44" y="212" width="325" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-NY-WXT">
+                                    <rect key="frame" x="45" y="135" width="325" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UBI-Ru-gkS">
+                                    <rect key="frame" x="44" y="58" width="325" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auo-aD-dkW">
+                                    <rect key="frame" x="139" y="281" width="134" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Изменить пароль"/>
+                                    <connections>
+                                        <action selector="changePassword:" destination="iN0-l3-epB" eventType="touchUpInside" id="TxL-Rf-7JW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDe-iL-Wdo">
+                                    <rect key="frame" x="45" y="352" width="325" height="55"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Редактировать профиль"/>
+                                    <connections>
+                                        <action selector="changeProfile:" destination="iN0-l3-epB" eventType="touchUpInside" id="5MS-BX-Dus"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="pe5-cw-E4v"/>
+                    <constraints>
+                        <constraint firstItem="9yw-8z-wMs" firstAttribute="top" secondItem="pe5-cw-E4v" secondAttribute="top" id="0Hk-9L-3L4"/>
+                        <constraint firstItem="9yw-8z-wMs" firstAttribute="bottom" secondItem="TWQ-Qc-qhL" secondAttribute="bottom" id="HdU-EE-Ulr"/>
+                        <constraint firstItem="9yw-8z-wMs" firstAttribute="leading" secondItem="TWQ-Qc-qhL" secondAttribute="leading" id="nFw-7J-UMy"/>
+                        <constraint firstItem="9yw-8z-wMs" firstAttribute="trailing" secondItem="TWQ-Qc-qhL" secondAttribute="trailing" id="nj4-Hq-kJy"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="JFg-4p-4Qc"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="TWQ-Qc-qhL"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <connections>
+                <outlet property="changePasswordButton" destination="XDe-iL-Wdo" id="P6M-XQ-to7"/>
+                <outlet property="changeProfileButton" destination="Auo-aD-dkW" id="nV9-IH-xWz"/>
+                <outlet property="conformNewPasswordField" destination="XcY-FR-B8a" id="3iT-8c-fNM"/>
+                <outlet property="newPasswordField" destination="dpb-NY-WXT" id="JFp-2n-Bnr"/>
+                <outlet property="oldPasswordField" destination="UBI-Ru-gkS" id="hws-Tq-0JM"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="48.883928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BaseRouting: class {
-    func setViewController(viewController: UIViewController)
+//    func setViewController(viewController: UIViewController)
     func routeToScreen(with key: ScreenKey, data: Any?)
     func presentScreen(with key: ScreenKey, data: Any?)
     func exit()

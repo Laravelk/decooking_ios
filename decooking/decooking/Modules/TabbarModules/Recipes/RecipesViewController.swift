@@ -65,6 +65,12 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
         super.viewDidLayoutSubviews()
 //        collectionView.frame = CGRect(x: 0, y: 150, width: view.frame.size.width, height: 300)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "Recipes"
+
+    }
 }
 
 

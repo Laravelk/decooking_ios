@@ -12,6 +12,8 @@ protocol ITabBarViewController {
 
 class TabBarViewContoller: UITabBarController, ITabBarViewController {
     private var recipes: Module<RecipesPresenter>?
+    private var search: Module<SearchPresenter>?
+    private var profile: Module<ProfilePresenter>?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,15 +28,24 @@ class TabBarViewContoller: UITabBarController, ITabBarViewController {
     
     private func setTabBar() -> Void {
         recipes = RecipesAssembly.makeModule()
-        
+        search = SearchAssembly.makeModule()
+        profile = ProfileAssembly.makeModule()
+
         guard let recipes = recipes else { return }
+        guard let search = search else { return }
+        guard let profile = profile else { return }
+        
         recipes.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        let viewCont = UIViewController()
-        viewCont.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        recipes.viewController.tabBarItem.title = "recipe"
+        search.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        profile.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
+        
+        recipes.viewController.title = "Recipe"
+        search.viewController.title = "Search"
+        profile.viewController.title = "Profile"
+        
         let viewCont1 = UIViewController()
         viewCont1.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 2)
-        let profile = UIViewController()
-        profile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
-        viewControllers = [recipes.viewController, viewCont, viewCont1, profile]
+        viewControllers = [recipes.viewController, search.viewController, viewCont1, profile.viewController]
     }
 }
