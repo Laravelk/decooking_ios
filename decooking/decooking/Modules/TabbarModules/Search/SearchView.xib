@@ -28,8 +28,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <connections>
-                <outlet property="searchBar" destination="vqP-ic-J3u" id="sm9-m1-fST"/>
-                <outlet property="searchTable" destination="VK7-HZ-XFI" id="mhZ-08-6PO"/>
+                <outlet property="searchBar" destination="vqP-ic-J3u" id="vsc-rT-62J"/>
+                <outlet property="searchTable" destination="VK7-HZ-XFI" id="2bt-vc-atL"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="49.553571428571423"/>
         </view>

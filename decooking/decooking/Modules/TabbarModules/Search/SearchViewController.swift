@@ -23,8 +23,6 @@ class SearchViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-        searchView.displayData = searchView.data
     }
     
     override func viewWillAppear(_ animated: Bool) {

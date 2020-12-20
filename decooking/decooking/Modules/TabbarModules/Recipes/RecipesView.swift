@@ -10,16 +10,19 @@ import UIKit
 protocol IRecipesView : AnyObject {
     var onSave: (() -> Void)? { get set }
     var onSearch: ((String) -> Void)? { get set }
+    var onAddPickedIngredient: ((Ingredient) -> Void)? { get set }
     func addDoneButtonOnKeyboard() -> Void
     func set(ingredients: [Ingredient])
 }
 
-class RecipesView: UIView, IRecipesView {
-    
+class RecipesView: UIView, IRecipesView, CellDelegate {
+        
     var onSave: (() -> Void)?
     var onSearch: ((String) -> Void)?
+    var onAddPickedIngredient: ((Ingredient) -> Void)?
     
     private var ingredients: [Ingredient] = [Ingredient]()
+    private var pickedIngredients: [Ingredient] = [Ingredient]()
     
     @IBOutlet weak var ingredientsTable: UITableView!
     @IBOutlet weak var searchField: UITextField!
@@ -33,6 +36,8 @@ class RecipesView: UIView, IRecipesView {
         let cellNib = UINib(nibName: reuseId, bundle: nil)
         self.ingredientsTable.register(cellNib, forCellReuseIdentifier: reuseId)
         
+        self.ingredientsTable.delegate = self
+        self.ingredientsTable.dataSource = self
         
         self.searchButton.layer.cornerRadius = 10
         self.searchButton.backgroundColor = .systemOrange
@@ -44,6 +49,12 @@ class RecipesView: UIView, IRecipesView {
         
         self.ingredientsTable.reloadData()
     }
+    
+    func didPressButton(_ tag: UIButton, _ ingredient: Ingredient) {
+        pickedIngredients.append(ingredient)
+        guard let add = self.onAddPickedIngredient else { return }
+        add(ingredient)
+    }ц
     
     func addDoneButtonOnKeyboard() {
         let keypadToolBar: UIToolbar = UIToolbar()
@@ -58,7 +69,6 @@ class RecipesView: UIView, IRecipesView {
     
     func set(ingredients: [Ingredient]) {
         self.ingredients = ingredients
-        self.searchField.text = "ANIME"
         self.ingredientsTable.reloadData()
     }
     
@@ -74,28 +84,21 @@ class RecipesView: UIView, IRecipesView {
     }
 }
 
-extension RecipesView: UITableViewDataSource {
+extension RecipesView: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("tea")
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("table")
         return self.ingredients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("CELL")
         let cell = self.ingredientsTable.dequeueReusableCell(withIdentifier: "\(IngredientCell.self)", for: indexPath) as! IngredientCell
-
+        cell.cellDelegate = self
         let ingredient = self.ingredients[indexPath.row]
         cell.set(ingredient: ingredient)
 
         return cell
     }
-}
- 
-extension RecipesView: UITableViewDelegate {
-
 }

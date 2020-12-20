@@ -73,8 +73,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <connections>
-                <outlet property="changePasswordButton" destination="XDe-iL-Wdo" id="P6M-XQ-to7"/>
-                <outlet property="changeProfileButton" destination="Auo-aD-dkW" id="nV9-IH-xWz"/>
+                <outlet property="changePasswordButton" destination="Auo-aD-dkW" id="pIE-mX-8t4"/>
+                <outlet property="changeProfileButton" destination="XDe-iL-Wdo" id="0Ay-eW-TAg"/>
                 <outlet property="conformNewPasswordField" destination="XcY-FR-B8a" id="3iT-8c-fNM"/>
                 <outlet property="newPasswordField" destination="dpb-NY-WXT" id="JFp-2n-Bnr"/>
                 <outlet property="oldPasswordField" destination="UBI-Ru-gkS" id="hws-Tq-0JM"/>

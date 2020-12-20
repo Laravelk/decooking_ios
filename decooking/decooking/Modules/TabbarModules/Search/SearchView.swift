@@ -20,6 +20,9 @@ class SearchView: UIView, ISearchView {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
+        
+//        self.searchTable.delegate = self
+//        self.searchTable.dataSource = self
     }
 
 }
@@ -27,7 +30,7 @@ class SearchView: UIView, ISearchView {
 
 extension SearchView: UITableViewDelegate, UITableViewDataSource {
 public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    var cell = searchTable.dequeueReusableCell(withIdentifier: "cell")// as? UITableViewCell
+    var cell = searchTable.dequeueReusableCell(withIdentifier: "cell")
     if cell == nil {
         cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
     }

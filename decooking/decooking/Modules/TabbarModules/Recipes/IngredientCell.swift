@@ -7,16 +7,29 @@
 
 import UIKit
 
+protocol CellDelegate {
+    func didPressButton(_ tag: UIButton, _ ingredient: Ingredient)
+}
+
 class IngredientCell: UITableViewCell {
+    var cellDelegate: CellDelegate?
     
-    @IBOutlet weak var label: UILabel!
+    private var ingredient: Ingredient?
+    
+    @IBOutlet weak var button: UIButton!
     
     override class func awakeFromNib() {
         super.awakeFromNib()
-            }
+    }
      
     func set(ingredient: Ingredient) {
-        print("setNAME")
-        self.label.text = ingredient.name
+        self.ingredient = ingredient
+        button.setTitle(ingredient.name, for: .normal)
+        button.tintColor = .black
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        guard let ingredient = self.ingredient else { return }
+        cellDelegate?.didPressButton(sender, ingredient)
     }
 }

@@ -21,7 +21,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-AU-e4x">
-                                    <rect key="frame" x="29" y="643" width="357" height="65"/>
+                                    <rect key="frame" x="29" y="661" width="357" height="65"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="65" id="nfw-3N-vHD"/>
                                     </constraints>
@@ -37,7 +37,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-qP-84r">
-                                    <rect key="frame" x="29" y="553" width="357" height="65"/>
+                                    <rect key="frame" x="29" y="571" width="357" height="65"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="65" id="2ul-Ik-obZ"/>
                                     </constraints>
@@ -47,24 +47,32 @@
                                     </connections>
                                 </button>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-PM-KK4">
-                                    <rect key="frame" x="29" y="103" width="357" height="385"/>
+                                    <rect key="frame" x="0.0" y="103" width="414" height="385"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="385" id="jo2-N8-PkT"/>
                                     </constraints>
                                 </tableView>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7L-BO-HRo">
+                                    <rect key="frame" x="87" y="496" width="240" height="67"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="BeI-PM-KK4" secondAttribute="trailing" constant="28" id="6Ms-Ir-t7j"/>
-                                <constraint firstItem="VTE-qP-84r" firstAttribute="top" secondItem="BeI-PM-KK4" secondAttribute="bottom" constant="65" id="AUJ-vR-xfk"/>
-                                <constraint firstItem="VTE-qP-84r" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="AdR-a7-Dy9"/>
-                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="top" secondItem="VTE-qP-84r" secondAttribute="bottom" constant="25" id="Elm-y1-Ssz"/>
-                                <constraint firstItem="BeI-PM-KK4" firstAttribute="top" secondItem="p3n-vz-cA8" secondAttribute="bottom" constant="33" id="XZa-h4-bC3"/>
-                                <constraint firstAttribute="trailing" secondItem="VTE-qP-84r" secondAttribute="trailing" constant="28" id="Zbk-Mi-Ic7"/>
-                                <constraint firstAttribute="trailing" secondItem="Sjs-AU-e4x" secondAttribute="trailing" constant="28" id="aIp-rB-bOj"/>
-                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="bon-JT-x6O"/>
-                                <constraint firstItem="BeI-PM-KK4" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="wJJ-MW-9RO"/>
+                                <constraint firstAttribute="bottom" secondItem="Sjs-AU-e4x" secondAttribute="bottom" constant="170" id="3Rs-eH-bPe"/>
+                                <constraint firstItem="BeI-PM-KK4" firstAttribute="top" secondItem="p3n-vz-cA8" secondAttribute="bottom" constant="33" id="7v8-Le-w0m"/>
+                                <constraint firstAttribute="trailing" secondItem="BeI-PM-KK4" secondAttribute="trailing" id="G9y-AW-Xa7"/>
+                                <constraint firstItem="BeI-PM-KK4" firstAttribute="top" secondItem="p3n-vz-cA8" secondAttribute="bottom" constant="33" id="GVq-UV-Lkt"/>
+                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="top" secondItem="VTE-qP-84r" secondAttribute="bottom" constant="25" id="NwC-0X-HAT"/>
+                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="P8V-h3-ryy"/>
+                                <constraint firstItem="Sjs-AU-e4x" firstAttribute="top" secondItem="VTE-qP-84r" secondAttribute="bottom" constant="25" id="VUL-9N-yEO"/>
+                                <constraint firstItem="BeI-PM-KK4" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" id="aKX-cH-gZH"/>
+                                <constraint firstItem="VTE-qP-84r" firstAttribute="leading" secondItem="HMP-jG-125" secondAttribute="leading" constant="29" id="bq0-7i-YF5"/>
+                                <constraint firstItem="m7L-BO-HRo" firstAttribute="top" secondItem="BeI-PM-KK4" secondAttribute="bottom" constant="8" id="hj2-Lo-D7v"/>
+                                <constraint firstItem="VTE-qP-84r" firstAttribute="top" secondItem="m7L-BO-HRo" secondAttribute="bottom" constant="8" id="oIm-01-bKX"/>
+                                <constraint firstAttribute="trailing" secondItem="Sjs-AU-e4x" secondAttribute="trailing" constant="28" id="upn-It-yjS"/>
+                                <constraint firstAttribute="trailing" secondItem="VTE-qP-84r" secondAttribute="trailing" constant="28" id="yrZ-zf-JEp"/>
                             </constraints>
                         </view>
                     </subviews>

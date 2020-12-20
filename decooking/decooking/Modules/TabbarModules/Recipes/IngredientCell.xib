@@ -15,22 +15,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBx-eJ-DGt">
-                        <rect key="frame" x="65" y="12" width="225" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS7-iw-qM9">
+                        <rect key="frame" x="12" y="7" width="393" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="buttonPressed:" destination="uMO-a4-mV8" eventType="touchUpInside" id="3oO-0H-58r"/>
+                        </connections>
+                    </button>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="UBx-eJ-DGt" secondAttribute="trailing" constant="124" id="Rgb-ah-3xV"/>
-                    <constraint firstItem="UBx-eJ-DGt" firstAttribute="leading" secondItem="6DN-Zd-Zkj" secondAttribute="leading" constant="65" id="bCj-Ws-fDe"/>
-                    <constraint firstAttribute="bottom" secondItem="UBx-eJ-DGt" secondAttribute="bottom" constant="11" id="i9W-dg-jbq"/>
-                    <constraint firstItem="UBx-eJ-DGt" firstAttribute="top" secondItem="6DN-Zd-Zkj" secondAttribute="top" constant="12" id="lGK-hP-liA"/>
-                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="label" destination="UBx-eJ-DGt" id="gsS-1z-k3H"/>
+                <outlet property="button" destination="GS7-iw-qM9" id="NlT-JX-bpp"/>
             </connections>
             <point key="canvasLocation" x="-688.40579710144937" y="1.3392857142857142"/>
         </tableViewCell>

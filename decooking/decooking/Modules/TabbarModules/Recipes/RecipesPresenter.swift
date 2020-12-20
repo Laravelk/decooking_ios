@@ -9,18 +9,19 @@ import Foundation
 
 protocol IRecipesPresenter {
     func didLoad(ui: IRecipesView)
+    var onAddPickedIngredient: ((Ingredient) -> Void)? { get set }
 }
 
-class RecipesPresenter {
+class RecipesPresenter: IRecipesPresenter {
     private weak var ui: IRecipesView?
     private weak var interactor: IRecipesInteractor!
+    var onAddPickedIngredient: ((Ingredient) -> Void)?
+
     
     init(interactor: IRecipesInteractor) {
         self.interactor = interactor
     }
-}
-
-extension RecipesPresenter: IRecipesPresenter {
+    
     func didLoad(ui: IRecipesView) {
         self.ui = ui
         
@@ -28,6 +29,13 @@ extension RecipesPresenter: IRecipesPresenter {
             print("search")
             self?.reloadTable(part: part)
         }
+        
+        ui.onAddPickedIngredient = { [weak self] (ingredient: Ingredient) in
+            guard let presenter = self else { return }
+            guard let complection = presenter.onAddPickedIngredient else { return }
+            complection(ingredient)
+        }
+
     }
 }
 
