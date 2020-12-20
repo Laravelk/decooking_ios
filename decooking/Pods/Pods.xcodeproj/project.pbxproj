@@ -3,68 +3,84 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A50D79A25EAB301B683CE587D3E0201 /* Pods-decooking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FA100501F237AC4C77D4BC3CF2DAFD /* Pods-decooking-dummy.m */; };
-		0FA87A4F391F4471ACFF1D7AEE8E885B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		10BB92451A9089BFF4393E8B6DB71890 /* TTGTagCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC183955A8A1BED905613C3348CDB17 /* TTGTagCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AF3901D9E7FE751F16767EE5E3E4887 /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 73E5049D86DE07308AFC832F889F7829 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		447DF1694134D4F71FF065854CBFAD24 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C849FF0BDECE0D6FC0BEF333EEF22B1 /* TTGTextTagCollectionView.m */; };
-		6F83A90F6FFD23DDEA553BA03E1582E2 /* Pods-decooking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5493A56FDD0A8C8DBA680F5FB9CC9D96 /* Pods-decooking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		717FD26A54BED7190BF8043A4F9EAB0C /* TTGTagCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DBA0041B7A2965E0E59719E423E81 /* TTGTagCollectionView-dummy.m */; };
-		8D25259489746F10C3E0A1C8679ABAD5 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBBE1BE9A86DA213F2DBA9EF006128D7 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EA1E26B890C3CB5F290B548D08C6626 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B42BC9C76DA49416DCD5961510C4D /* TTGTagCollectionView.m */; };
+		10BB92451A9089BFF4393E8B6DB71890 /* TTGTagCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A36BDBD7261D019F8F8A25381B606D0 /* TTGTagCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AF3901D9E7FE751F16767EE5E3E4887 /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = AE152E7444E9F8DB9003DDC0C9B91B83 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		447DF1694134D4F71FF065854CBFAD24 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C268C2C6C73F31FF0E2D188A5EC140 /* TTGTextTagCollectionView.m */; };
+		717FD26A54BED7190BF8043A4F9EAB0C /* TTGTagCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE1E94BD688CEC96A9B85A65B2ADD4B /* TTGTagCollectionView-dummy.m */; };
+		7A2F9FA43C98BDDB92887CD8F811A31C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8D25259489746F10C3E0A1C8679ABAD5 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B54D4C3993A7EF46A3DB135AF940F05 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EA1E26B890C3CB5F290B548D08C6626 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 236B311AA50016685B313F7B05CFF36C /* TTGTagCollectionView.m */; };
 		8EB919F90CB82F3FE6D33094EBC26CFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		98A20656D7DAC78C97EFFDE913267745 /* Pods-decooking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5493A56FDD0A8C8DBA680F5FB9CC9D96 /* Pods-decooking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6EC3DF1E275D0757F3C498DA60FA33B /* TagListView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BB6D88DA280E4C2967EFCF9A9D92E /* TagListView-dummy.m */; };
+		D873E920F6CAC3D63428190C85520012 /* TagListView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 939F17F005AE96C1B01BD6599754B261 /* TagListView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8857C7EFEC671C6D23BACB10087FA7A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405532B8E93ECDD16F333A792427E82 /* TagView.swift */; };
+		DDCF8206846A556F290F3EE5B9C409D0 /* Pods-decooking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FA100501F237AC4C77D4BC3CF2DAFD /* Pods-decooking-dummy.m */; };
+		E6BBD02DE6D603EA8028A046B28896A4 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E5EDA7F90ED49157E97DBCD5750568 /* TagListView.swift */; };
+		F9EAAF9FBB7DB084E9A21122C3E62125 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB92474653F6EA9BF4F10EE9D14CE9A /* CloseButton.swift */; };
+		FC6635DC65D10F484644140050D9CB85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A5C31CF1D00E72A17C29D11C134307D4 /* PBXContainerItemProxy */ = {
+		0E8371DED63B926E64F87ACB09EEF15D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F4949B35B65C78C4D7DCBEEA66EC61D4;
 			remoteInfo = TTGTagCollectionView;
 		};
+		7FE0A84AA06912F4FF9D0677994A49EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B43A58FC22C898DE29F6E12FE9636507;
+			remoteInfo = TagListView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A36BDBD7261D019F8F8A25381B606D0 /* TTGTagCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTGTagCollectionView-umbrella.h"; sourceTree = "<group>"; };
 		0A3947F0B111F1607E3874B92C4144EB /* Pods-decooking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-decooking.modulemap"; sourceTree = "<group>"; };
-		1AEBE4C1094E0D39C1E27D338E033C40 /* TTGTagCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTGTagCollectionView.release.xcconfig; sourceTree = "<group>"; };
 		21BC818447FD4CAE93DD923E716178E9 /* Pods-decooking-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-decooking-acknowledgements.plist"; sourceTree = "<group>"; };
-		2F4DBA0041B7A2965E0E59719E423E81 /* TTGTagCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTGTagCollectionView-dummy.m"; sourceTree = "<group>"; };
+		22CA9D758C71CEFC66EA020575BD3597 /* TTGTagCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTGTagCollectionView.release.xcconfig; sourceTree = "<group>"; };
+		236B311AA50016685B313F7B05CFF36C /* TTGTagCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTagCollectionView.m; path = TTGTagCollectionView/Classes/TTGTagCollectionView.m; sourceTree = "<group>"; };
 		335F7C803254E89AFA2150CA213F84C7 /* Pods-decooking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-decooking-Info.plist"; sourceTree = "<group>"; };
-		36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTGTagCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FC183955A8A1BED905613C3348CDB17 /* TTGTagCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTGTagCollectionView-umbrella.h"; sourceTree = "<group>"; };
-		5363B1E2CB4A16F7AD5F94BC64F38ADE /* TTGTagCollectionView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTGTagCollectionView-Info.plist"; sourceTree = "<group>"; };
+		36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTGTagCollectionView.framework; path = TTGTagCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB92474653F6EA9BF4F10EE9D14CE9A /* CloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloseButton.swift; path = TagListView/CloseButton.swift; sourceTree = "<group>"; };
 		5493A56FDD0A8C8DBA680F5FB9CC9D96 /* Pods-decooking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-decooking-umbrella.h"; sourceTree = "<group>"; };
-		564393FBE2B1A0F7BC3ECDBCF1C602D2 /* TTGTagCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTGTagCollectionView.debug.xcconfig; sourceTree = "<group>"; };
+		56F859C1E61658BEBF9AE5F67B30D13F /* TTGTagCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTGTagCollectionView.debug.xcconfig; sourceTree = "<group>"; };
+		5AFFC8D2D3E9D2CBEA4ADF4D560625CB /* TTGTagCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTGTagCollectionView.modulemap; sourceTree = "<group>"; };
+		5CE1E94BD688CEC96A9B85A65B2ADD4B /* TTGTagCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTGTagCollectionView-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		73E5049D86DE07308AFC832F889F7829 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTagCollectionView.h; path = TTGTagCollectionView/Classes/TTGTagCollectionView.h; sourceTree = "<group>"; };
-		76BFAEE191AE43E2B85160B4AF820259 /* TTGTagCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTGTagCollectionView.modulemap; sourceTree = "<group>"; };
 		78FA100501F237AC4C77D4BC3CF2DAFD /* Pods-decooking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-decooking-dummy.m"; sourceTree = "<group>"; };
-		7A8B42BC9C76DA49416DCD5961510C4D /* TTGTagCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTagCollectionView.m; path = TTGTagCollectionView/Classes/TTGTagCollectionView.m; sourceTree = "<group>"; };
-		7C849FF0BDECE0D6FC0BEF333EEF22B1 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagCollectionView.m; path = TTGTagCollectionView/Classes/TTGTextTagCollectionView.m; sourceTree = "<group>"; };
-		8669B208B70D17EEAADD13C07BC40D58 /* TTGTagCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTGTagCollectionView-prefix.pch"; sourceTree = "<group>"; };
-		8C0C9730739DBC4B2ABB98EFD39E7072 /* Pods_decooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_decooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B54D4C3993A7EF46A3DB135AF940F05 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagCollectionView.h; path = TTGTagCollectionView/Classes/TTGTextTagCollectionView.h; sourceTree = "<group>"; };
+		7C6E0A8A9DBBD9516C9F32AAAB4DED5D /* TagListView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TagListView.debug.xcconfig; sourceTree = "<group>"; };
+		8373A50F4523432E69AC4B339C805B40 /* TagListView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagListView-prefix.pch"; sourceTree = "<group>"; };
+		85E4C71ED52304F1AB0503E80CD9CB1E /* TagListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TagListView.framework; path = TagListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C0C9730739DBC4B2ABB98EFD39E7072 /* Pods_decooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_decooking.framework; path = "Pods-decooking.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939F17F005AE96C1B01BD6599754B261 /* TagListView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagListView-umbrella.h"; sourceTree = "<group>"; };
+		93E5EDA7F90ED49157E97DBCD5750568 /* TagListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagListView.swift; path = TagListView/TagListView.swift; sourceTree = "<group>"; };
+		958BB6D88DA280E4C2967EFCF9A9D92E /* TagListView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TagListView-dummy.m"; sourceTree = "<group>"; };
+		976801D39F9216AED113E1029E1460F2 /* TagListView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TagListView.modulemap; sourceTree = "<group>"; };
 		99F8F0360B96EAB332038C3D9BA9A95A /* Pods-decooking-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-decooking-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB5EEB861B71D0A4B8705839B483BC55 /* Pods-decooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-decooking.debug.xcconfig"; sourceTree = "<group>"; };
+		AE152E7444E9F8DB9003DDC0C9B91B83 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTagCollectionView.h; path = TTGTagCollectionView/Classes/TTGTagCollectionView.h; sourceTree = "<group>"; };
 		BF367152FB1444F06877B11F9F2C411C /* Pods-decooking-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-decooking-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C405532B8E93ECDD16F333A792427E82 /* TagView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = TagListView/TagView.swift; sourceTree = "<group>"; };
+		C7C268C2C6C73F31FF0E2D188A5EC140 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagCollectionView.m; path = TTGTagCollectionView/Classes/TTGTextTagCollectionView.m; sourceTree = "<group>"; };
+		C8187968014F4B3BFB9E0E9D53E511B1 /* TTGTagCollectionView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTGTagCollectionView-Info.plist"; sourceTree = "<group>"; };
+		C89D447C3703F851C15B4E5F0F597447 /* TTGTagCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTGTagCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		CB6E336E4BE6B9AE434FC65BD390BF43 /* TagListView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TagListView.release.xcconfig; sourceTree = "<group>"; };
 		D891CB3B77ED998026F6B55416DEB6F0 /* Pods-decooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-decooking.release.xcconfig"; sourceTree = "<group>"; };
-		DBBE1BE9A86DA213F2DBA9EF006128D7 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagCollectionView.h; path = TTGTagCollectionView/Classes/TTGTextTagCollectionView.h; sourceTree = "<group>"; };
+		DE66091F03DAA1D32E8B359C92363BAA /* TagListView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TagListView-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		383C269561E271B76F8355AAF9F8F5BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FA87A4F391F4471ACFF1D7AEE8E885B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		57AD97FD4C9405D6487BCEBF4E82BFB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,16 +89,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1322D05BDAB225FFA538820249C29C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6635DC65D10F484644140050D9CB85 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1703ECBE2030D3AA1DC701DBEEB2AED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2F9FA43C98BDDB92887CD8F811A31C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		019C6EB980B90CD8E10221151FA45ADF /* Products */ = {
+		0014300E98CE7BDB1A94DCAE8B647ADF /* TagListView */ = {
+			isa = PBXGroup;
+			children = (
+				3EB92474653F6EA9BF4F10EE9D14CE9A /* CloseButton.swift */,
+				93E5EDA7F90ED49157E97DBCD5750568 /* TagListView.swift */,
+				C405532B8E93ECDD16F333A792427E82 /* TagView.swift */,
+				11C5CE015D1C0B6048FBE44CCADC5B4D /* Support Files */,
+			);
+			name = TagListView;
+			path = TagListView;
+			sourceTree = "<group>";
+		};
+		117B547FE4D502370D819CDCC4162FB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				8C0C9730739DBC4B2ABB98EFD39E7072 /* Pods_decooking.framework */,
+				85E4C71ED52304F1AB0503E80CD9CB1E /* TagListView.framework */,
 				36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		11C5CE015D1C0B6048FBE44CCADC5B4D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				976801D39F9216AED113E1029E1460F2 /* TagListView.modulemap */,
+				958BB6D88DA280E4C2967EFCF9A9D92E /* TagListView-dummy.m */,
+				DE66091F03DAA1D32E8B359C92363BAA /* TagListView-Info.plist */,
+				8373A50F4523432E69AC4B339C805B40 /* TagListView-prefix.pch */,
+				939F17F005AE96C1B01BD6599754B261 /* TagListView-umbrella.h */,
+				7C6E0A8A9DBBD9516C9F32AAAB4DED5D /* TagListView.debug.xcconfig */,
+				CB6E336E4BE6B9AE434FC65BD390BF43 /* TagListView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TagListView";
 			sourceTree = "<group>";
 		};
 		1F0660EF76DC0FBA6CC1D93660924FC7 /* Pods-decooking */ = {
@@ -102,12 +162,17 @@
 			path = "Target Support Files/Pods-decooking";
 			sourceTree = "<group>";
 		};
-		22698D113DF8B31EE81B693E3284F814 /* Pods */ = {
+		370D7491F7E4E5601B8F227EE013D0BA /* TTGTagCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				7D92AAA3851B63E8C2D34F658CE6E2EB /* TTGTagCollectionView */,
+				AE152E7444E9F8DB9003DDC0C9B91B83 /* TTGTagCollectionView.h */,
+				236B311AA50016685B313F7B05CFF36C /* TTGTagCollectionView.m */,
+				7B54D4C3993A7EF46A3DB135AF940F05 /* TTGTextTagCollectionView.h */,
+				C7C268C2C6C73F31FF0E2D188A5EC140 /* TTGTextTagCollectionView.m */,
+				C3994A4FFB65F4848728268B47EF6536 /* Support Files */,
 			);
-			name = Pods;
+			name = TTGTagCollectionView;
+			path = TTGTagCollectionView;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -118,21 +183,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		651681958771AF39BC1F4F8968944EF6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				76BFAEE191AE43E2B85160B4AF820259 /* TTGTagCollectionView.modulemap */,
-				2F4DBA0041B7A2965E0E59719E423E81 /* TTGTagCollectionView-dummy.m */,
-				5363B1E2CB4A16F7AD5F94BC64F38ADE /* TTGTagCollectionView-Info.plist */,
-				8669B208B70D17EEAADD13C07BC40D58 /* TTGTagCollectionView-prefix.pch */,
-				3FC183955A8A1BED905613C3348CDB17 /* TTGTagCollectionView-umbrella.h */,
-				564393FBE2B1A0F7BC3ECDBCF1C602D2 /* TTGTagCollectionView.debug.xcconfig */,
-				1AEBE4C1094E0D39C1E27D338E033C40 /* TTGTagCollectionView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TTGTagCollectionView";
-			sourceTree = "<group>";
-		};
 		68ADD74472D1E9007986B64599A36711 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,16 +191,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7D92AAA3851B63E8C2D34F658CE6E2EB /* TTGTagCollectionView */ = {
+		C3994A4FFB65F4848728268B47EF6536 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73E5049D86DE07308AFC832F889F7829 /* TTGTagCollectionView.h */,
-				7A8B42BC9C76DA49416DCD5961510C4D /* TTGTagCollectionView.m */,
-				DBBE1BE9A86DA213F2DBA9EF006128D7 /* TTGTextTagCollectionView.h */,
-				7C849FF0BDECE0D6FC0BEF333EEF22B1 /* TTGTextTagCollectionView.m */,
-				651681958771AF39BC1F4F8968944EF6 /* Support Files */,
+				5AFFC8D2D3E9D2CBEA4ADF4D560625CB /* TTGTagCollectionView.modulemap */,
+				5CE1E94BD688CEC96A9B85A65B2ADD4B /* TTGTagCollectionView-dummy.m */,
+				C8187968014F4B3BFB9E0E9D53E511B1 /* TTGTagCollectionView-Info.plist */,
+				C89D447C3703F851C15B4E5F0F597447 /* TTGTagCollectionView-prefix.pch */,
+				0A36BDBD7261D019F8F8A25381B606D0 /* TTGTagCollectionView-umbrella.h */,
+				56F859C1E61658BEBF9AE5F67B30D13F /* TTGTagCollectionView.debug.xcconfig */,
+				22CA9D758C71CEFC66EA020575BD3597 /* TTGTagCollectionView.release.xcconfig */,
 			);
-			path = TTGTagCollectionView;
+			name = "Support Files";
+			path = "../Target Support Files/TTGTagCollectionView";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -158,8 +211,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				22698D113DF8B31EE81B693E3284F814 /* Pods */,
-				019C6EB980B90CD8E10221151FA45ADF /* Products */,
+				D69F64EC8262DD993EC0368574566028 /* Pods */,
+				117B547FE4D502370D819CDCC4162FB8 /* Products */,
 				68ADD74472D1E9007986B64599A36711 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -170,6 +223,15 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D69F64EC8262DD993EC0368574566028 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0014300E98CE7BDB1A94DCAE8B647ADF /* TagListView */,
+				370D7491F7E4E5601B8F227EE013D0BA /* TTGTagCollectionView */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +247,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80EB6F5B0A5B82BE62BA3284995408A4 /* Headers */ = {
+		9FA322CA0734CA401F466AE4DAD0CF22 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F83A90F6FFD23DDEA553BA03E1582E2 /* Pods-decooking-umbrella.h in Headers */,
+				D873E920F6CAC3D63428190C85520012 /* TagListView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E76D51D572E0E364B349D8D314912186 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98A20656D7DAC78C97EFFDE913267745 /* Pods-decooking-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,21 +268,40 @@
 /* Begin PBXNativeTarget section */
 		5EBFA9F3CA95B32EB03DD48928BCEABD /* Pods-decooking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A3B664E4960CCED10CBCC847A50186E /* Build configuration list for PBXNativeTarget "Pods-decooking" */;
+			buildConfigurationList = 2A39CB21FB7CE3D7B6A45BC1CB18C50E /* Build configuration list for PBXNativeTarget "Pods-decooking" */;
 			buildPhases = (
-				80EB6F5B0A5B82BE62BA3284995408A4 /* Headers */,
-				EA7108928D9EDBD09575157393B4FE73 /* Sources */,
-				383C269561E271B76F8355AAF9F8F5BA /* Frameworks */,
-				8FF79DFD4571CBBB2BF271E2E370DCB7 /* Resources */,
+				E76D51D572E0E364B349D8D314912186 /* Headers */,
+				210DD9EFC7498828E001600F60AEBCE4 /* Sources */,
+				D1322D05BDAB225FFA538820249C29C8 /* Frameworks */,
+				2C5F3EF6A633883163D80A3B0077A08F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				69F15DEC22C3F302922CCEE6E2F1B618 /* PBXTargetDependency */,
+				943184C309F157A7A104B94D014E86B3 /* PBXTargetDependency */,
+				2E958B1D9BC61135CCFFA01FB7DD932B /* PBXTargetDependency */,
 			);
 			name = "Pods-decooking";
 			productName = "Pods-decooking";
 			productReference = 8C0C9730739DBC4B2ABB98EFD39E7072 /* Pods_decooking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B43A58FC22C898DE29F6E12FE9636507 /* TagListView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0B1A26E4E3B0F19211CAB90190291C /* Build configuration list for PBXNativeTarget "TagListView" */;
+			buildPhases = (
+				9FA322CA0734CA401F466AE4DAD0CF22 /* Headers */,
+				E74F27944B92DE20ACDB098B23D6560E /* Sources */,
+				F1703ECBE2030D3AA1DC701DBEEB2AED /* Frameworks */,
+				6BC538A98D210BCB26CE139DFBE834A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TagListView;
+			productName = TagListView;
+			productReference = 85E4C71ED52304F1AB0503E80CD9CB1E /* TagListView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */ = {
@@ -240,10 +329,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -251,11 +340,12 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 019C6EB980B90CD8E10221151FA45ADF /* Products */;
+			productRefGroup = 117B547FE4D502370D819CDCC4162FB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5EBFA9F3CA95B32EB03DD48928BCEABD /* Pods-decooking */,
+				B43A58FC22C898DE29F6E12FE9636507 /* TagListView */,
 				F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */,
 			);
 		};
@@ -269,7 +359,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FF79DFD4571CBBB2BF271E2E370DCB7 /* Resources */ = {
+		2C5F3EF6A633883163D80A3B0077A08F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC538A98D210BCB26CE139DFBE834A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +376,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		210DD9EFC7498828E001600F60AEBCE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCF8206846A556F290F3EE5B9C409D0 /* Pods-decooking-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A938DB253801134E7977E423ECDCB1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,26 +394,107 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA7108928D9EDBD09575157393B4FE73 /* Sources */ = {
+		E74F27944B92DE20ACDB098B23D6560E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A50D79A25EAB301B683CE587D3E0201 /* Pods-decooking-dummy.m in Sources */,
+				F9EAAF9FBB7DB084E9A21122C3E62125 /* CloseButton.swift in Sources */,
+				A6EC3DF1E275D0757F3C498DA60FA33B /* TagListView-dummy.m in Sources */,
+				E6BBD02DE6D603EA8028A046B28896A4 /* TagListView.swift in Sources */,
+				D8857C7EFEC671C6D23BACB10087FA7A /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		69F15DEC22C3F302922CCEE6E2F1B618 /* PBXTargetDependency */ = {
+		2E958B1D9BC61135CCFFA01FB7DD932B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TagListView;
+			target = B43A58FC22C898DE29F6E12FE9636507 /* TagListView */;
+			targetProxy = 7FE0A84AA06912F4FF9D0677994A49EB /* PBXContainerItemProxy */;
+		};
+		943184C309F157A7A104B94D014E86B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TTGTagCollectionView;
 			target = F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */;
-			targetProxy = A5C31CF1D00E72A17C29D11C134307D4 /* PBXContainerItemProxy */;
+			targetProxy = 0E8371DED63B926E64F87ACB09EEF15D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		480ED7A85E569838B67575A837B1BD39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB6E336E4BE6B9AE434FC65BD390BF43 /* TagListView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TagListView/TagListView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TagListView/TagListView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TagListView/TagListView.modulemap";
+				PRODUCT_MODULE_NAME = TagListView;
+				PRODUCT_NAME = TagListView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48A30B7891B6DE22FE28B19666A1A605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB5EEB861B71D0A4B8705839B483BC55 /* Pods-decooking.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-decooking/Pods-decooking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-decooking/Pods-decooking.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,7 +563,7 @@
 		};
 		4F8011237E5DF576396D911AA8A06D38 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 564393FBE2B1A0F7BC3ECDBCF1C602D2 /* TTGTagCollectionView.debug.xcconfig */;
+			baseConfigurationReference = 56F859C1E61658BEBF9AE5F67B30D13F /* TTGTagCollectionView.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -390,7 +576,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +597,7 @@
 		};
 		671892018B282DEFD73042ED1A5DF490 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AEBE4C1094E0D39C1E27D338E033C40 /* TTGTagCollectionView.release.xcconfig */;
+			baseConfigurationReference = 22CA9D758C71CEFC66EA020575BD3597 /* TTGTagCollectionView.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -424,7 +610,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +692,7 @@
 			};
 			name = Release;
 		};
-		D1387F9057AA70CE220243611FC1D5AA /* Release */ = {
+		8BC0D4D397E4A5DD61BFC47C554E309A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D891CB3B77ED998026F6B55416DEB6F0 /* Pods-decooking.release.xcconfig */;
 			buildSettings = {
@@ -544,12 +730,10 @@
 			};
 			name = Release;
 		};
-		D731BE228A94AE4B040BCED54F674CB3 /* Debug */ = {
+		B95255CFE23BB552B35A1E9E09172CFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB5EEB861B71D0A4B8705839B483BC55 /* Pods-decooking.debug.xcconfig */;
+			baseConfigurationReference = 7C6E0A8A9DBBD9516C9F32AAAB4DED5D /* TagListView.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -558,23 +742,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-decooking/Pods-decooking-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TagListView/TagListView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TagListView/TagListView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-decooking/Pods-decooking.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/TagListView/TagListView.modulemap";
+				PRODUCT_MODULE_NAME = TagListView;
+				PRODUCT_NAME = TagListView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -584,6 +767,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A39CB21FB7CE3D7B6A45BC1CB18C50E /* Build configuration list for PBXNativeTarget "Pods-decooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48A30B7891B6DE22FE28B19666A1A605 /* Debug */,
+				8BC0D4D397E4A5DD61BFC47C554E309A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -593,20 +785,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5D0B1A26E4E3B0F19211CAB90190291C /* Build configuration list for PBXNativeTarget "TagListView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95255CFE23BB552B35A1E9E09172CFA /* Debug */,
+				480ED7A85E569838B67575A837B1BD39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		68FEA514D73F339FF9AC5F33897597EE /* Build configuration list for PBXNativeTarget "TTGTagCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F8011237E5DF576396D911AA8A06D38 /* Debug */,
 				671892018B282DEFD73042ED1A5DF490 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6A3B664E4960CCED10CBCC847A50186E /* Build configuration list for PBXNativeTarget "Pods-decooking" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D731BE228A94AE4B040BCED54F674CB3 /* Debug */,
-				D1387F9057AA70CE220243611FC1D5AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

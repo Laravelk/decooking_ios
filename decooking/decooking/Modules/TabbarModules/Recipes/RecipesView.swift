@@ -11,8 +11,12 @@ protocol IRecipesView : AnyObject {
     var onSave: (() -> Void)? { get set }
     var onSearch: ((String) -> Void)? { get set }
     var onAddPickedIngredient: ((Ingredient) -> Void)? { get set }
+    
+    func removeIngredient(names: [String])
     func addDoneButtonOnKeyboard() -> Void
     func set(ingredients: [Ingredient])
+
+    var pickedIngredients: [Ingredient] { get }
 }
 
 class RecipesView: UIView, IRecipesView, CellDelegate {
@@ -22,7 +26,7 @@ class RecipesView: UIView, IRecipesView, CellDelegate {
     var onAddPickedIngredient: ((Ingredient) -> Void)?
     
     private var ingredients: [Ingredient] = [Ingredient]()
-    private var pickedIngredients: [Ingredient] = [Ingredient]()
+    var pickedIngredients: [Ingredient] = [Ingredient]()
     
     @IBOutlet weak var ingredientsTable: UITableView!
     @IBOutlet weak var searchField: UITextField!
@@ -50,11 +54,27 @@ class RecipesView: UIView, IRecipesView, CellDelegate {
         self.ingredientsTable.reloadData()
     }
     
+    func removeIngredient(names: [String]) {
+        var newIngredients: [Ingredient] = [Ingredient]()
+        for ingredient in pickedIngredients {
+            var removed: Bool = false
+            for name in names {
+                if name == ingredient.name {
+                    removed = true
+                }
+            }
+            if !removed {
+                newIngredients.append(ingredient)
+            }
+        }
+        pickedIngredients = newIngredients
+    }
+    
     func didPressButton(_ tag: UIButton, _ ingredient: Ingredient) {
         pickedIngredients.append(ingredient)
         guard let add = self.onAddPickedIngredient else { return }
         add(ingredient)
-    }ц
+    }
     
     func addDoneButtonOnKeyboard() {
         let keypadToolBar: UIToolbar = UIToolbar()

@@ -1,16 +1,20 @@
 PODS:
+  - TagListView (1.4.1)
   - TTGTagCollectionView (1.11.1)
 
 DEPENDENCIES:
+  - TagListView (~> 1.0)
   - TTGTagCollectionView
 
 SPEC REPOS:
   trunk:
+    - TagListView
     - TTGTagCollectionView
 
 SPEC CHECKSUMS:
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   TTGTagCollectionView: 86fcbfa6a7493c9e860b01c2e693cffc8acf6de1
 
-PODFILE CHECKSUM: 44b6f497e56d3f9dea1ddb5772605fdae7fd7f54
+PODFILE CHECKSUM: 53f3fa03cea63cd52ea7b431aa3825b81265d6a8
 
 COCOAPODS: 1.10.0

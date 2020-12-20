@@ -6,6 +6,7 @@
 //
 
 import TTGTagCollectionView
+import TagListView
 import UIKit
 
 class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate {
@@ -13,8 +14,9 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
     private var presenter: IRecipesPresenter
     private var interactor: IRecipesInteractor
     private let collectionView = TTGTextTagCollectionView()
-    
+        
     private var onAddTag: ((Ingredient) -> Void)?
+    private var onSave: (() -> Void)?
     
     init(presenter: IRecipesPresenter, interactor: IRecipesInteractor) {
         self.presenter = presenter
@@ -25,8 +27,14 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
             guard let viewController = self else { return }
             viewController.addIngredientTag(ingredient: ingredient)
         }
+        self.onSave = { [weak self] () in
+            guard let viewController = self else { return }
+            viewController.save()
+        }
+        
         self.presenter.onAddPickedIngredient = self.onAddTag
-
+        self.presenter.onSaveIngredients = self.onSave
+        
         }
     
     required init?(coder: NSCoder) {
@@ -39,6 +47,15 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
     
     private func addIngredientTag(ingredient: Ingredient) {
         collectionView.addTag(ingredient.name)
+    }
+    
+    private func save() {
+        if let selectedTags = collectionView.allSelectedTags() {
+            for tag in selectedTags {
+                collectionView.removeTag(tag)
+            }
+        }
+        
     }
 
     override func viewDidLoad() {
@@ -64,9 +81,9 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
         config.textColor = .white
         config.borderColor = .systemOrange
         config.borderWidth = 1
-
-        collectionView.addTags(["Tea", "Potato"], with: config)
+        config.cornerRadius = 5
     }
+    
     
     @objc func dismissKeyboard() {
         view.endEditing(true)

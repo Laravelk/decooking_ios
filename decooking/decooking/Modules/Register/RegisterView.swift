@@ -50,6 +50,7 @@ class RegisterView: UIView, IRegisterView {
         guard let onBack = self.onBack else { return }
         onBack()
     }
+    
     @IBAction func registerAction(_ sender: Any) {
         guard let onRegister = self.onRegister else { return }
         guard let username = self.username.text else { return }
@@ -60,5 +61,4 @@ class RegisterView: UIView, IRegisterView {
         guard password.count >= 1 else { return }
         onRegister(username, email, password)
     }
-    
 }

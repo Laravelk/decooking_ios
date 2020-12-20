@@ -10,23 +10,25 @@ import Foundation
 protocol IRecipesPresenter {
     func didLoad(ui: IRecipesView)
     var onAddPickedIngredient: ((Ingredient) -> Void)? { get set }
+    var onSaveIngredients: (() -> Void)? { get set }
 }
 
-class RecipesPresenter: IRecipesPresenter {
+class RecipesPresenter: BasePresenter<IRecipesInteractor, IRecipesRouter & BaseRouting>, IRecipesPresenter {
     private weak var ui: IRecipesView?
-    private weak var interactor: IRecipesInteractor!
-    var onAddPickedIngredient: ((Ingredient) -> Void)?
-
     
-    init(interactor: IRecipesInteractor) {
-        self.interactor = interactor
+    var onSaveIngredients: (() -> Void)?
+    var onAddPickedIngredient: ((Ingredient) -> Void)?
+    
+    func removePickedIngredients(names: [String]?) {
+        guard let names = names else { return }
+        guard let ui = self.ui else { return }
+        ui.removeIngredient(names: names)
     }
     
     func didLoad(ui: IRecipesView) {
         self.ui = ui
         
         ui.onSearch = { [weak self] (part: String) in
-            print("search")
             self?.reloadTable(part: part)
         }
         
@@ -34,6 +36,15 @@ class RecipesPresenter: IRecipesPresenter {
             guard let presenter = self else { return }
             guard let complection = presenter.onAddPickedIngredient else { return }
             complection(ingredient)
+        }
+        
+        ui.onSave = { [weak self, weak router] () in
+            guard let presenter = self else { return }
+            guard let complection = presenter.onSaveIngredients else { return }
+            guard let view = presenter.ui else { return }
+            guard let router = router else { return }
+            complection()
+            router.routeToScreen(with: .recipesSearchResult, data: view.pickedIngredients)
         }
 
     }

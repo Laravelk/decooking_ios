@@ -29,13 +29,17 @@ extension RegisterPresenter: IRegisterPresenter {
         ui.onRegister = { [weak superRouter, weak interactor](username: String, email: String, password: String) in
             interactor?.registerAccount(username: username, email: email, password: password) {
                 (data: Network.RequestResult<RegisterData>) in
+                DispatchQueue.main.async() {
                 switch data {
                 case .failure(_):
+                    print("failure")
                     superRouter?.routeToScreen(with: .login, data: nil)
                     break
                 case .success(_):
+                    print("success")
                     superRouter?.routeToScreen(with: .login, data: nil)
                     break
+                }
                 }
             }
         }
