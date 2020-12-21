@@ -102,6 +102,7 @@
 		B0D43F152590EB050085D718 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F142590EB050085D718 /* RecipeView.swift */; };
 		B0D43F182590EB130085D718 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F172590EB130085D718 /* RecipeViewController.swift */; };
 		B0D43F1B2590EB190085D718 /* RecipeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F1A2590EB190085D718 /* RecipeRouter.swift */; };
+		B0D43F1F2590F8F90085D718 /* RecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0D43F1E2590F8F90085D718 /* RecipeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,6 +204,7 @@
 		B0D43F142590EB050085D718 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		B0D43F172590EB130085D718 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		B0D43F1A2590EB190085D718 /* RecipeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRouter.swift; sourceTree = "<group>"; };
+		B0D43F1E2590F8F90085D718 /* RecipeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeView.xib; sourceTree = "<group>"; };
 		C4F991EDDF87671ED5009426 /* Pods-decooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-decooking.debug.xcconfig"; path = "Target Support Files/Pods-decooking/Pods-decooking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,7 +231,6 @@
 		48182B6A25860A4B00011CAC /* TabbarModules */ = {
 			isa = PBXGroup;
 			children = (
-				B0D07C20258F4C4300880F98 /* RecipesResult */,
 				48ECCEE2258B98CB00EF87EF /* Favorite */,
 				48ECCEE1258B982700EF87EF /* Profile */,
 				48C8FA65258B608A00FB0B0A /* Search */,
@@ -241,6 +242,7 @@
 		482535FD25487F7D001C7316 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B0D07C20258F4C4300880F98 /* RecipesResult */,
 				B0D43F0A2590EAD40085D718 /* Recipe */,
 				48182B6A25860A4B00011CAC /* TabbarModules */,
 				4885CADE257D0978005C6737 /* Tabbar */,
@@ -479,6 +481,7 @@
 				B0D43F142590EB050085D718 /* RecipeView.swift */,
 				B0D43F172590EB130085D718 /* RecipeViewController.swift */,
 				B0D43F1A2590EB190085D718 /* RecipeRouter.swift */,
+				B0D43F1E2590F8F90085D718 /* RecipeView.xib */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 			files = (
 				48B13CEC2545BE4B00511922 /* LaunchScreen.storyboard in Resources */,
 				48161DBF255D360D00213628 /* SplashView.xib in Resources */,
+				B0D43F1F2590F8F90085D718 /* RecipeView.xib in Resources */,
 				48B13CE92545BE4B00511922 /* Assets.xcassets in Resources */,
 				48DB330C25779E1D0075E4F0 /* ForgotView.xib in Resources */,
 				48EB1CBD255977DF00962D53 /* RecipesView.xib in Resources */,

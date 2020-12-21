@@ -16,4 +16,5 @@ enum ScreenKey {
     case forgotConform
     case tabbar
     case recipesSearchResult
+    case recipe
 }

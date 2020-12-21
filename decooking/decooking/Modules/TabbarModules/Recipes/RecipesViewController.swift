@@ -97,6 +97,8 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.topItem?.title = "Recipes"
+        self.recepiesView.pickedIngredients.removeAll()
+        collectionView.removeAllTags()
     }
 }
 

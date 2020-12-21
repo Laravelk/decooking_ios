@@ -16,7 +16,7 @@ protocol IRecipesView : AnyObject {
     func addDoneButtonOnKeyboard() -> Void
     func set(ingredients: [Ingredient])
 
-    var pickedIngredients: [Ingredient] { get }
+    var pickedIngredients: [Ingredient] { get set }
 }
 
 class RecipesView: UIView, IRecipesView, CellDelegate {

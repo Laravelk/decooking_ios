@@ -23,6 +23,9 @@ enum RecipesResultAssembly {
         let controller = RecipeResultViewController(presenter: presenter)
         
         // Setup depency
+        router.setViewController(viewController: controller)
+        
+        
         return Module<RecipesResultPresenter>(viewController: controller, presenter: presenter)
     }
 }

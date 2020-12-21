@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol IRecipeInteractor {
+    
+}
+
+class RecipeInteractor: IRecipeInteractor {
+    private var network = Network()
+}

@@ -13,17 +13,23 @@ protocol IRecipesResultPresenter {
     func updateRecipes()
 }
 
-class RecipesResultPresenter: BasePresenter<IRecipesResultInteractor, IRecipesResultRouter>, IRecipesResultPresenter {
+class RecipesResultPresenter: BasePresenter<IRecipesResultInteractor, IRecipesResultRouter & BaseRouting>, IRecipesResultPresenter {
     private weak var ui: IRecipesResultView?
     private var ingredients: [Ingredient]
     
-    init(interactor: IRecipesResultInteractor, router: IRecipesResultRouter, ingredients: [Ingredient]) {
+    init(interactor: IRecipesResultInteractor, router: IRecipesResultRouter & BaseRouting, ingredients: [Ingredient]) {
         self.ingredients = ingredients
         super.init(interactor: interactor, router: router)
     }
     
     func didLoad(ui: IRecipesResultView) {
         self.ui = ui
+        ui.onRecipe = { [weak self](recipe: RecipeData, image: UIImage) in
+            let recipeWithImage: RecipeDataWithPicture = RecipeDataWithPicture(recipe: recipe, picture: image)
+            guard let presenter = self else { return }
+            presenter.router.routeToScreen(with: .recipe, data: recipeWithImage)
+        }
+        
     }
     
     func updateRecipes() {

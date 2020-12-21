@@ -9,9 +9,11 @@ import UIKit
 
 protocol IRecipesResultView : AnyObject {
     func set(recipes: [RecipeData], pictures: [UIImage])
+    var onRecipe: ((_ recipe: RecipeData, _ image: UIImage) -> Void)? { get set }
 }
 
 class RecipesResultView: UIView, IRecipesResultView {
+    var onRecipe: ((RecipeData, UIImage) -> Void)?
     
     @IBOutlet weak var recipesTable: UITableView!
     
@@ -55,5 +57,11 @@ extension RecipesResultView: UITableViewDataSource, UITableViewDelegate {
         let picture = self.recipesImages[indexPath.row]
         cell.set(recipe: recipe, picture: picture)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        guard let onRecipe = self.onRecipe else { return }
+        onRecipe(recipes[indexPath.row], recipesImages[indexPath.row])
     }
 }
