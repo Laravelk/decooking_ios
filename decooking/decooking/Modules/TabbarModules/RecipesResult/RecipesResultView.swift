@@ -27,6 +27,8 @@ class RecipesResultView: UIView, IRecipesResultView {
         
         self.recipesTable.delegate = self
         self.recipesTable.dataSource = self
+        
+        self.recipesTable.rowHeight = 200
     }
     
     func set(recipes: [RecipeData], pictures: [UIImage]) {

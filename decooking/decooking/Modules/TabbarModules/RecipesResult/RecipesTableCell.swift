@@ -20,6 +20,7 @@ class RecipesTableCell: UITableViewCell {
     
     func set(recipe: RecipeData, picture: UIImage) {
         self.title.text = recipe.name
+        self.title.font = UIFont.boldSystemFont(ofSize: 20)
         self.recipeDescription.text = recipe.description
         self.foodPicture.image = picture
         self.recipe = recipe

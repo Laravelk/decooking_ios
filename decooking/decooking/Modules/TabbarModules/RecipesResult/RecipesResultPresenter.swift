@@ -34,12 +34,24 @@ class RecipesResultPresenter: BasePresenter<IRecipesResultInteractor, IRecipesRe
             case .failure(_): // TODO: обработка ошибок
                 break
             case .success(let data):
-                DispatchQueue.main.sync {
-                    var images = [UIImage]()
-                    DispatchQueue.global().sync {
-                        images.append(contentsOf: self.interactor.getPictureByRecipes(recipes: data))
+                var images = [UIImage]()
+                var recipes = data
+                for recipe in data {
+                self.interactor.getPictureByRecipe(recipe: recipe) {
+                        (data: Network.RequestResult<UIImage>) in
+                        switch data {
+                        case .failure(_):
+                            break
+                        case .success(let data):
+                            images.append(data)
+                            if images.count == recipes.count {
+                                DispatchQueue.main.sync {
+                                    self.ui?.set(recipes: recipes, pictures: images)
+                                }
+                            }
+                            break
+                        }
                     }
-                    self.ui?.set(recipes: data, pictures: images)
                 }
                 break
             }

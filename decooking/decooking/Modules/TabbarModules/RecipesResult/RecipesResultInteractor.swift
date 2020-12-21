@@ -12,9 +12,14 @@ import Network
 protocol IRecipesResultInteractor: AnyObject {
     func getRecipesByIngredients(ingredients: [Ingredient], complection: @escaping (Network.RequestResult<Array<RecipeData>>) -> Void)
     func getPictureByRecipes(recipes: [RecipeData]) -> [UIImage]
+    func getPictureByRecipe(recipe: RecipeData, complection: @escaping ((Network.RequestResult<UIImage>) -> Void))
 }
 
 class RecipesResultInteractor: IRecipesResultInteractor {
+    func getPictureByRecipe(recipe: RecipeData, complection: @escaping (Network.RequestResult<UIImage>) -> Void) {
+        network.getPicture(recipesId: recipe.id, completion: complection)
+    }
+    
     private var network: Network
     
     init() {
@@ -30,21 +35,6 @@ class RecipesResultInteractor: IRecipesResultInteractor {
         network.getRecipes(ingredientsId: ingredientsId, completion: complection)
     }
     
-    private func getPictureByRecipe(recipe: RecipeData) -> UIImage? {
-        var image: UIImage?
-        network.getPicture(recipesId: recipe.id) {
-            (data: Network.RequestResult<UIImage>) in
-            switch data {
-            case .failure(_):
-                break
-            case .success(let data):
-                image = data
-                break
-            }
-        }
-        return image
-    }
-    
     public func getPictureByRecipes(recipes: [RecipeData]) -> [UIImage] {
         var images: [UIImage] = [UIImage]()
         for recipe in recipes {
@@ -55,6 +45,7 @@ class RecipesResultInteractor: IRecipesResultInteractor {
                     break
                 case .success(let data):
                     images.append(data)
+                    print("append images")
                     break
                 }
             }

@@ -96,6 +96,12 @@
 		B0D07C40258F8C4C00880F98 /* RecipePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D07C3F258F8C4C00880F98 /* RecipePicture.swift */; };
 		B0D07C43258F8D3E00880F98 /* RecipesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D07C42258F8D3E00880F98 /* RecipesTableCell.swift */; };
 		B0D07C46258FA00600880F98 /* RecipeDataWithPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D07C45258FA00600880F98 /* RecipeDataWithPicture.swift */; };
+		B0D43F0C2590EAE90085D718 /* RecipeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F0B2590EAE90085D718 /* RecipeAssembly.swift */; };
+		B0D43F0F2590EAF10085D718 /* RecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F0E2590EAF10085D718 /* RecipePresenter.swift */; };
+		B0D43F122590EAFA0085D718 /* RecipeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F112590EAFA0085D718 /* RecipeInteractor.swift */; };
+		B0D43F152590EB050085D718 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F142590EB050085D718 /* RecipeView.swift */; };
+		B0D43F182590EB130085D718 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F172590EB130085D718 /* RecipeViewController.swift */; };
+		B0D43F1B2590EB190085D718 /* RecipeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D43F1A2590EB190085D718 /* RecipeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +197,12 @@
 		B0D07C3F258F8C4C00880F98 /* RecipePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePicture.swift; sourceTree = "<group>"; };
 		B0D07C42258F8D3E00880F98 /* RecipesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableCell.swift; sourceTree = "<group>"; };
 		B0D07C45258FA00600880F98 /* RecipeDataWithPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataWithPicture.swift; sourceTree = "<group>"; };
+		B0D43F0B2590EAE90085D718 /* RecipeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAssembly.swift; sourceTree = "<group>"; };
+		B0D43F0E2590EAF10085D718 /* RecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePresenter.swift; sourceTree = "<group>"; };
+		B0D43F112590EAFA0085D718 /* RecipeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInteractor.swift; sourceTree = "<group>"; };
+		B0D43F142590EB050085D718 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		B0D43F172590EB130085D718 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		B0D43F1A2590EB190085D718 /* RecipeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRouter.swift; sourceTree = "<group>"; };
 		C4F991EDDF87671ED5009426 /* Pods-decooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-decooking.debug.xcconfig"; path = "Target Support Files/Pods-decooking/Pods-decooking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +241,7 @@
 		482535FD25487F7D001C7316 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B0D43F0A2590EAD40085D718 /* Recipe */,
 				48182B6A25860A4B00011CAC /* TabbarModules */,
 				4885CADE257D0978005C6737 /* Tabbar */,
 				48DB32E82577971A0075E4F0 /* Forgot */,
@@ -457,6 +470,19 @@
 			path = RecipesResult;
 			sourceTree = "<group>";
 		};
+		B0D43F0A2590EAD40085D718 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				B0D43F0B2590EAE90085D718 /* RecipeAssembly.swift */,
+				B0D43F0E2590EAF10085D718 /* RecipePresenter.swift */,
+				B0D43F112590EAFA0085D718 /* RecipeInteractor.swift */,
+				B0D43F142590EB050085D718 /* RecipeView.swift */,
+				B0D43F172590EB130085D718 /* RecipeViewController.swift */,
+				B0D43F1A2590EB190085D718 /* RecipeRouter.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,7 +615,9 @@
 				48EC3C3A255D70DC00A93771 /* RegisterInteractor.swift in Sources */,
 				48C8FA7A258B8E0F00FB0B0A /* SearchView.swift in Sources */,
 				48DB32F22577974B0075E4F0 /* ForgotViewController.swift in Sources */,
+				B0D43F0F2590EAF10085D718 /* RecipePresenter.swift in Sources */,
 				48F77B6C258675D50064047D /* TabBarView.swift in Sources */,
+				B0D43F152590EB050085D718 /* RecipeView.swift in Sources */,
 				48161DB0255D303B00213628 /* LoginInteractor.swift in Sources */,
 				48ECCEEB258B99AE00EF87EF /* ProfileAssembly.swift in Sources */,
 				B0D07C28258F4C8300880F98 /* RecipesResultView.swift in Sources */,
@@ -603,7 +631,9 @@
 				48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */,
 				48AC7562256D3D2900EBBD09 /* BaseRouter.swift in Sources */,
 				48EC3C22255D382000A93771 /* RecipesInteractor.swift in Sources */,
+				B0D43F122590EAFA0085D718 /* RecipeInteractor.swift in Sources */,
 				48E06FE4255AC97C006C49B2 /* URLSharedSessionDelegate.swift in Sources */,
+				B0D43F0C2590EAE90085D718 /* RecipeAssembly.swift in Sources */,
 				48DB32EF2577973A0075E4F0 /* ForgotView.swift in Sources */,
 				48ECCEE8258B99A500EF87EF /* ProfileView.swift in Sources */,
 				489F975D25587C4500FD51DF /* RecipesPresenter.swift in Sources */,
@@ -633,7 +663,9 @@
 				48161DB6255D35DF00213628 /* SplashView.swift in Sources */,
 				4885CAE0257D09A4005C6737 /* TabViewController.swift in Sources */,
 				48EC3C34255D70C500A93771 /* RegisterViewController.swift in Sources */,
+				B0D43F182590EB130085D718 /* RecipeViewController.swift in Sources */,
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
+				B0D43F1B2590EB190085D718 /* RecipeRouter.swift in Sources */,
 				48EC3C2D255D70AD00A93771 /* RegisterPresenter.swift in Sources */,
 				4885CAE7257D09CC005C6737 /* TabBarAssembly.swift in Sources */,
 				48ECCEE5258B999B00EF87EF /* ProfileViewController.swift in Sources */,
