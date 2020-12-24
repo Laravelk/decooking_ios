@@ -17,7 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window = window
         self.window?.windowScene = windowScene
-
         self.appRouter = AppRouter(on: window)
     }
 

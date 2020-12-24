@@ -67,7 +67,7 @@ class RecipesViewController : UIViewController, TTGTextTagCollectionViewDelegate
         
         view.addGestureRecognizer(closeKeyboardTap)
         
-        self.recepiesView.addDoneButtonOnKeyboard()
+//        self.recepiesView.addDoneButtonOnKeyboard()
         self.presenter.didLoad(ui: self.recepiesView)
         
         collectionView.alignment = .center

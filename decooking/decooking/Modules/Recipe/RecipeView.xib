@@ -26,51 +26,69 @@
                                         <constraint firstAttribute="height" constant="165" id="pKq-3c-YJb"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETD-yc-gjI">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Название" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETD-yc-gjI">
                                     <rect key="frame" x="5" y="170" width="404" height="21.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JO-sM-VAa">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Описание" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JO-sM-VAa">
                                     <rect key="frame" x="5" y="196.5" width="404" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст описания" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXC-Jf-tdj">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Текст описания" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXC-Jf-tdj">
                                     <rect key="frame" x="5" y="222" width="404" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Национальность блюда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yur-Af-ipO">
-                                    <rect key="frame" x="5" y="247.5" width="404" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-hZ-aUo">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Национальность блюда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yur-Af-ipO">
                                     <rect key="frame" x="5" y="273.5" width="404" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Способы приготовить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDw-sp-K32">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Национальность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qd-ch-vjv">
+                                    <rect key="frame" x="5" y="247.5" width="133" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-hZ-aUo">
                                     <rect key="frame" x="5" y="299.5" width="404" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Способы приготовить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDw-sp-K32">
+                                    <rect key="frame" x="5" y="351.5" width="404" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Ингредиенты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-oJ-iqw">
+                                    <rect key="frame" x="5" y="428" width="404" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Калорийность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-R5-t3r">
+                                    <rect key="frame" x="5" y="377.5" width="404" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="СпособыTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6l-Lj-fqE">
                                     <rect key="frame" x="5" y="325.5" width="404" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ингредиенты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-oJ-iqw">
-                                    <rect key="frame" x="5" y="351.5" width="404" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИнгредиентыTitle: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M68-0r-1so">
+                                    <rect key="frame" x="5" y="403.5" width="404" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -78,28 +96,46 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="ETD-yc-gjI" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="1W7-YM-Th4"/>
+                                <constraint firstItem="T6l-Lj-fqE" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="1n9-bw-3cd"/>
+                                <constraint firstItem="bDw-sp-K32" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="2kD-iv-Fe2"/>
                                 <constraint firstItem="JXC-Jf-tdj" firstAttribute="top" secondItem="6JO-sM-VAa" secondAttribute="bottom" constant="5" id="3Cs-YQ-5rL"/>
+                                <constraint firstAttribute="trailing" secondItem="T6l-Lj-fqE" secondAttribute="trailing" constant="5" id="3JW-hQ-9QE"/>
+                                <constraint firstItem="T6l-Lj-fqE" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="5Rm-UK-GX9"/>
+                                <constraint firstAttribute="trailing" secondItem="bJ6-oJ-iqw" secondAttribute="trailing" constant="5" id="6Ot-Yj-bbM"/>
+                                <constraint firstAttribute="trailing" secondItem="wtT-hZ-aUo" secondAttribute="trailing" constant="5" id="DTe-Ix-7A9"/>
                                 <constraint firstItem="uhD-7p-fFW" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" id="E9A-OA-VuW"/>
                                 <constraint firstAttribute="trailing" secondItem="bJ6-oJ-iqw" secondAttribute="trailing" constant="5" id="F5T-cL-YGX"/>
-                                <constraint firstItem="Yur-Af-ipO" firstAttribute="top" secondItem="JXC-Jf-tdj" secondAttribute="bottom" constant="5" id="G74-6U-sgi"/>
-                                <constraint firstAttribute="trailing" secondItem="i7y-R5-t3r" secondAttribute="trailing" constant="5" id="GSS-sm-pLV"/>
+                                <constraint firstItem="T6l-Lj-fqE" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="FyE-ly-D5i"/>
+                                <constraint firstAttribute="trailing" secondItem="T6l-Lj-fqE" secondAttribute="trailing" constant="5" id="Hde-cR-mAp"/>
+                                <constraint firstItem="T6l-Lj-fqE" firstAttribute="top" secondItem="wtT-hZ-aUo" secondAttribute="bottom" constant="5" id="IXT-LO-g2f"/>
+                                <constraint firstItem="bDw-sp-K32" firstAttribute="top" secondItem="T6l-Lj-fqE" secondAttribute="bottom" constant="5" id="J7L-gG-Z2y"/>
                                 <constraint firstAttribute="trailing" secondItem="JXC-Jf-tdj" secondAttribute="trailing" constant="5" id="JgR-om-doM"/>
+                                <constraint firstAttribute="trailing" secondItem="T6l-Lj-fqE" secondAttribute="trailing" constant="5" id="Kv2-8P-d4a"/>
                                 <constraint firstAttribute="trailing" secondItem="bDw-sp-K32" secondAttribute="trailing" constant="5" id="M3U-oD-14D"/>
+                                <constraint firstItem="M68-0r-1so" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="Nz4-BT-kO1"/>
+                                <constraint firstAttribute="trailing" secondItem="M68-0r-1so" secondAttribute="trailing" constant="5" id="P3d-kV-v72"/>
+                                <constraint firstItem="wtT-hZ-aUo" firstAttribute="top" secondItem="Yur-Af-ipO" secondAttribute="bottom" constant="5" id="RE9-kt-0xK"/>
+                                <constraint firstAttribute="trailing" secondItem="bDw-sp-K32" secondAttribute="trailing" constant="5" id="RgF-wP-sTo"/>
+                                <constraint firstItem="bJ6-oJ-iqw" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="SQS-ar-aao"/>
                                 <constraint firstItem="uhD-7p-fFW" firstAttribute="top" secondItem="Qh0-ku-rBy" secondAttribute="top" id="STO-q3-ogB"/>
-                                <constraint firstItem="i7y-R5-t3r" firstAttribute="top" secondItem="bDw-sp-K32" secondAttribute="bottom" constant="5" id="YSl-6h-nqS"/>
+                                <constraint firstItem="9Qd-ch-vjv" firstAttribute="leading" secondItem="JXC-Jf-tdj" secondAttribute="leading" id="Voo-eD-Kco"/>
+                                <constraint firstItem="i7y-R5-t3r" firstAttribute="top" secondItem="bDw-sp-K32" secondAttribute="bottom" constant="5" id="WQq-sa-nez"/>
+                                <constraint firstItem="9Qd-ch-vjv" firstAttribute="top" secondItem="JXC-Jf-tdj" secondAttribute="bottom" constant="5" id="X61-v7-WmG"/>
+                                <constraint firstItem="Yur-Af-ipO" firstAttribute="top" secondItem="9Qd-ch-vjv" secondAttribute="bottom" constant="5" id="XYF-9b-bm5"/>
                                 <constraint firstItem="bDw-sp-K32" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="a3L-yt-1VT"/>
-                                <constraint firstItem="i7y-R5-t3r" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="aCa-G4-l6y"/>
                                 <constraint firstItem="6JO-sM-VAa" firstAttribute="top" secondItem="ETD-yc-gjI" secondAttribute="bottom" constant="5" id="aQ2-Sl-QLd"/>
                                 <constraint firstItem="bJ6-oJ-iqw" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="aoV-lt-1DA"/>
                                 <constraint firstAttribute="trailing" secondItem="Yur-Af-ipO" secondAttribute="trailing" constant="5" id="exZ-iZ-cRe"/>
-                                <constraint firstItem="bJ6-oJ-iqw" firstAttribute="top" secondItem="i7y-R5-t3r" secondAttribute="bottom" constant="5" id="iVQ-r7-cDv"/>
-                                <constraint firstItem="wtT-hZ-aUo" firstAttribute="top" secondItem="Yur-Af-ipO" secondAttribute="bottom" constant="5" id="jRG-gv-Lxq"/>
+                                <constraint firstItem="wtT-hZ-aUo" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="gN5-MI-FJU"/>
+                                <constraint firstItem="M68-0r-1so" firstAttribute="top" secondItem="i7y-R5-t3r" secondAttribute="bottom" constant="5" id="joB-Fv-rif"/>
+                                <constraint firstItem="i7y-R5-t3r" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="lsY-JS-lkv"/>
                                 <constraint firstAttribute="trailing" secondItem="uhD-7p-fFW" secondAttribute="trailing" id="mwm-Ho-WRZ"/>
+                                <constraint firstItem="bJ6-oJ-iqw" firstAttribute="top" secondItem="M68-0r-1so" secondAttribute="bottom" constant="5" id="nEE-9q-k2e"/>
                                 <constraint firstItem="6JO-sM-VAa" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="oql-21-EOc"/>
                                 <constraint firstAttribute="trailing" secondItem="wtT-hZ-aUo" secondAttribute="trailing" constant="5" id="sDE-9b-8xP"/>
                                 <constraint firstItem="ETD-yc-gjI" firstAttribute="top" secondItem="uhD-7p-fFW" secondAttribute="bottom" constant="5" id="uJa-H8-aKO"/>
                                 <constraint firstItem="JXC-Jf-tdj" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="v5h-EW-B94"/>
-                                <constraint firstItem="bDw-sp-K32" firstAttribute="top" secondItem="wtT-hZ-aUo" secondAttribute="bottom" constant="5" id="vEW-Hb-fOj"/>
+                                <constraint firstAttribute="trailing" secondItem="i7y-R5-t3r" secondAttribute="trailing" constant="5" id="vEl-4y-NVp"/>
                                 <constraint firstItem="wtT-hZ-aUo" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="wWS-81-73g"/>
                                 <constraint firstAttribute="trailing" secondItem="6JO-sM-VAa" secondAttribute="trailing" constant="5" id="wx8-KR-oyc"/>
                                 <constraint firstItem="Yur-Af-ipO" firstAttribute="leading" secondItem="Qh0-ku-rBy" secondAttribute="leading" constant="5" id="yQo-gD-SDi"/>
@@ -135,10 +171,13 @@
                 <outlet property="descriptionTextLabel" destination="JXC-Jf-tdj" id="flF-iu-WVk"/>
                 <outlet property="image" destination="uhD-7p-fFW" id="vOD-lj-r4O"/>
                 <outlet property="ingredientsLabel" destination="bJ6-oJ-iqw" id="GZy-hr-xWc"/>
+                <outlet property="ingredientsTitle" destination="M68-0r-1so" id="flH-uM-PyL"/>
                 <outlet property="nationalityLabel" destination="Yur-Af-ipO" id="lo1-W3-eTr"/>
+                <outlet property="nationalityTitle" destination="9Qd-ch-vjv" id="Y2N-xo-XqT"/>
                 <outlet property="raitingLabel" destination="wtT-hZ-aUo" id="ylZ-0b-FZc"/>
                 <outlet property="title" destination="ETD-yc-gjI" id="6yA-tM-ypT"/>
                 <outlet property="waysToCookLabel" destination="bDw-sp-K32" id="kJr-vt-Yz5"/>
+                <outlet property="waysToCookTitle" destination="T6l-Lj-fqE" id="wxp-Fu-eFg"/>
             </connections>
             <point key="canvasLocation" x="31.884057971014496" y="63.616071428571423"/>
         </view>

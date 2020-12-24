@@ -209,4 +209,8 @@ class Network {
         {
         let url: String = URLBase + "/dev/recipe/images_by_recipe/"
     }
+    
+    public func getRecipesByName(name: String, complection: @escaping (RequestResult<Array<RecipeData>>) -> Void) {
+//        let url: String = URLBase + ""
+    }
 }

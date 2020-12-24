@@ -17,6 +17,21 @@ class SearchPresenter: BasePresenter<ISearchInteractor, ISearchRouter>, ISearchP
     
     func didLoad(ui: ISearchView) {
         self.view = ui
+        
+//        self.view?.onSearchBarChanged = { [] (search: String) in
+//            interactor.getRecipeByName(recipeName: search) {
+//                (data: Network.RequestResult<Array<RecipeData>>) in
+//                        switch data {
+//                        case .failure(_):
+//                            break
+//                        case .success(let rdata):
+//                            DispatchQueue.main.async() {
+//                                self.ui?.set(ingredients: rdata)
+//                            }
+//                            break
+//                        }
+//            }
+//        }
     }
     
     

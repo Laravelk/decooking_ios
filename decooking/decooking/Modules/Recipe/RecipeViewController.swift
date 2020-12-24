@@ -16,6 +16,7 @@ class RecipeViewController: UIViewController {
         presenter.didLoad(ui: recipeView)
         recipeView.parseRecipe(recipe: presenter.recipeWithImage)
         super.init(nibName: nil, bundle: nil)
+        self.navigationController?.title = "Рецепт"
     }
     
     required init?(coder: NSCoder) {

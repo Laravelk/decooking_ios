@@ -83,6 +83,13 @@
 		48F2CA0F25753F0A00E29547 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA0E25753F0A00E29547 /* Presenter.swift */; };
 		48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2CA2C25754D8100E29547 /* AppRouter.swift */; };
 		48F77B6C258675D50064047D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F77B6B258675D50064047D /* TabBarView.swift */; };
+		B00C17172594EDE800340D03 /* FavoriteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C17162594EDE800340D03 /* FavoriteAssembly.swift */; };
+		B00C171A2594EDF600340D03 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C17192594EDF600340D03 /* FavoriteRouter.swift */; };
+		B00C171D2594EDFF00340D03 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C171C2594EDFF00340D03 /* FavoriteInteractor.swift */; };
+		B00C17202594EE0500340D03 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C171F2594EE0500340D03 /* FavoriteView.swift */; };
+		B00C17232594EE1100340D03 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C17222594EE1100340D03 /* FavoritePresenter.swift */; };
+		B00C17262594EE1700340D03 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C17252594EE1700340D03 /* FavoriteViewController.swift */; };
+		B00C17292594EE3C00340D03 /* FavoriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00C17282594EE3C00340D03 /* FavoriteView.xib */; };
 		B0D07C22258F4C6600880F98 /* RecipesResultAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D07C21258F4C6600880F98 /* RecipesResultAssembly.swift */; };
 		B0D07C25258F4C7800880F98 /* RecipesResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D07C24258F4C7800880F98 /* RecipesResultViewController.swift */; };
 		B0D07C28258F4C8300880F98 /* RecipesResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D07C27258F4C8300880F98 /* RecipesResultView.swift */; };
@@ -185,6 +192,13 @@
 		48F2CA2C25754D8100E29547 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		48F77B6B258675D50064047D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		501030F27E9113F2261DC879 /* Pods-decooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-decooking.release.xcconfig"; path = "Target Support Files/Pods-decooking/Pods-decooking.release.xcconfig"; sourceTree = "<group>"; };
+		B00C17162594EDE800340D03 /* FavoriteAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAssembly.swift; sourceTree = "<group>"; };
+		B00C17192594EDF600340D03 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
+		B00C171C2594EDFF00340D03 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		B00C171F2594EE0500340D03 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		B00C17222594EE1100340D03 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		B00C17252594EE1700340D03 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		B00C17282594EE3C00340D03 /* FavoriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteView.xib; sourceTree = "<group>"; };
 		B0D07C21258F4C6600880F98 /* RecipesResultAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesResultAssembly.swift; sourceTree = "<group>"; };
 		B0D07C24258F4C7800880F98 /* RecipesResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesResultViewController.swift; sourceTree = "<group>"; };
 		B0D07C27258F4C8300880F98 /* RecipesResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesResultView.swift; sourceTree = "<group>"; };
@@ -231,7 +245,7 @@
 		48182B6A25860A4B00011CAC /* TabbarModules */ = {
 			isa = PBXGroup;
 			children = (
-				48ECCEE2258B98CB00EF87EF /* Favorite */,
+				B00C17152594EDDA00340D03 /* Favorite */,
 				48ECCEE1258B982700EF87EF /* Profile */,
 				48C8FA65258B608A00FB0B0A /* Search */,
 				489F975B25587C1700FD51DF /* Recipes */,
@@ -440,13 +454,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		48ECCEE2258B98CB00EF87EF /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Favorite;
-			sourceTree = "<group>";
-		};
 		49682C2EC4D69D0093A543FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +461,20 @@
 				501030F27E9113F2261DC879 /* Pods-decooking.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B00C17152594EDDA00340D03 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				B00C17162594EDE800340D03 /* FavoriteAssembly.swift */,
+				B00C17192594EDF600340D03 /* FavoriteRouter.swift */,
+				B00C171C2594EDFF00340D03 /* FavoriteInteractor.swift */,
+				B00C171F2594EE0500340D03 /* FavoriteView.swift */,
+				B00C17222594EE1100340D03 /* FavoritePresenter.swift */,
+				B00C17252594EE1700340D03 /* FavoriteViewController.swift */,
+				B00C17282594EE3C00340D03 /* FavoriteView.xib */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		B0D07C20258F4C4300880F98 /* RecipesResult */ = {
@@ -560,6 +581,7 @@
 				486ED708258A56FF0025F573 /* IngredientCell.xib in Resources */,
 				48ECCEF7258BA74800EF87EF /* ProfileView.xib in Resources */,
 				4885CAED257D4D04005C6737 /* TabBarView.xib in Resources */,
+				B00C17292594EE3C00340D03 /* FavoriteView.xib in Resources */,
 				48B13CE72545BE4700511922 /* Main.storyboard in Resources */,
 				B0D07C3A258F651000880F98 /* RecipesTableCell.xib in Resources */,
 				4841340C254ACD8F00F7133E /* LoginView.xib in Resources */,
@@ -631,6 +653,7 @@
 				4825360225487FD5001C7316 /* LoginView.swift in Sources */,
 				48182B7025860C0100011CAC /* TabBarInteractor.swift in Sources */,
 				48C8FA74258B611100FB0B0A /* SearchCellView.swift in Sources */,
+				B00C17202594EE0500340D03 /* FavoriteView.swift in Sources */,
 				48161DB3255D35D600213628 /* SplashViewController.swift in Sources */,
 				48EC3C37255D70D100A93771 /* RegisterAssembly.swift in Sources */,
 				48AC7562256D3D2900EBBD09 /* BaseRouter.swift in Sources */,
@@ -656,6 +679,7 @@
 				48D3BA332577E8ED00B71B35 /* ForgotData.swift in Sources */,
 				48AC755E256D284F00EBBD09 /* SplashInteractor.swift in Sources */,
 				48F2CA2D25754D8100E29547 /* AppRouter.swift in Sources */,
+				B00C17232594EE1100340D03 /* FavoritePresenter.swift in Sources */,
 				48C0FEE0255C4F9D00832202 /* AuthenticationData.swift in Sources */,
 				48ECCEF1258B99C100EF87EF /* ProfileRouter.swift in Sources */,
 				48413408254ACC3700F7133E /* UIView+xib.swift in Sources */,
@@ -665,7 +689,9 @@
 				B0D07C40258F8C4C00880F98 /* RecipePicture.swift in Sources */,
 				48DB32F82577976C0075E4F0 /* ForgotPresenter.swift in Sources */,
 				48161DB6255D35DF00213628 /* SplashView.swift in Sources */,
+				B00C171A2594EDF600340D03 /* FavoriteRouter.swift in Sources */,
 				4885CAE0257D09A4005C6737 /* TabViewController.swift in Sources */,
+				B00C17262594EE1700340D03 /* FavoriteViewController.swift in Sources */,
 				48EC3C34255D70C500A93771 /* RegisterViewController.swift in Sources */,
 				B0D43F182590EB130085D718 /* RecipeViewController.swift in Sources */,
 				48413413254ACF7700F7133E /* LoginAssembly.swift in Sources */,
@@ -680,6 +706,7 @@
 				48E06FDD255AC8A9006C49B2 /* Network.swift in Sources */,
 				489130D4255EE96E005174BF /* SplashRouter.swift in Sources */,
 				B0D07C37258F534A00880F98 /* RecipesRouter.swift in Sources */,
+				B00C171D2594EDFF00340D03 /* FavoriteInteractor.swift in Sources */,
 				48DB32F52577975C0075E4F0 /* ForgotInteractor.swift in Sources */,
 				B0D07C25258F4C7800880F98 /* RecipesResultViewController.swift in Sources */,
 				48DB32EA2577972E0075E4F0 /* ForgotRouter.swift in Sources */,
@@ -692,6 +719,7 @@
 				489130CE255EE913005174BF /* LoginRouter.swift in Sources */,
 				B0D07C31258F4DF900880F98 /* RecipesResultRouter.swift in Sources */,
 				48C8FA67258B609B00FB0B0A /* SearchAssembly.swift in Sources */,
+				B00C17172594EDE800340D03 /* FavoriteAssembly.swift in Sources */,
 				B0D07C2E258F4C9F00880F98 /* RecipesResultPresenter.swift in Sources */,
 				B0D07C2B258F4C9200880F98 /* RecipesResultInteractor.swift in Sources */,
 				48B13CF82545BE7A00511922 /* LoginPresenter.swift in Sources */,

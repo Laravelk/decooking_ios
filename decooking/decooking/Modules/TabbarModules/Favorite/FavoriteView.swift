@@ -1,53 +1,50 @@
 //
-//  SearchView.swift
+//  FavoriteView.swift
 //  decooking
 //
-//  Created by Иван Морозов on 17.12.2020.
+//  Created by Ivan Morozov on 24.12.2020.
 //
+
 
 import UIKit
 
-protocol ISearchView: AnyObject {
+protocol IFavoriteView : AnyObject {
     func set(recipes: [RecipeData], pictures: [UIImage])
-    var onSearchBarChanged: String? { get set }
+    var onRecipe: ((_ recipe: RecipeData, _ image: UIImage) -> Void)? { get set }
 }
 
-class SearchView: UIView, ISearchView {
-    var onSearchBarChanged: ((String))?
+class FavoriteView: UIView, IFavoriteView {
+    var onRecipe: ((RecipeData, UIImage) -> Void)?
     
-    @IBOutlet weak var searchTable: UITableView!
+    @IBOutlet weak var recipesTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     private var recipes: [RecipeData] = [RecipeData]()
     private var recipesImages: [UIImage] = [UIImage]()
-
-    var lastSearch: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         let reuseId = "\(RecipesTableCell.self)"
         let cellNib = UINib(nibName: reuseId, bundle: nil)
-        self.searchTable.register(cellNib, forCellReuseIdentifier: reuseId)
-        self.searchTable.rowHeight = 200
-
+        self.recipesTable.register(cellNib, forCellReuseIdentifier: reuseId)
         
-        searchTable.dataSource = self
-        searchTable.delegate = self
-        searchBar.delegate = self
+        self.recipesTable.delegate = self
+        self.recipesTable.dataSource = self
+        
+        self.recipesTable.rowHeight = 200
     }
-    
     
     func set(recipes: [RecipeData], pictures: [UIImage]) {
         self.recipes = recipes
         self.recipesImages = pictures
-        self.searchTable.reloadData()
+        self.recipesTable.reloadData()
     }
-
+    
+    
 }
 
-
-extension SearchView: UITableViewDelegate, UITableViewDataSource {
+extension FavoriteView: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -57,7 +54,7 @@ extension SearchView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.searchTable.dequeueReusableCell(withIdentifier: "\(RecipesTableCell.self)", for: indexPath) as! RecipesTableCell
+        let cell = self.recipesTable.dequeueReusableCell(withIdentifier: "\(RecipesTableCell.self)", for: indexPath) as! RecipesTableCell
         let recipe = self.recipes[indexPath.row]
         let picture = self.recipesImages[indexPath.row]
         cell.set(recipe: recipe, picture: picture)
@@ -66,13 +63,8 @@ extension SearchView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-//        guard let onRecipe = self.onRecipe else { return }
-//        onRecipe(recipes[indexPath.row], recipesImages[indexPath.row])
+        guard let onRecipe = self.onRecipe else { return }
+        onRecipe(recipes[indexPath.row], recipesImages[indexPath.row])
     }
 }
 
-extension SearchView: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        lastSearch = searchText
-    }
-}

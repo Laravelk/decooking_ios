@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FavoriteView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nQS-Z4-WP3">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="iCx-Lu-QnY">
+                    <rect key="frame" x="0.0" y="38" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nQS-Z4-WP3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="3cR-oM-S3t"/>
+                <constraint firstItem="iCx-Lu-QnY" firstAttribute="leading" secondItem="nQS-Z4-WP3" secondAttribute="leading" id="9bp-6k-dgD"/>
+                <constraint firstItem="nQS-Z4-WP3" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="EFH-8v-Zwg"/>
+                <constraint firstItem="nQS-Z4-WP3" firstAttribute="top" secondItem="iCx-Lu-QnY" secondAttribute="bottom" id="VeC-kp-4dd"/>
+                <constraint firstItem="iCx-Lu-QnY" firstAttribute="trailing" secondItem="nQS-Z4-WP3" secondAttribute="trailing" id="Wuj-Mb-4Ic"/>
+                <constraint firstItem="nQS-Z4-WP3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="odN-U7-7g4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="iCx-Lu-QnY" secondAttribute="top" constant="6" id="uMq-sQ-0L2"/>
+            </constraints>
+            <connections>
+                <outlet property="recipesTable" destination="nQS-Z4-WP3" id="LCh-HM-7e1"/>
+                <outlet property="searchBar" destination="iCx-Lu-QnY" id="2b2-wC-8lb"/>
+            </connections>
+            <point key="canvasLocation" x="-26.086956521739133" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

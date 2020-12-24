@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,19 +14,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-HZ-XFI">
-                    <rect key="frame" x="0.0" y="149" width="414" height="747"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-HZ-XFI">
+                    <rect key="frame" x="0.0" y="105" width="414" height="791"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-ic-J3u">
-                    <rect key="frame" x="0.0" y="105" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-ic-J3u">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VK7-HZ-XFI" secondAttribute="bottom" id="9es-De-mpz"/>
+                <constraint firstItem="VK7-HZ-XFI" firstAttribute="top" secondItem="vqP-ic-J3u" secondAttribute="bottom" constant="5" id="CS0-Sw-xhL"/>
+                <constraint firstItem="vqP-ic-J3u" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QV9-8V-gr1"/>
+                <constraint firstItem="vqP-ic-J3u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sxt-zX-lWj"/>
+                <constraint firstItem="vqP-ic-J3u" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="X5K-P7-RSY"/>
+                <constraint firstItem="VK7-HZ-XFI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="XO9-On-tFg"/>
+                <constraint firstItem="VK7-HZ-XFI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YSM-G1-KJ8"/>
+            </constraints>
             <connections>
                 <outlet property="searchBar" destination="vqP-ic-J3u" id="vsc-rT-62J"/>
                 <outlet property="searchTable" destination="VK7-HZ-XFI" id="2bt-vc-atL"/>
