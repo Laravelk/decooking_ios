@@ -14,6 +14,7 @@ class TabBarViewContoller: UITabBarController, ITabBarViewController {
     private var recipes: Module<RecipesPresenter>?
     private var search: Module<SearchPresenter>?
     private var profile: Module<ProfilePresenter>?
+    private var favorite: Module<FavoritePresenter>?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,25 +28,30 @@ class TabBarViewContoller: UITabBarController, ITabBarViewController {
     }
     
     private func setTabBar() -> Void {
+        tabBar.tintColor = .systemOrange
+        
         recipes = RecipesAssembly.makeModule()
         search = SearchAssembly.makeModule()
         profile = ProfileAssembly.makeModule()
+        favorite = FavoriteAssembly.makeModule(recipes: [])
 
-        guard let recipes = recipes else { return }
-        guard let search = search else { return }
-        guard let profile = profile else { return }
+        guard let recipes = self.recipes else { return }
+        guard let search = self.search else { return }
+        guard let profile = self.profile else { return }
+        guard let favorite = self.favorite else { return }
         
-        recipes.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        recipes.viewController.tabBarItem = UITabBarItem(title: "Recipe", image: UIImage(named: "fork"), tag: 0)
         recipes.viewController.tabBarItem.title = "recipe"
+        
         search.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-        profile.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
+        
+        favorite.viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        
+        profile.viewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user"), tag: 3)
         
         recipes.viewController.title = "Recipe"
         search.viewController.title = "Search"
         profile.viewController.title = "Profile"
-        
-        let viewCont1 = UIViewController()
-        viewCont1.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 2)
-        viewControllers = [recipes.viewController, search.viewController, viewCont1, profile.viewController]
+        viewControllers = [recipes.viewController, search.viewController, favorite.viewController, profile.viewController]
     }
 }

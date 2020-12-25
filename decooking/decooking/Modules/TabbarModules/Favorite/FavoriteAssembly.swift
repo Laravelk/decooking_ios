@@ -8,24 +8,24 @@
 import Foundation
 
 enum FavoriteAssembly {
-    static func makeModule(ingredients: [Ingredient]) -> Module<RecipesResultPresenter> {
+    static func makeModule(recipes: [String]?) -> Module<FavoritePresenter> {
         
         // Router
-        let router = RecipesResultRouter()
-        
+        let router = FavoriteRouter()
+
         // Interactor
-        let interactor = RecipesResultInteractor()
-        
+        let interactor = FavoriteInteractor()
+
         // Presenter
-        let presenter = RecipesResultPresenter(interactor: interactor, router: router, ingredients: ingredients)
-        
+        let presenter = FavoritePresenter(interactor: interactor, router: router, recipes: recipes)
+
         // Controller
-        let controller = RecipeResultViewController(presenter: presenter)
-        
+        let controller = FavoriteViewController(presenter: presenter)
+
         // Setup depency
         router.setViewController(viewController: controller)
-        
-        
-        return Module<RecipesResultPresenter>(viewController: controller, presenter: presenter)
+
+
+        return Module<FavoritePresenter>(viewController: controller, presenter: presenter)
     }
 }

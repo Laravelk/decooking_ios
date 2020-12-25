@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FavoriteView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FavoriteView" customModule="decooking" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -35,8 +35,8 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="iCx-Lu-QnY" secondAttribute="top" constant="6" id="uMq-sQ-0L2"/>
             </constraints>
             <connections>
-                <outlet property="recipesTable" destination="nQS-Z4-WP3" id="LCh-HM-7e1"/>
-                <outlet property="searchBar" destination="iCx-Lu-QnY" id="2b2-wC-8lb"/>
+                <outlet property="recipesTable" destination="nQS-Z4-WP3" id="nWI-41-F7G"/>
+                <outlet property="searchBar" destination="iCx-Lu-QnY" id="Wg3-ap-Sxa"/>
             </connections>
             <point key="canvasLocation" x="-26.086956521739133" y="87.723214285714278"/>
         </view>

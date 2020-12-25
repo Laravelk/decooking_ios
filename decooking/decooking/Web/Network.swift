@@ -131,9 +131,6 @@ class Network {
                return
            }
             
-//            print(String(data: data, encoding: .utf8))
-
-            
             if let response = response as? HTTPURLResponse {
                 let correctCode = 200
                 if correctCode != response.statusCode {
@@ -210,7 +207,7 @@ class Network {
         let url: String = URLBase + "/dev/recipe/images_by_recipe/"
     }
     
-    public func getRecipesByName(name: String, complection: @escaping (RequestResult<Array<RecipeData>>) -> Void) {
+    public func getRecipesByName(name: String, compl ection: @escaping (RequestResult<Array<RecipeData>>) -> Void) {
 //        let url: String = URLBase + ""
     }
 }

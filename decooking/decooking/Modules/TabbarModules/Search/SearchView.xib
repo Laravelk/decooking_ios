@@ -15,11 +15,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-HZ-XFI">
-                    <rect key="frame" x="0.0" y="105" width="414" height="791"/>
+                    <rect key="frame" x="0.0" y="99" width="414" height="797"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-ic-J3u">
-                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <rect key="frame" x="0.0" y="38" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </subviews>
@@ -28,9 +28,9 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="VK7-HZ-XFI" secondAttribute="bottom" id="9es-De-mpz"/>
                 <constraint firstItem="VK7-HZ-XFI" firstAttribute="top" secondItem="vqP-ic-J3u" secondAttribute="bottom" constant="5" id="CS0-Sw-xhL"/>
+                <constraint firstItem="vqP-ic-J3u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="GMv-sY-C26"/>
                 <constraint firstItem="vqP-ic-J3u" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QV9-8V-gr1"/>
                 <constraint firstItem="vqP-ic-J3u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sxt-zX-lWj"/>
-                <constraint firstItem="vqP-ic-J3u" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="X5K-P7-RSY"/>
                 <constraint firstItem="VK7-HZ-XFI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="XO9-On-tFg"/>
                 <constraint firstItem="VK7-HZ-XFI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YSM-G1-KJ8"/>
             </constraints>

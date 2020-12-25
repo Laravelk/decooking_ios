@@ -43,10 +43,9 @@ class LoginView: UIView, ILoginView {
         self.passwordField.borderStyle = .roundedRect
         self.passwordField.returnKeyType = UIReturnKeyType.done
 
-        self.forgotPassword.setTitleColor(.blue, for: .normal)
+        self.forgotPassword.setTitleColor(.red, for: .normal)
 
         self.entrance.setTitleColor(.white, for: .normal)
-        self.entrance.backgroundColor = .gray
         self.entrance.layer.cornerRadius = 10
 
         self.register.setTitleColor(.red, for: .normal)

@@ -17,9 +17,9 @@ class FavoritePresenter: BasePresenter<IFavoriteInteractor, IFavoriteRouter & Ba
     private weak var ui: IFavoriteView?
     private var idRecipes: [String]!
     
-    override init(interactor: IFavoriteInteractor, router: BaseRouting & IFavoriteRouter) {
-        
+    init(interactor: IFavoriteInteractor, router: BaseRouting & IFavoriteRouter, recipes: [String]?) {
         super.init(interactor: interactor, router: router)
+        idRecipes = [String]()
     }
     
     func didLoad(ui: IFavoriteView) {
