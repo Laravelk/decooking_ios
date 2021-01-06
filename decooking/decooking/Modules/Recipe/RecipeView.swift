@@ -60,12 +60,13 @@ class RecipeView: UIView, IRecipeView {
         self.ingredientsTitle.text = "Ингредиенты: "
         
         var allIngredients: String = ""
-        for ingredient in recipe.recipe.ingredientFromRecipes {
-            let name: String = ingredient.ingredientTypeName
+        for ingredient in recipe.recipe.ingredients {
+            let name: String = ingredient.name
             let amount: String = String(ingredient.amount)
             let measureName: String = ingredient.measure.name
             allIngredients = allIngredients + name + " " + measureName + " " + amount + "\n"
         }
+        
         self.ingredientsLabel.text = allIngredients
         
     }

@@ -27,8 +27,10 @@ class ForgotView: UIView, IForgotView {
         self.emailField.layer.cornerRadius = 20
         self.emailField.borderStyle = .roundedRect
         
+        self.sendLetterButton.tintColor = .red
+        
         self.backButton.setTitleColor(.white, for: .normal)
-        self.backButton.backgroundColor = .blue
+        self.backButton.backgroundColor = .systemOrange
         self.backButton.layer.cornerRadius = 15
     }
     

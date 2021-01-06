@@ -18,8 +18,8 @@ struct WayToCook: Codable {
 }
 
 struct IngredientFromRecipes: Codable {
-    var ingredientTypeId: String
-    var ingredientTypeName: String
+    var id: String
+    var name: String
     var amount: Float
     struct Measure: Codable {
         var measureId: String
@@ -40,7 +40,7 @@ struct RecipeData: Codable {
     var isVegan: Bool
     var rating: Int
     var waysToCook: [WayToCook]
-    var ingredientFromRecipes: [IngredientFromRecipes]
+    var ingredients: [IngredientFromRecipes]
     var calories: Float
 }
 

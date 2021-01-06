@@ -52,6 +52,7 @@ class RecipesView: UIView, IRecipesView, CellDelegate {
         self.saveButton.tintColor = .white
         
         self.ingredientsTable.reloadData()
+        self.ingredientsTable.isHidden = true
     }
     
     func removeIngredient(names: [String]) {
@@ -90,6 +91,7 @@ class RecipesView: UIView, IRecipesView, CellDelegate {
     func set(ingredients: [Ingredient]) {
         self.ingredients = ingredients
         self.ingredientsTable.reloadData()
+        self.ingredientsTable.isHidden = false
     }
     
     @IBAction func saveAction(_ sender: Any) {
